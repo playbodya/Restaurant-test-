@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Prostorica Restaurace</title>
-<meta name="description" content="Prostorica — restaurace s provensálskou duší. Sezónní kuchyně, levandule, víno a klid.">
+<meta name="description" content="Restaurace Prostorica, Slezská Ostrava. Poctivá česká kuchyně s nádechem francouzského venkova. Rezervace: +420 725 988 208.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap">
@@ -22,6 +22,7 @@
     <a href="#o-nas" data-i18n="nav.about">O nás</a>
     <a href="#menu" data-i18n="nav.menu">Menu</a>
     <a href="#degustace" data-i18n="nav.tasting">Degustace</a>
+    <a href="#kudy" data-i18n="nav.where">Kudy k nám</a>
     <a href="#kontakt" data-i18n="nav.contact">Kontakt</a>
   </nav>
   <div class="nav__tools">
@@ -39,13 +40,13 @@
   <section class="hero">
     <canvas class="hero__petals" id="petals" aria-hidden="true"></canvas>
     <div class="hero__text">
-      <p class="eyebrow load" style="--d:.1s" data-i18n="hero.eyebrow">Restaurace · Praha</p>
+      <p class="eyebrow load" style="--d:.1s" data-i18n="hero.eyebrow">Restaurace · Slezská Ostrava</p>
       <h1 class="hero__title">
-        <span class="line"><span class="load" style="--d:.2s" data-i18n="hero.t1">Chuť Provence</span></span>
-        <span class="line"><em class="load" style="--d:.35s" data-i18n="hero.t2">v klidu</em></span>
-        <span class="line"><span class="load" style="--d:.5s" data-i18n="hero.t3">vašeho večera</span></span>
+        <span class="line"><span class="load" style="--d:.2s" data-i18n="hero.t1">Česká kuchyně</span></span>
+        <span class="line"><em class="load" style="--d:.35s" data-i18n="hero.t2">s nádechem</em></span>
+        <span class="line"><span class="load" style="--d:.5s" data-i18n="hero.t3">francouzského venkova</span></span>
       </h1>
-      <p class="hero__lead load" style="--d:.7s" data-i18n="hero.lead">Sezónní kuchyně, bylinky z vlastní zahrádky a víno z malých vinařství. Místo, kde se zpomalí čas.</p>
+      <p class="hero__lead load" style="--d:.7s" data-i18n="hero.lead">Přinášíme poctivou českou kuchyni s nádechem francouzského venkova. Sezónní suroviny, bylinky a víno z malých vinařství.</p>
       <div class="hero__cta load" style="--d:.85s">
         <a class="btn magnetic" href="#rezervace"><span data-i18n="hero.book">Rezervovat stůl</span></a>
         <a class="btn btn--ghost magnetic" href="#menu"><span data-i18n="hero.menu">Prohlédnout menu</span></a>
@@ -81,7 +82,7 @@
     <div class="about__text">
       <p class="eyebrow reveal" data-i18n="about.eyebrow">O nás</p>
       <h2 class="h2 reveal" data-i18n="about.title">Prostor pro chuť, <em>čas</em> a rozhovor</h2>
-      <p class="reveal" data-i18n="about.p1">Prostorica vznikla z jednoduché myšlenky: vařit poctivě, se sezónou a s respektem k surovině. Inspirujeme se jihem Francie, ale nakupujeme u farmářů z okolí.</p>
+      <p class="reveal" data-i18n="about.p1">Prostorica vznikla z jednoduché myšlenky: vařit poctivou českou kuchyni, se sezónou a s respektem k surovině. Inspiraci hledáme na francouzském venkově, suroviny nakupujeme u farmářů z okolí Ostravy.</p>
       <p class="reveal" data-i18n="about.p2">Menu měníme čtyřikrát do roka. Chléb pečeme každé ráno, bylinky trháme těsně před servisem a levandule z naší zahrádky najdete v dezertech i v limonádě.</p>
       <dl class="facts reveal">
         <div><dt class="count" data-to="42">42</dt><dd data-i18n="about.f1">míst u stolu</dd></div>
@@ -134,7 +135,19 @@
     <div class="book__info">
       <p class="eyebrow reveal" data-i18n="book.eyebrow">Rezervace</p>
       <h2 class="h2 reveal" data-i18n="book.title">Připravíme vám <em>stůl</em></h2>
-      <p class="reveal" data-i18n="book.lead">Pro skupiny nad 8 osob nebo soukromé akce nám prosím zavolejte.</p>
+      <p class="reveal" data-i18n="book.lead">Stůl vám rádi rezervujeme i telefonicky. Pronájem sálu a catering domlouváme na samostatném čísle.</p>
+      <div class="phones reveal">
+        <div class="phone">
+          <span class="phone__lbl" data-i18n="book.telBook">Rezervace stolu</span>
+          <a class="phone__num" href="tel:+420725988208">+420 725 988 208</a>
+          <button type="button" class="link copy-btn" data-copy="+420 725 988 208" data-i18n="foot.copy">Zkopírovat</button>
+        </div>
+        <div class="phone">
+          <span class="phone__lbl" data-i18n="book.telCater">Pronájem sálu / catering</span>
+          <a class="phone__num" href="tel:+420602530838">+420 602 530 838</a>
+          <button type="button" class="link copy-btn" data-copy="+420 602 530 838" data-i18n="foot.copy">Zkopírovat</button>
+        </div>
+      </div>
       <table class="hours reveal" id="hours">
         <caption data-i18n="book.hours">Otevírací doba</caption>
         <tbody></tbody>
@@ -172,6 +185,7 @@
       </label>
       <p class="form__error" id="formError" role="alert" hidden></p>
       <button class="btn btn--wide magnetic" type="submit"><span data-i18n="form.submit">Odeslat poptávku</span></button>
+      <p class="form__gdpr" data-i18n="form.gdpr">Odesláním souhlasíte se zpracováním osobních údajů za účelem vyřízení rezervace (GDPR).</p>
 
       <div class="form__done" id="formDone" hidden>
         <img src="assets/sprig-small.webp" alt="" width="145" height="288">
@@ -183,6 +197,44 @@
   </section>
 </main>
 
+<!-- LOCATION -->
+<section class="where section" id="kudy">
+  <div class="where__text">
+    <p class="eyebrow reveal" data-i18n="where.eyebrow">Kudy k nám</p>
+    <h2 class="h2 reveal" data-i18n="where.title">Švédská 42/58a, <em>Slezská Ostrava</em></h2>
+    <p class="reveal" data-i18n="where.lead">Najdete nás v Muglinově. Zadejte, odkud jedete, a Google Mapy vám ukážou cestu autem, MHD i pěšky.</p>
+    <form class="route reveal" id="routeForm">
+      <label class="field">
+        <span data-i18n="where.from">Odkud jedete?</span>
+        <input type="text" id="r-from" name="from" autocomplete="street-address" data-i18n-ph="where.fromPh" placeholder="např. Hlavní nádraží Ostrava">
+      </label>
+      <div class="route__modes" role="radiogroup" id="routeModes">
+        <button type="button" class="mode" role="radio" aria-checked="true" data-mode="driving" data-i18n="where.car">Autem</button>
+        <button type="button" class="mode" role="radio" aria-checked="false" data-mode="transit" data-i18n="where.transit">MHD</button>
+        <button type="button" class="mode" role="radio" aria-checked="false" data-mode="walking" data-i18n="where.walk">Pěšky</button>
+      </div>
+      <div class="route__actions">
+        <a class="btn magnetic" id="routeBtn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%C5%A0v%C3%A9dsk%C3%A1%2042%2F58a%2C%20712%2000%20Slezsk%C3%A1%20Ostrava&amp;travelmode=driving" target="_blank" rel="noopener"><span data-i18n="where.go">Naplánovat trasu ↗</span></a>
+        <a class="btn btn--ghost" id="routeHere" href="https://www.google.com/maps/dir/?api=1&amp;destination=%C5%A0v%C3%A9dsk%C3%A1%2042%2F58a%2C%20712%2000%20Slezsk%C3%A1%20Ostrava&amp;travelmode=driving" target="_blank" rel="noopener"><span data-i18n="where.here">Z mé polohy ↗</span></a>
+      </div>
+    </form>
+  </div>
+  <div class="where__map reveal">
+    <!--MAP-EMBED-START-->
+    <iframe class="where__iframe" title="Mapa: Restaurace Prostorica" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps?q=Restaurace%20Prostorica%2C%20%C5%A0v%C3%A9dsk%C3%A1%2042%2F58a%2C%20712%2000%20Slezsk%C3%A1%20Ostrava&amp;z=15&amp;output=embed"></iframe>
+    <!--MAP-EMBED-END-->
+    <div class="where__card">
+      <img src="assets/sprig-small.webp" alt="" width="145" height="288">
+      <div>
+        <strong>Restaurace Prostorica</strong>
+        <span>Švédská 42/58a<br>712 00 Slezská Ostrava</span>
+        <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Restaurace%20Prostorica%2C%20%C5%A0v%C3%A9dsk%C3%A1%2042%2F58a%2C%20Slezsk%C3%A1%20Ostrava" target="_blank" rel="noopener" data-i18n="foot.map">Otevřít v Google Mapách ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer class="foot" id="kontakt">
   <div class="foot__logo reveal" aria-label="Prostorica restaurace">
@@ -193,23 +245,25 @@
     <span class="foot__p">P</span><span class="foot__word">ROSTORICA</span>
     <span class="foot__sub">RESTAURACE</span>
   </div>
+  <p class="foot__tagline" data-i18n="foot.tagline">Přinášíme poctivou českou kuchyni s nádechem francouzského venkova.</p>
   <div class="foot__cols">
     <div>
-      <h3 data-i18n="foot.addr">Adresa</h3>
-      <p>Levandulová 12<br>110 00 Praha 1</p>
-      <a class="link" href="https://maps.google.com/?q=Praha+1" target="_blank" rel="noopener" data-i18n="foot.map">Otevřít mapu ↗</a>
+      <h3 data-i18n="foot.addr">Kudy k nám</h3>
+      <p>Švédská 42/58a<br>712 00 Slezská Ostrava</p>
+      <a class="link" href="#kudy" data-i18n="foot.route">Naplánovat trasu</a>
     </div>
     <div>
       <h3 data-i18n="foot.contact">Kontakt</h3>
-      <p><span class="copy" id="phone">+420 777 123 456</span><br><span class="copy">ahoj@prostorica.cz</span></p>
-      <button type="button" class="link" id="copyPhone" data-i18n="foot.copy">Zkopírovat telefon</button>
+      <p><span data-i18n="foot.telBook">Rezervace stolu</span><br><a class="foot__tel" href="tel:+420725988208">+420 725 988 208</a></p>
+      <p><span data-i18n="foot.telCater">Pronájem sálu / catering</span><br><a class="foot__tel" href="tel:+420602530838">+420 602 530 838</a></p>
     </div>
     <div>
-      <h3 data-i18n="foot.follow">Sledujte nás</h3>
-      <p><a class="link" href="https://instagram.com" target="_blank" rel="noopener">Instagram ↗</a><br><a class="link" href="https://facebook.com" target="_blank" rel="noopener">Facebook ↗</a></p>
+      <h3 data-i18n="foot.hours">Otevírací doba</h3>
+      <p><span data-i18n="foot.monsat">Pondělí – Sobota</span> 11:00–21:00<br><span data-i18n="foot.sun">Neděle</span> 12:00–20:00</p>
+      <p><a class="link" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a> &nbsp; <a class="link" href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook ↗</a></p>
     </div>
   </div>
-  <p class="foot__copy">© 2026 Prostorica · <span data-i18n="foot.made">S láskou k levanduli</span></p>
+  <p class="foot__copy">© 2026 Restaurace Prostorica · prostorica.cz · <span data-i18n="foot.gdpr">GDPR – Zásady zpracování osobních údajů</span></p>
 </footer>
 <!--CONTENT-END-->
 <script src="js/main.js"></script>

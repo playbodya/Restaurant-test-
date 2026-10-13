@@ -9,13 +9,13 @@
 
   /* ---------- Content ---------- */
   const RU = {
-    'nav.about': 'О нас', 'nav.menu': 'Меню', 'nav.tasting': 'Дегустация', 'nav.contact': 'Контакты', 'nav.book': 'Бронь',
-    'hero.eyebrow': 'Ресторан · Прага', 'hero.t1': 'Вкус Прованса', 'hero.t2': 'в тишине', 'hero.t3': 'вашего вечера',
-    'hero.lead': 'Сезонная кухня, травы с собственного огорода и вино небольших виноделен. Место, где время замедляется.',
+    'nav.about': 'О нас', 'nav.menu': 'Меню', 'nav.tasting': 'Дегустация', 'nav.contact': 'Контакты', 'nav.where': 'Как добраться', 'nav.book': 'Бронь',
+    'hero.eyebrow': 'Ресторан · Слезска-Острава', 'hero.t1': 'Чешская кухня', 'hero.t2': 'с ноткой', 'hero.t3': 'французской деревни',
+    'hero.lead': 'Мы готовим честную чешскую кухню с ноткой французской деревни. Сезонные продукты, травы и вино небольших виноделен.',
     'hero.book': 'Забронировать стол', 'hero.menu': 'Смотреть меню',
     'marquee': 'лаванда · тимьян · розмарин · лесной мёд · козий сыр · оливки · инжир · шалфей · ',
     'about.eyebrow': 'О нас', 'about.title': 'Пространство для вкуса, <em>времени</em> и разговора',
-    'about.p1': 'Prostorica родилась из простой идеи: готовить честно, по сезону и с уважением к продукту. Мы вдохновляемся югом Франции, но покупаем у фермеров по соседству.',
+    'about.p1': 'Prostorica родилась из простой идеи: готовить честную чешскую кухню, по сезону и с уважением к продукту. Вдохновение ищем во французской деревне, а продукты покупаем у фермеров из окрестностей Остравы.',
     'about.p2': 'Меню меняется четыре раза в год. Хлеб печём каждое утро, травы срываем прямо перед подачей, а лаванду с нашего огорода вы найдёте и в десертах, и в лимонаде.',
     'about.f1': 'мест за столами', 'about.f2': 'сезонных меню в год', 'about.f3': 'малых виноделен',
     'menu.eyebrow': 'Осеннее меню 2026', 'menu.title': 'Меню',
@@ -25,11 +25,12 @@
     'tasting.p1': 'меню', 'tasting.p2': 'с винным сопровождением',
     'quote.text': '«Хорошей еде нужны три вещи: сезон, терпение и стол, за которым никто не спешит».', 'quote.by': '— шеф-повар Prostorica',
     'book.eyebrow': 'Бронирование', 'book.title': 'Мы подготовим для вас <em>стол</em>',
-    'book.lead': 'Для компаний больше 8 человек и частных мероприятий, пожалуйста, позвоните нам.', 'book.hours': 'Часы работы',
+    'book.lead': 'Стол можно забронировать и по телефону. Аренду зала и кейтеринг обсуждаем по отдельному номеру.', 'book.telBook': 'Бронирование столов', 'book.telCater': 'Аренда зала / кейтеринг', 'book.hours': 'Часы работы',
     'form.date': 'Дата', 'form.time': 'Время', 'form.guests': 'Количество гостей', 'form.name': 'Имя', 'form.phone': 'Телефон',
-    'form.note': 'Комментарий (аллергии, праздник…)', 'form.submit': 'Отправить запрос', 'form.doneTitle': 'Спасибо!', 'form.again': 'Новая бронь',
-    'foot.addr': 'Адрес', 'foot.map': 'Открыть карту ↗', 'foot.contact': 'Контакты', 'foot.copy': 'Скопировать телефон',
-    'foot.follow': 'Мы в соцсетях', 'foot.made': 'С любовью к лаванде',
+    'form.note': 'Комментарий (аллергии, праздник…)', 'form.submit': 'Отправить запрос', 'form.doneTitle': 'Спасибо!', 'form.again': 'Новая бронь', 'form.gdpr': 'Отправляя форму, вы соглашаетесь на обработку персональных данных для оформления брони (GDPR).',
+    'where.eyebrow': 'Как добраться', 'where.title': 'Švédská 42/58a, <em>Слезска-Острава</em>', 'where.lead': 'Мы находимся в районе Муглинов. Укажите, откуда едете, и Google Карты покажут маршрут на машине, общественном транспорте или пешком.', 'where.from': 'Откуда вы едете?', 'where.fromPh': 'например, Hlavní nádraží Ostrava', 'where.car': 'На машине', 'where.transit': 'Транспорт', 'where.walk': 'Пешком', 'where.go': 'Построить маршрут ↗', 'where.here': 'От моего места ↗',
+    'foot.addr': 'Как добраться', 'foot.map': 'Открыть в Google Картах ↗', 'foot.route': 'Построить маршрут', 'foot.contact': 'Контакты', 'foot.copy': 'Скопировать', 'foot.telBook': 'Бронирование столов', 'foot.telCater': 'Аренда зала / кейтеринг', 'foot.hours': 'Часы работы', 'foot.monsat': 'Понедельник – суббота', 'foot.sun': 'Воскресенье', 'foot.tagline': 'Мы готовим честную чешскую кухню с ноткой французской деревни.', 'foot.gdpr': 'GDPR – Политика обработки персональных данных',
+    
   };
 
   const UI = {
@@ -37,7 +38,7 @@
       days: ['Pondělí', 'Úterý', 'Středa', 'Čtvrtek', 'Pátek', 'Sobota', 'Neděle'],
       closed: 'zavřeno', openNow: (t) => `Právě otevřeno · do ${t}`, opensAt: (d, t) => `Zavřeno · otevíráme ${d} v ${t}`,
       today: 'dnes', tomorrow: 'zítra',
-      errors: { date: 'Vyberte prosím datum.', name: 'Napište prosím své jméno.', phone: 'Zadejte telefon, ať vám můžeme potvrdit rezervaci.', past: 'Toto datum už proběhlo.', monday: 'V pondělí máme zavřeno. Vyberte prosím jiný den.' },
+      errors: { date: 'Vyberte prosím datum.', name: 'Napište prosím své jméno.', phone: 'Zadejte telefon, ať vám můžeme potvrdit rezervaci.', past: 'Toto datum už proběhlo.' },
       done: (n, g, d, t) => `${n}, poptávku na ${g} ${g === 1 ? 'osobu' : g < 5 ? 'osoby' : 'osob'} ${d} v ${t} jsme přijali. Ozveme se vám s potvrzením. (Ukázková stránka: zpráva se nikam neodesílá.)`,
       copied: 'Zkopírováno ✓',
     },
@@ -45,7 +46,7 @@
       days: ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
       closed: 'выходной', openNow: (t) => `Сейчас открыто · до ${t}`, opensAt: (d, t) => `Закрыто · откроемся ${d} в ${t}`,
       today: 'сегодня', tomorrow: 'завтра',
-      errors: { date: 'Выберите, пожалуйста, дату.', name: 'Укажите, пожалуйста, имя.', phone: 'Укажите телефон, чтобы мы могли подтвердить бронь.', past: 'Эта дата уже прошла.', monday: 'По понедельникам мы закрыты. Выберите другой день.' },
+      errors: { date: 'Выберите, пожалуйста, дату.', name: 'Укажите, пожалуйста, имя.', phone: 'Укажите телефон, чтобы мы могли подтвердить бронь.', past: 'Эта дата уже прошла.' },
       done: (n, g, d, t) => `${n}, запрос на столик для ${g} ${g === 1 ? 'персоны' : 'персон'} ${d} в ${t} принят. Мы свяжемся с вами для подтверждения. (Демо-страница: заявка никуда не отправляется.)`,
       copied: 'Скопировано ✓',
     },
@@ -86,12 +87,14 @@
   ];
 
   // Mon..Sun, [open, close] in hours; null = closed
-  const HOURS = [null, [12, 22], [12, 22], [12, 22], [12, 23], [12, 23], [12, 21]];
+  const HOURS = [[11, 21], [11, 21], [11, 21], [11, 21], [11, 21], [11, 21], [12, 20]];
 
   /* ---------- i18n ---------- */
   let lang = store.get('prostorica-lang') === 'ru' ? 'ru' : 'cs';
   const nodes = $$('[data-i18n]');
   nodes.forEach((el) => { el.dataset.cs = el.innerHTML; });
+  const phNodes = $$('[data-i18n-ph]');
+  phNodes.forEach((el) => { el.dataset.csPh = el.placeholder; });
 
   function applyLang() {
     document.documentElement.lang = lang;
@@ -99,6 +102,7 @@
       const key = el.dataset.i18n;
       el.innerHTML = lang === 'ru' && RU[key] ? RU[key] : el.dataset.cs;
     });
+    phNodes.forEach((el) => { el.placeholder = lang === 'ru' && RU[el.dataset.i18nPh] ? RU[el.dataset.i18nPh] : el.dataset.csPh; });
     $$('.lang__btn').forEach((b) => b.classList.toggle('is-active', b.dataset.lang === lang));
     renderTabs(); renderMenu(false); renderCourses(); renderHours(); renderStatus();
   }
@@ -192,19 +196,28 @@
   function initForm() {
     const t = new Date(); dateIn.min = iso(t);
     const next = new Date(t); next.setDate(t.getDate() + 1);
-    while (next.getDay() === 1) next.setDate(next.getDate() + 1);
     dateIn.value = iso(next);
-    const slots = [];
-    for (let m = 12 * 60; m <= 21 * 60; m += 30) slots.push(`${Math.floor(m / 60)}:${pad(m % 60)}`);
-    timeIn.innerHTML = slots.map((s) => `<option${s === '19:00' ? ' selected' : ''}>${s}</option>`).join('');
+    fillSlots();
     const g = $('#guests');
     g.innerHTML = Array.from({ length: 8 }, (_, i) => `<button type="button" class="guest" role="radio" aria-checked="${i + 1 === guests}" data-g="${i + 1}">${i + 1}</button>`).join('');
-    g.addEventListener('click', (e) => {
-      const b = e.target.closest('.guest'); if (!b) return;
-      guests = +b.dataset.g;
-      $$('.guest', g).forEach((x) => x.setAttribute('aria-checked', String(x === b)));
-    });
   }
+  $('#guests').addEventListener('click', (e) => {
+    const b = e.target.closest('.guest'); if (!b) return;
+    guests = +b.dataset.g;
+    $$('.guest', $('#guests')).forEach((x) => x.setAttribute('aria-checked', String(x === b)));
+  });
+
+  // last table one hour before closing
+  function fillSlots() {
+    const prev = timeIn.value || '18:00';
+    const d = dateIn.value ? new Date(`${dateIn.value}T12:00`) : new Date();
+    const [open, close] = HOURS[(d.getDay() + 6) % 7];
+    const slots = [];
+    for (let m = open * 60; m <= (close - 1) * 60; m += 30) slots.push(`${Math.floor(m / 60)}:${pad(m % 60)}`);
+    const pick = slots.includes(prev) ? prev : slots[slots.length - 1];
+    timeIn.innerHTML = slots.map((s) => `<option${s === pick ? ' selected' : ''}>${s}</option>`).join('');
+  }
+  dateIn.addEventListener('change', fillSlots);
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -215,7 +228,6 @@
     const picked = dateIn.value ? new Date(`${dateIn.value}T12:00`) : null;
     if (!picked) { msg = u.date; bad = dateIn; }
     else if (dateIn.value < iso(new Date())) { msg = u.past; bad = dateIn; }
-    else if (picked.getDay() === 1) { msg = u.monday; bad = dateIn; }
     else if (!name.value.trim()) { msg = u.name; bad = name; }
     else if (phone.value.replace(/\D/g, '').length < 9) { msg = u.phone; bad = phone; }
     if (msg) { err.textContent = msg; err.hidden = false; bad.classList.add('is-invalid'); bad.focus(); return; }
@@ -226,13 +238,29 @@
   });
   $('#formAgain').addEventListener('click', () => { done.hidden = true; form.reset(); initForm(); });
 
-  /* ---------- Copy phone ---------- */
-  $('#copyPhone').addEventListener('click', (e) => {
-    const btn = e.currentTarget, text = $('#phone').textContent, label = btn.innerHTML;
-    const ok = () => { btn.textContent = UI[lang].copied; setTimeout(() => { btn.innerHTML = label; }, 1800); };
-    const fallback = () => { const r = document.createRange(); r.selectNodeContents($('#phone')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); };
-    try { navigator.clipboard.writeText(text).then(ok, fallback); } catch { fallback(); }
+  /* ---------- Copy phone numbers ---------- */
+  $$('.copy-btn').forEach((btn) => btn.addEventListener('click', () => {
+    const ok = () => { btn.textContent = UI[lang].copied; setTimeout(() => { btn.textContent = lang === 'ru' ? RU['foot.copy'] : btn.dataset.cs; }, 1800); };
+    const fallback = () => { const r = document.createRange(); r.selectNodeContents(btn.previousElementSibling); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); };
+    try { navigator.clipboard.writeText(btn.dataset.copy).then(ok, fallback); } catch { fallback(); }
+  }));
+
+  /* ---------- Google Maps route ---------- */
+  const DEST = 'Švédská 42/58a, 712 00 Slezská Ostrava';
+  let mode = 'driving';
+  const routeUrl = (from) => `https://www.google.com/maps/dir/?api=1${from ? `&origin=${encodeURIComponent(from)}` : ''}&destination=${encodeURIComponent(DEST)}&travelmode=${mode}`;
+  function updateRoute() {
+    $('#routeBtn').href = routeUrl($('#r-from').value.trim());
+    $('#routeHere').href = routeUrl('');
+  }
+  $('#r-from').addEventListener('input', updateRoute);
+  $('#routeModes').addEventListener('click', (e) => {
+    const b = e.target.closest('.mode'); if (!b) return;
+    mode = b.dataset.mode;
+    $$('.mode').forEach((x) => x.setAttribute('aria-checked', String(x === b)));
+    updateRoute();
   });
+  $('#routeForm').addEventListener('submit', (e) => { e.preventDefault(); updateRoute(); $('#routeBtn').click(); });
 
   /* ---------- Nav ---------- */
   const nav = $('#nav'), burger = $('#burger');
