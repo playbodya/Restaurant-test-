@@ -14,6 +14,20 @@
     allergens: 'Список аллергенов (1–14)', n1: 'Вес указан в сыром виде', n2: 'Аллергены уточнит персонал', n3: 'Упаковка с собой 15 Kč',
     ctaTitle: 'Приходите на <em>обед</em>', ctaLead: 'Придержим для вас стол на обед. Достаточно позвонить.', route: 'Как добраться',
   };
+  const EN = {
+    back: '← Home', book: 'Book', eyebrow: 'Lunch offer · Mon–Fri', t1: 'Lunch', t2: 'menu',
+    soups: 'Soups', soupsHint: 'A different one every day. Today’s is highlighted.', mains: 'Main courses', mainsHint: 'Order by number. Valid all week.',
+    allergens: 'Allergen list (1–14)', n1: 'Weights are raw weights', n2: 'Our staff will gladly advise on allergens', n3: 'Takeaway box 15 Kč',
+    ctaTitle: 'Come for <em>lunch</em>', ctaLead: 'We’ll gladly hold a lunch table for you. Just give us a call.', route: 'Find us',
+  };
+  const PL = {
+    back: '← Strona główna', book: 'Rezerwacja', eyebrow: 'Oferta obiadowa · pon.–pt.', t1: 'Menu', t2: 'dnia',
+    soups: 'Zupy', soupsHint: 'Codziennie inna. Dzisiejsza jest wyróżniona.', mains: 'Dania główne', mainsHint: 'Zamawiaj według numeru. Obowiązują cały tydzień.',
+    allergens: 'Lista alergenów (1–14)', n1: 'Gramatura w stanie surowym', n2: 'O alergeny zapytaj obsługę', n3: 'Opakowanie na wynos 15 Kč',
+    ctaTitle: 'Wpadnij na <em>obiad</em>', ctaLead: 'Chętnie przytrzymamy dla Ciebie stolik na obiad. Wystarczy zadzwonić.', route: 'Dojazd',
+  };
+  const DICT = { ru: RU, en: EN, pl: PL };
+
   const UI = {
     cs: {
       days: ['Pondělí', 'Úterý', 'Středa', 'Čtvrtek', 'Pátek'], today: 'Dnes',
@@ -29,12 +43,28 @@
       al: 'аллергены',
       allergens: ['Злаки, содержащие глютен', 'Ракообразные', 'Яйца', 'Рыба', 'Арахис', 'Соя', 'Молоко', 'Орехи', 'Сельдерей', 'Горчица', 'Кунжут', 'Диоксид серы и сульфиты', 'Люпин', 'Моллюски'],
     },
+    en: {
+      days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], today: 'Today',
+      open: (h) => `Cooking now · ${h}`, later: (h) => `Today ${h}`, done: 'Today’s lunch service has ended',
+      weekend: 'Lunch menu runs Mon–Fri', stale: 'The new lunch menu is on its way', soon: (d) => `Valid from ${d}`,
+      al: 'allergens',
+      allergens: ['Cereals containing gluten', 'Crustaceans', 'Eggs', 'Fish', 'Peanuts', 'Soybeans', 'Milk', 'Tree nuts', 'Celery', 'Mustard', 'Sesame seeds', 'Sulphur dioxide and sulphites', 'Lupin', 'Molluscs'],
+    },
+    pl: {
+      days: ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek'], today: 'Dziś',
+      open: (h) => `Teraz gotujemy · ${h}`, later: (h) => `Dziś ${h}`, done: 'Dzisiejsze menu obiadowe już się skończyło',
+      weekend: 'Menu dnia serwujemy pon.–pt.', stale: 'Nowe menu dnia właśnie przygotowujemy', soon: (d) => `Obowiązuje od ${d}`,
+      al: 'alergeny',
+      allergens: ['Zboża zawierające gluten', 'Skorupiaki', 'Jaja', 'Ryby', 'Orzeszki ziemne', 'Soja', 'Mleko', 'Orzechy', 'Seler', 'Gorczyca', 'Sezam', 'Dwutlenek siarki i siarczyny', 'Łubin', 'Mięczaki'],
+    },
   };
 
-  let lang = store.get('prostorica-lang') === 'ru' ? 'ru' : 'cs';
+  const LANGS = ['cs', 'ru', 'en', 'pl'];
+  const stored = store.get('prostorica-lang');
+  let lang = LANGS.includes(stored) ? stored : 'cs';
   const nodes = $$('[data-i18n]');
   nodes.forEach((el) => { el.dataset.cs = el.innerHTML; });
-  const tr = (o) => (lang === 'ru' && o.ru) || o.cs;
+  const tr = (o) => o[lang] || o.cs;
   const fmt = (n) => `${n.toLocaleString('cs-CZ')} Kč`;
   const dm = (iso) => { const [, m, d] = iso.split('-'); return `${+d}. ${+m}.`; };
   const addDays = (iso, n) => { const d = new Date(`${iso}T12:00:00Z`); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
@@ -87,7 +117,7 @@
 
   function applyLang() {
     document.documentElement.lang = lang;
-    nodes.forEach((el) => { el.innerHTML = lang === 'ru' && RU[el.dataset.i18n] ? RU[el.dataset.i18n] : el.dataset.cs; });
+    nodes.forEach((el) => { el.innerHTML = (DICT[lang] && DICT[lang][el.dataset.i18n]) || el.dataset.cs; });
     $$('.lang__btn').forEach((b) => b.classList.toggle('is-active', b.dataset.lang === lang));
     render();
   }

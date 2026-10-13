@@ -33,6 +33,56 @@
     
   };
 
+  const EN = {
+    'nav.about': 'About', 'nav.menu': 'Menu', 'nav.lunch': 'Lunch menu', 'nav.contact': 'Contact', 'nav.where': 'Find us', 'nav.gallery': 'Gallery', 'nav.book': 'Book',
+    'hero.eyebrow': 'Restaurant · Slezská Ostrava', 'hero.t1': 'Czech cuisine', 'hero.t2': 'with a touch', 'hero.t3': 'of the French countryside',
+    'hero.lead': 'We serve honest Czech cooking with a touch of the French countryside. Seasonal produce, herbs and wine from small wineries.',
+    'hero.book': 'Book a table', 'hero.menu': 'See the menu',
+    'marquee': 'lavender · thyme · rosemary · wild honey · goat cheese · olives · figs · sage · ',
+    'about.eyebrow': 'About us', 'about.title': 'A place for flavour, <em>time</em> and conversation',
+    'about.p1': 'Prostorica grew from a simple idea: cook honest Czech food, follow the seasons and respect the ingredients. We look to the French countryside for inspiration and buy from farmers around Ostrava.',
+    'about.f1': 'seats', 'about.f2': 'seasonal menus a year', 'about.f3': 'small wineries',
+    'menu.eyebrow': 'À la carte', 'menu.title': 'Menu',
+    'dishes.label': 'Czech cuisine, the modern way. Honest. Light. Full of flavour.',
+    'gallery.eyebrow': 'Gallery', 'gallery.title': 'The feel of the <em>French countryside</em>', 'gallery.c1': 'Wild flowers on every table', 'gallery.c2': 'A festive table', 'gallery.c3': 'Lavender napkins', 'gallery.c4': 'The salon', 'gallery.c5': 'A hall for celebrations', 'gallery.c6': 'A long table for family gatherings',
+    'hall.eyebrow': 'Hall hire / catering', 'hall.title': 'Weddings, parties <em>and company evenings</em>', 'hall.lead': 'Hire the whole hall, decorated to suit your event, or let us cook and deliver catering wherever you celebrate.',
+    'menu.note': 'Half portion 70 % of the price · weights are raw weights · ask our staff about allergens · takeaway box 15 Kč',
+    'lunch.eyebrow': 'Lunch menu · Mon–Fri', 'lunch.title': 'A lunch that changes <em>every week</em>', 'lunch.lead': 'Soup of the day and six main courses to choose from. Weekdays 11:00–15:00.', 'lunch.from': 'mains from', 'lunch.cta': 'Full lunch menu →',
+    'quote.text': '“Good food needs three things: the season, patience and a table where nobody is in a hurry.”', 'quote.by': '— Prostorica head chef',
+    'book.eyebrow': 'Reservations', 'book.title': 'We’ll have a <em>table</em> ready for you',
+    'book.lead': 'You can also book by phone. Hall hire and catering have their own number.', 'book.telBook': 'Table reservations', 'book.telCater': 'Hall hire / catering', 'book.hours': 'Opening hours',
+    'form.date': 'Date', 'form.time': 'Time', 'form.guests': 'Guests', 'form.name': 'Name', 'form.phone': 'Phone',
+    'form.note': 'Note (allergies, celebration…)', 'form.submit': 'Send request', 'form.doneTitle': 'Thank you!', 'form.again': 'New booking', 'form.gdpr': 'By sending the form you agree to the processing of your personal data to handle the booking (GDPR).',
+    'where.eyebrow': 'Find us', 'where.title': 'Švédská 42/58a, <em>Slezská Ostrava</em>', 'where.lead': 'We are in Muglinov. Tell us where you’re coming from and Google Maps will show the way by car, public transport or on foot.', 'where.from': 'Where are you coming from?', 'where.fromPh': 'e.g. Ostrava main station', 'where.car': 'By car', 'where.transit': 'Transit', 'where.walk': 'Walking', 'where.go': 'Get directions ↗', 'where.here': 'From my location ↗',
+    'foot.addr': 'Find us', 'foot.map': 'Open in Google Maps ↗', 'foot.route': 'Get directions', 'foot.contact': 'Contact', 'foot.copy': 'Copy', 'foot.telBook': 'Table reservations', 'foot.telCater': 'Hall hire / catering', 'foot.hours': 'Opening hours', 'foot.monsat': 'Monday – Saturday', 'foot.sun': 'Sunday', 'foot.tagline': 'We serve honest Czech cooking with a touch of the French countryside.', 'foot.gdpr': 'GDPR – Privacy policy',
+  };
+
+  const PL = {
+    'nav.about': 'O nas', 'nav.menu': 'Menu', 'nav.lunch': 'Menu dnia', 'nav.contact': 'Kontakt', 'nav.where': 'Dojazd', 'nav.gallery': 'Galeria', 'nav.book': 'Rezerwacja',
+    'hero.eyebrow': 'Restauracja · Slezská Ostrava', 'hero.t1': 'Kuchnia czeska', 'hero.t2': 'z nutą', 'hero.t3': 'francuskiej wsi',
+    'hero.lead': 'Gotujemy uczciwą kuchnię czeską z nutą francuskiej wsi. Sezonowe produkty, zioła i wino z małych winnic.',
+    'hero.book': 'Zarezerwuj stolik', 'hero.menu': 'Zobacz menu',
+    'marquee': 'lawenda · tymianek · rozmaryn · miód leśny · kozi ser · oliwki · figi · szałwia · ',
+    'about.eyebrow': 'O nas', 'about.title': 'Miejsce na smak, <em>czas</em> i rozmowę',
+    'about.p1': 'Prostorica powstała z prostej myśli: gotować uczciwą kuchnię czeską, zgodnie z sezonem i z szacunkiem do produktu. Inspiracji szukamy na francuskiej wsi, a produkty kupujemy od rolników z okolic Ostrawy.',
+    'about.f1': 'miejsc przy stołach', 'about.f2': 'sezonowe menu w roku', 'about.f3': 'małych winnic',
+    'menu.eyebrow': 'Karta dań', 'menu.title': 'Menu',
+    'dishes.label': 'Kuchnia czeska w nowoczesnym wydaniu. Uczciwie. Lekko. Ze smakiem.',
+    'gallery.eyebrow': 'Galeria', 'gallery.title': 'Atmosfera <em>francuskiej wsi</em>', 'gallery.c1': 'Polne kwiaty na każdym stole', 'gallery.c2': 'Odświętny stół', 'gallery.c3': 'Lawendowe serwetki', 'gallery.c4': 'Salonik', 'gallery.c5': 'Sala na uroczystości', 'gallery.c6': 'Długi stół na rodzinne spotkania',
+    'hall.eyebrow': 'Wynajem sali / catering', 'hall.title': 'Wesela, przyjęcia <em>i imprezy firmowe</em>', 'hall.lead': 'Wynajmiemy całą salę z dekoracją dopasowaną do okazji albo przygotujemy i dowieziemy catering tam, gdzie świętujecie.',
+    'menu.note': 'Pół porcji 70 % ceny dania · gramatura w stanie surowym · alergeny na życzenie u obsługi · opakowanie na wynos 15 Kč',
+    'lunch.eyebrow': 'Menu dnia · pon.–pt.', 'lunch.title': 'Obiad, który zmienia się <em>co tydzień</em>', 'lunch.lead': 'Zupa dnia i sześć dań głównych do wyboru. W dni robocze 11:00–15:00.', 'lunch.from': 'dania od', 'lunch.cta': 'Całe menu dnia →',
+    'quote.text': '„Dobre jedzenie potrzebuje trzech rzeczy: sezonu, cierpliwości i stołu, przy którym nikt się nie spieszy.”', 'quote.by': '— szef kuchni Prostoriki',
+    'book.eyebrow': 'Rezerwacja', 'book.title': 'Przygotujemy dla Was <em>stolik</em>',
+    'book.lead': 'Stolik można zarezerwować także telefonicznie. Wynajem sali i catering ustalamy pod osobnym numerem.', 'book.telBook': 'Rezerwacja stolików', 'book.telCater': 'Wynajem sali / catering', 'book.hours': 'Godziny otwarcia',
+    'form.date': 'Data', 'form.time': 'Godzina', 'form.guests': 'Liczba gości', 'form.name': 'Imię', 'form.phone': 'Telefon',
+    'form.note': 'Uwagi (alergie, uroczystość…)', 'form.submit': 'Wyślij zapytanie', 'form.doneTitle': 'Dziękujemy!', 'form.again': 'Nowa rezerwacja', 'form.gdpr': 'Wysyłając formularz, zgadzasz się na przetwarzanie danych osobowych w celu obsługi rezerwacji (RODO).',
+    'where.eyebrow': 'Dojazd', 'where.title': 'Švédská 42/58a, <em>Slezská Ostrava</em>', 'where.lead': 'Jesteśmy w dzielnicy Muglinov. Wpisz, skąd jedziesz, a Mapy Google pokażą trasę samochodem, komunikacją lub pieszo.', 'where.from': 'Skąd jedziesz?', 'where.fromPh': 'np. dworzec główny Ostrava', 'where.car': 'Samochodem', 'where.transit': 'Komunikacją', 'where.walk': 'Pieszo', 'where.go': 'Wyznacz trasę ↗', 'where.here': 'Z mojej lokalizacji ↗',
+    'foot.addr': 'Dojazd', 'foot.map': 'Otwórz w Mapach Google ↗', 'foot.route': 'Wyznacz trasę', 'foot.contact': 'Kontakt', 'foot.copy': 'Kopiuj', 'foot.telBook': 'Rezerwacja stolików', 'foot.telCater': 'Wynajem sali / catering', 'foot.hours': 'Godziny otwarcia', 'foot.monsat': 'Poniedziałek – sobota', 'foot.sun': 'Niedziela', 'foot.tagline': 'Gotujemy uczciwą kuchnię czeską z nutą francuskiej wsi.', 'foot.gdpr': 'RODO – Zasady przetwarzania danych osobowych',
+  };
+
+  const DICT = { ru: RU, en: EN, pl: PL };
+
   const UI = {
     cs: {
       days: ['Pondělí', 'Úterý', 'Středa', 'Čtvrtek', 'Pátek', 'Sobota', 'Neděle'],
@@ -52,52 +102,70 @@
       copied: 'Скопировано ✓',
       lunch: { todaySoup: 'Суп дня', weekend: 'В выходные дневного меню нет, ждём вас в понедельник.', stale: 'Новое дневное меню скоро появится.', soon: (d) => `Меню действует с ${d}` },
     },
+    en: {
+      days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+      closed: 'closed', openNow: (t) => `Open now · until ${t}`, opensAt: (d, t) => `Closed · we open ${d} at ${t}`,
+      today: 'today', tomorrow: 'tomorrow',
+      errors: { date: 'Please choose a date.', name: 'Please enter your name.', phone: 'Please enter a phone number so we can confirm the booking.', past: 'This date has already passed.' },
+      done: (n, g, d, t) => `${n}, we have your request for ${g} ${g === 1 ? 'guest' : 'guests'} on ${d} at ${t}. We will get back to you to confirm. (Demo page: the request is not sent anywhere.)`,
+      copied: 'Copied ✓',
+      lunch: { todaySoup: 'Today’s soup', weekend: 'No lunch menu at weekends. See you on Monday.', stale: 'The new lunch menu is on its way.', soon: (d) => `Valid from ${d}` },
+    },
+    pl: {
+      days: ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota', 'Niedziela'],
+      closed: 'nieczynne', openNow: (t) => `Teraz otwarte · do ${t}`, opensAt: (d, t) => `Zamknięte · otwieramy ${d} o ${t}`,
+      today: 'dziś', tomorrow: 'jutro',
+      errors: { date: 'Wybierz datę.', name: 'Podaj swoje imię.', phone: 'Podaj numer telefonu, abyśmy mogli potwierdzić rezerwację.', past: 'Ta data już minęła.' },
+      done: (n, g, d, t) => `${n}, przyjęliśmy zapytanie o stolik dla ${g} ${g === 1 ? 'osoby' : 'osób'} na ${d}, godz. ${t}. Odezwiemy się z potwierdzeniem. (Strona demonstracyjna: zapytanie nie jest nigdzie wysyłane.)`,
+      copied: 'Skopiowano ✓',
+      lunch: { todaySoup: 'Zupa dnia', weekend: 'W weekend nie ma menu dnia. Zapraszamy w poniedziałek.', stale: 'Nowe menu dnia właśnie przygotowujemy.', soon: (d) => `Obowiązuje od ${d}` },
+    },
   };
 
-  // Stálý jídelní lístek. p = cena v Kč, nebo text, když se cena mění.
-  const I = (cs, ru, dcs, dru, g, p) => ({ n: { cs, ru }, d: dcs ? { cs: dcs, ru: dru } : null, g, p });
+  // Stálý jídelní lístek. p = cena v Kč, nebo text (ve všech jazycích), když se cena mění.
+  const I = (n, d, g, p) => ({ n, d, g, p });
   const MENU = [
-    { cat: { cs: 'Předkrmy', ru: 'Закуски' }, items: [
-      I('Hovězí tatarák', 'Говяжий тартар', 'sušený žloutek · petrželová majonéza · nakládané hřiby · domácí pečivo', 'сушёный желток · петрушечный майонез · маринованные белые грибы · домашняя выпечка', '90 g', 235),
-      I('Carpaccio z pomalu pečené vepřové krkovice', 'Карпаччо из томлёной свиной шейки', 'křenová majonéza · nakládaná hořčičná semínka · domácí pečivo', 'майонез с хреном · маринованные зёрна горчицы · домашняя выпечка', '120 g', 189),
+    { cat: {"cs": "Předkrmy", "ru": "Закуски", "en": "Starters", "pl": "Przystawki"}, items: [
+      I({"cs": "Hovězí tatarák", "ru": "Говяжий тартар", "en": "Beef tartare", "pl": "Tatar wołowy"}, {"cs": "sušený žloutek · petrželová majonéza · nakládané hřiby · domácí pečivo", "ru": "сушёный желток · петрушечный майонез · маринованные белые грибы · домашняя выпечка", "en": "dried egg yolk · parsley mayonnaise · pickled porcini · homemade bread", "pl": "suszone żółtko · majonez pietruszkowy · marynowane borowiki · domowe pieczywo"}, "90 g", 235),
+      I({"cs": "Carpaccio z pomalu pečené vepřové krkovice", "ru": "Карпаччо из томлёной свиной шейки", "en": "Slow-roasted pork neck carpaccio", "pl": "Carpaccio z wolno pieczonej karkówki"}, {"cs": "křenová majonéza · nakládaná hořčičná semínka · domácí pečivo", "ru": "майонез с хреном · маринованные зёрна горчицы · домашняя выпечка", "en": "horseradish mayonnaise · pickled mustard seeds · homemade bread", "pl": "majonez chrzanowy · marynowane ziarna gorczycy · domowe pieczywo"}, "120 g", 189),
     ] },
-    { cat: { cs: 'Polévky', ru: 'Супы' }, items: [
-      I('Hovězí vývar', 'Говяжий бульон', 'domácí těstovina · kořenová zelenina · hovězí maso', 'домашняя лапша · корнеплоды · говядина', '', 120),
-      I('Dýňový krém', 'Тыквенный крем-суп', 'kokosové mléko · koriandr · nakládaná dýně', 'кокосовое молоко · кинза · маринованная тыква', '', 119),
-      I('Krémová kyselica', 'Сливочная киселица', 'brambory · uzenina', 'картофель · копчёности', '', 115),
+    { cat: {"cs": "Polévky", "ru": "Супы", "en": "Soups", "pl": "Zupy"}, items: [
+      I({"cs": "Hovězí vývar", "ru": "Говяжий бульон", "en": "Beef broth", "pl": "Rosół wołowy"}, {"cs": "domácí těstovina · kořenová zelenina · hovězí maso", "ru": "домашняя лапша · корнеплоды · говядина", "en": "homemade noodles · root vegetables · beef", "pl": "domowy makaron · warzywa korzeniowe · wołowina"}, "", 120),
+      I({"cs": "Dýňový krém", "ru": "Тыквенный крем-суп", "en": "Pumpkin cream soup", "pl": "Krem z dyni"}, {"cs": "kokosové mléko · koriandr · nakládaná dýně", "ru": "кокосовое молоко · кинза · маринованная тыква", "en": "coconut milk · coriander · pickled pumpkin", "pl": "mleko kokosowe · kolendra · marynowana dynia"}, "", 119),
+      I({"cs": "Krémová kyselica", "ru": "Сливочная киселица", "en": "Creamy kyselica sour soup", "pl": "Kremowa kwaśnica (kyselica)"}, {"cs": "brambory · uzenina", "ru": "картофель · копчёности", "en": "potatoes · smoked sausage", "pl": "ziemniaki · wędzonka"}, "", 115),
     ] },
-    { cat: { cs: 'Hlavní chody', ru: 'Основные блюда' }, items: [
-      I('Svíčková na smetaně', 'Свичкова на сметане', 'loupaná hovězí plec · karlovarský knedlík · brusinky', 'говяжья лопатка · карловарский кнедлик · брусника', '200 g', 365),
-      I('Konfitované kachní stehno', 'Утиная ножка конфи', 'červené zelí · povidlová omáčka · variace domácích knedlíků', 'красная капуста · соус из повидла · ассорти домашних кнедликов', '400 g', 389),
-      I('Daňčí hřbet', 'Спинка лани', 'topinambur · bramborová roláda · omáčka z jalovce', 'топинамбур · картофельный рулет · можжевёловый соус', '180 g', 489),
-      I('Čerstvé tagliolini', 'Свежие тальолини', 'krémová omáčka z lesních hub · podzimní lanýž', 'сливочный соус из лесных грибов · осенний трюфель', '', 289),
-      I('Čerstvé tagliolini s kuřecím prsem', 'Свежие тальолини с куриной грудкой', 'krémová omáčka z lesních hub · podzimní lanýž', 'сливочный соус из лесных грибов · осенний трюфель', '', 339),
-      I('Vepřová panenka', 'Свиная вырезка', 'pastiňákové pyré · divoká brokolice · bramborová kroketa s lanýžem', 'пюре из пастернака · дикая брокколи · картофельная крокета с трюфелем', '180 g', 369),
-      I('Králík', 'Кролик', 'pohanka · pečená červená řepa · slanina · hořčice', 'гречка · печёная свёкла · бекон · горчица', '180 g', 359),
-      I('Grilovaná vepřová krkovice', 'Свиная шейка на гриле', 'bramborové noky · omáčka z pečeného česneku · restovaná sezónní zelenina', 'картофельные ньокки · соус из печёного чеснока · обжаренные сезонные овощи', '250 g', 349),
-      I('Pstruh duhový', 'Радужная форель', 'máslové brambory · kopr', 'картофель со сливочным маслом · укроп', '200 g', 368),
-      I('Smažená gouda', 'Жареный сыр гауда', 'máslové brambory · domácí tatarská omáčka', 'картофель со сливочным маслом · домашний соус тартар', '150 g', 279),
-      I('Caesar salát s kuřecím masem', 'Салат «Цезарь» с курицей', 'římský salát · Caesar dresink · parmazán · slanina · domácí krutony · kuřecí prso', 'салат ромэн · соус «Цезарь» · пармезан · бекон · домашние крутоны · куриная грудка', '', 289),
+    { cat: {"cs": "Hlavní chody", "ru": "Основные блюда", "en": "Main courses", "pl": "Dania główne"}, items: [
+      I({"cs": "Svíčková na smetaně", "ru": "Свичкова на сметане", "en": "Svíčková – beef in cream sauce", "pl": "Svíčková – wołowina w sosie śmietanowym"}, {"cs": "loupaná hovězí plec · karlovarský knedlík · brusinky", "ru": "говяжья лопатка · карловарский кнедлик · брусника", "en": "braised beef shoulder · Carlsbad dumpling · cranberries", "pl": "łopatka wołowa · knedel karlowarski · żurawina"}, "200 g", 365),
+      I({"cs": "Konfitované kachní stehno", "ru": "Утиная ножка конфи", "en": "Confit duck leg", "pl": "Udko kacze confit"}, {"cs": "červené zelí · povidlová omáčka · variace domácích knedlíků", "ru": "красная капуста · соус из повидла · ассорти домашних кнедликов", "en": "red cabbage · plum butter sauce · a choice of homemade dumplings", "pl": "czerwona kapusta · sos z powideł · wybór domowych knedli"}, "400 g", 389),
+      I({"cs": "Daňčí hřbet", "ru": "Спинка лани", "en": "Fallow deer loin", "pl": "Comber z daniela"}, {"cs": "topinambur · bramborová roláda · omáčka z jalovce", "ru": "топинамбур · картофельный рулет · можжевёловый соус", "en": "Jerusalem artichoke · potato roulade · juniper sauce", "pl": "topinambur · rolada ziemniaczana · sos jałowcowy"}, "180 g", 489),
+      I({"cs": "Čerstvé tagliolini", "ru": "Свежие тальолини", "en": "Fresh tagliolini", "pl": "Świeże tagliolini"}, {"cs": "krémová omáčka z lesních hub · podzimní lanýž", "ru": "сливочный соус из лесных грибов · осенний трюфель", "en": "creamy wild mushroom sauce · autumn truffle", "pl": "kremowy sos z leśnych grzybów · jesienna trufla"}, "", 289),
+      I({"cs": "Čerstvé tagliolini s kuřecím prsem", "ru": "Свежие тальолини с куриной грудкой", "en": "Fresh tagliolini with chicken breast", "pl": "Świeże tagliolini z piersią kurczaka"}, {"cs": "krémová omáčka z lesních hub · podzimní lanýž", "ru": "сливочный соус из лесных грибов · осенний трюфель", "en": "creamy wild mushroom sauce · autumn truffle", "pl": "kremowy sos z leśnych grzybów · jesienna trufla"}, "", 339),
+      I({"cs": "Vepřová panenka", "ru": "Свиная вырезка", "en": "Pork tenderloin", "pl": "Polędwiczka wieprzowa"}, {"cs": "pastiňákové pyré · divoká brokolice · bramborová kroketa s lanýžem", "ru": "пюре из пастернака · дикая брокколи · картофельная крокета с трюфелем", "en": "parsnip purée · wild broccoli · potato croquette with truffle", "pl": "purée z pasternaku · dzikie brokuły · krokiet ziemniaczany z truflą"}, "180 g", 369),
+      I({"cs": "Králík", "ru": "Кролик", "en": "Rabbit", "pl": "Królik"}, {"cs": "pohanka · pečená červená řepa · slanina · hořčice", "ru": "гречка · печёная свёкла · бекон · горчица", "en": "buckwheat · roasted beetroot · bacon · mustard", "pl": "kasza gryczana · pieczony burak · boczek · musztarda"}, "180 g", 359),
+      I({"cs": "Grilovaná vepřová krkovice", "ru": "Свиная шейка на гриле", "en": "Grilled pork neck", "pl": "Grillowana karkówka"}, {"cs": "bramborové noky · omáčka z pečeného česneku · restovaná sezónní zelenina", "ru": "картофельные ньокки · соус из печёного чеснока · обжаренные сезонные овощи", "en": "potato gnocchi · roasted garlic sauce · sautéed seasonal vegetables", "pl": "kluski ziemniaczane · sos z pieczonego czosnku · smażone warzywa sezonowe"}, "250 g", 349),
+      I({"cs": "Pstruh duhový", "ru": "Радужная форель", "en": "Rainbow trout", "pl": "Pstrąg tęczowy"}, {"cs": "máslové brambory · kopr", "ru": "картофель со сливочным маслом · укроп", "en": "buttered potatoes · dill", "pl": "ziemniaki z masłem · koperek"}, "200 g", 368),
+      I({"cs": "Smažená gouda", "ru": "Жареный сыр гауда", "en": "Fried Gouda", "pl": "Smażony ser gouda"}, {"cs": "máslové brambory · domácí tatarská omáčka", "ru": "картофель со сливочным маслом · домашний соус тартар", "en": "buttered potatoes · homemade tartar sauce", "pl": "ziemniaki z masłem · domowy sos tatarski"}, "150 g", 279),
+      I({"cs": "Caesar salát s kuřecím masem", "ru": "Салат «Цезарь» с курицей", "en": "Caesar salad with chicken", "pl": "Sałatka Cezar z kurczakiem"}, {"cs": "římský salát · Caesar dresink · parmazán · slanina · domácí krutony · kuřecí prso", "ru": "салат ромэн · соус «Цезарь» · пармезан · бекон · домашние крутоны · куриная грудка", "en": "romaine · Caesar dressing · parmesan · bacon · homemade croutons · chicken breast", "pl": "sałata rzymska · sos Cezar · parmezan · boczek · domowe grzanki · pierś z kurczaka"}, "", 289),
     ] },
-    { cat: { cs: 'Speciality', ru: 'Фирменное' }, items: [
-      I('Steak dne', 'Стейк дня', 'sezónní příloha · omáčka dle aktuální nabídky', 'сезонный гарнир · соус по текущему предложению', '', { cs: 'cena dle aktuální nabídky', ru: 'цена по текущему предложению' }),
+    { cat: {"cs": "Speciality", "ru": "Фирменное", "en": "Specialities", "pl": "Specjalności"}, items: [
+      I({"cs": "Steak dne", "ru": "Стейк дня", "en": "Steak of the day", "pl": "Stek dnia"}, {"cs": "sezónní příloha · omáčka dle aktuální nabídky", "ru": "сезонный гарнир · соус по текущему предложению", "en": "seasonal side · sauce of the day", "pl": "sezonowy dodatek · sos według bieżącej oferty"}, "", {"cs": "cena dle aktuální nabídky", "ru": "цена по текущему предложению", "en": "price as per current offer", "pl": "cena według bieżącej oferty"}),
     ] },
-    { cat: { cs: 'Dětské menu', ru: 'Детское меню' }, items: [
-      I('Kuřecí řízek', 'Куриный шницель', 'hranolky · bramborová kaše', 'картофель фри · картофельное пюре', '100 g', 209),
-      I('Smažená gouda', 'Жареная гауда', 'hranolky · bramborová kaše', 'картофель фри · картофельное пюре', '100 g', 209),
-      I('Tagliolini', 'Тальолини', 'rajčatová omáčka · parmazán', 'томатный соус · пармезан', '150 g', 189),
+    { cat: {"cs": "Dětské menu", "ru": "Детское меню", "en": "Kids' menu", "pl": "Menu dla dzieci"}, items: [
+      I({"cs": "Kuřecí řízek", "ru": "Куриный шницель", "en": "Chicken schnitzel", "pl": "Sznycel z kurczaka"}, {"cs": "hranolky · bramborová kaše", "ru": "картофель фри · картофельное пюре", "en": "fries · mashed potatoes", "pl": "frytki · purée ziemniaczane"}, "100 g", 209),
+      I({"cs": "Smažená gouda", "ru": "Жареная гауда", "en": "Fried Gouda", "pl": "Smażony ser gouda"}, {"cs": "hranolky · bramborová kaše", "ru": "картофель фри · картофельное пюре", "en": "fries · mashed potatoes", "pl": "frytki · purée ziemniaczane"}, "100 g", 209),
+      I({"cs": "Tagliolini", "ru": "Тальолини", "en": "Tagliolini", "pl": "Tagliolini"}, {"cs": "rajčatová omáčka · parmazán", "ru": "томатный соус · пармезан", "en": "tomato sauce · parmesan", "pl": "sos pomidorowy · parmezan"}, "150 g", 189),
     ] },
-    { cat: { cs: 'Dezerty', ru: 'Десерты' }, items: [
-      I('Éclair', 'Эклер', 'šlehaný pařížský krém · pistácie', 'взбитый парижский крем · фисташки', '', 159),
-      I('Crème brûlée', 'Крем-брюле', 'pomeranč · crumble z bílé čokolády · perník', 'апельсин · крамбл из белого шоколада · пряник', '', 149),
+    { cat: {"cs": "Dezerty", "ru": "Десерты", "en": "Desserts", "pl": "Desery"}, items: [
+      I({"cs": "Éclair", "ru": "Эклер", "en": "Éclair", "pl": "Ekler"}, {"cs": "šlehaný pařížský krém · pistácie", "ru": "взбитый парижский крем · фисташки", "en": "whipped Parisian cream · pistachio", "pl": "ubity krem paryski · pistacje"}, "", 159),
+      I({"cs": "Crème brûlée", "ru": "Крем-брюле", "en": "Crème brûlée", "pl": "Crème brûlée"}, {"cs": "pomeranč · crumble z bílé čokolády · perník", "ru": "апельсин · крамбл из белого шоколада · пряник", "en": "orange · white chocolate crumble · gingerbread", "pl": "pomarańcza · kruszonka z białej czekolady · piernik"}, "", 149),
     ] },
-    { cat: { cs: 'Chuťovky a omáčky', ru: 'Снеки и соусы' }, items: [
-      I('Domácí hranolky', 'Домашний картофель фри', '', '', '200 g', 69),
-      I('Domácí bramborové lupínky', 'Домашние картофельные чипсы', 'dip · naše tatarka + ďábelská omáčka', 'дип · наш тартар + «дьявольский» соус', '250 g', 189),
-      I('Pražené mandle', 'Жареный миндаль', '', '', '70 g', 99),
-      I('Domácí tatarka', 'Домашний соус тартар', '', '', '50 g', 49),
-      I('Ďábelská omáčka', '«Дьявольский» соус', '', '', '50 g', 49),
-      I('Kečup', 'Кетчуп', '', '', '50 g', 39),
+    { cat: {"cs": "Chuťovky a omáčky", "ru": "Снеки и соусы", "en": "Snacks & sauces", "pl": "Przekąski i sosy"}, items: [
+      I({"cs": "Domácí hranolky", "ru": "Домашний картофель фри", "en": "Homemade fries", "pl": "Domowe frytki"}, null, "200 g", 69),
+      I({"cs": "Domácí bramborové lupínky", "ru": "Домашние картофельные чипсы", "en": "Homemade potato crisps", "pl": "Domowe chipsy ziemniaczane"}, {"cs": "dip · naše tatarka + ďábelská omáčka", "ru": "дип · наш тартар + «дьявольский» соус", "en": "dip · our tartar + devil’s sauce", "pl": "dip · nasz sos tatarski + sos diabelski"}, "250 g", 189),
+      I({"cs": "Pražené mandle", "ru": "Жареный миндаль", "en": "Roasted almonds", "pl": "Prażone migdały"}, null, "70 g", 99),
+      I({"cs": "Domácí tatarka", "ru": "Домашний соус тартар", "en": "Homemade tartar sauce", "pl": "Domowy sos tatarski"}, null, "50 g", 49),
+      I({"cs": "Ďábelská omáčka", "ru": "«Дьявольский» соус", "en": "Devil’s sauce", "pl": "Sos diabelski"}, null, "50 g", 49),
+      I({"cs": "Kečup", "ru": "Кетчуп", "en": "Ketchup", "pl": "Keczup"}, null, "50 g", 39),
     ] },
   ];
 
@@ -105,7 +173,11 @@
   const HOURS = [[11, 21], [11, 21], [11, 21], [11, 21], [11, 21], [11, 21], [12, 20]];
 
   /* ---------- i18n ---------- */
-  let lang = store.get('prostorica-lang') === 'ru' ? 'ru' : 'cs';
+  const LANGS = ['cs', 'ru', 'en', 'pl'];
+  const LOCALE = { cs: 'cs-CZ', ru: 'ru-RU', en: 'en-GB', pl: 'pl-PL' };
+  const stored = store.get('prostorica-lang');
+  let lang = LANGS.includes(stored) ? stored : 'cs';
+  const t = (key) => (DICT[lang] && DICT[lang][key]) || null;
   const nodes = $$('[data-i18n]');
   nodes.forEach((el) => { el.dataset.cs = el.innerHTML; });
   const phNodes = $$('[data-i18n-ph]');
@@ -115,9 +187,9 @@
     document.documentElement.lang = lang;
     nodes.forEach((el) => {
       const key = el.dataset.i18n;
-      el.innerHTML = lang === 'ru' && RU[key] ? RU[key] : el.dataset.cs;
+      el.innerHTML = t(key) || el.dataset.cs;
     });
-    phNodes.forEach((el) => { el.placeholder = lang === 'ru' && RU[el.dataset.i18nPh] ? RU[el.dataset.i18nPh] : el.dataset.csPh; });
+    phNodes.forEach((el) => { el.placeholder = t(el.dataset.i18nPh) || el.dataset.csPh; });
     $$('.lang__btn').forEach((b) => b.classList.toggle('is-active', b.dataset.lang === lang));
     renderTabs(); renderMenu(false); renderLunch(); renderHours(); renderStatus();
   }
@@ -137,7 +209,7 @@
       const b = document.createElement('button');
       b.type = 'button'; b.className = 'tab'; b.role = 'tab'; b.id = `tab-${i}`;
       b.setAttribute('aria-selected', String(i === activeCat));
-      b.textContent = c.cat[lang];
+      b.textContent = tr(c.cat);
       b.addEventListener('click', () => { activeCat = i; updateTabs(); renderMenu(true); });
       tabs.appendChild(b);
     });
@@ -157,11 +229,11 @@
   function renderMenu(animate) {
     list.setAttribute('aria-labelledby', `tab-${activeCat}`);
     list.innerHTML = MENU[activeCat].items.map((it, i) => {
-      const price = typeof it.p === 'number' ? fmt(it.p) : it.p[lang];
+      const price = typeof it.p === 'number' ? fmt(it.p) : tr(it.p);
       return `
       <article class="dish" style="--i:${animate ? i : 0};${animate ? '' : 'animation:none'}">
-        <div class="dish__top"><span class="dish__name">${it.n[lang]}${it.g ? ` <span class="dish__g">— ${it.g}</span>` : ''}</span><span class="dish__dots"></span><span class="dish__price${typeof it.p === 'number' ? '' : ' dish__price--text'}">${price}</span></div>
-        ${it.d ? `<p class="dish__desc">${it.d[lang]}</p>` : ''}
+        <div class="dish__top"><span class="dish__name">${tr(it.n)}${it.g ? ` <span class="dish__g">— ${it.g}</span>` : ''}</span><span class="dish__dots"></span><span class="dish__price${typeof it.p === 'number' ? '' : ' dish__price--text'}">${price}</span></div>
+        ${it.d ? `<p class="dish__desc">${tr(it.d)}</p>` : ''}
       </article>`;
     }).join('');
   }
@@ -169,7 +241,7 @@
   /* ---------- Weekly lunch teaser (data: js/denni-menu-data.js) ---------- */
   const LUNCH = window.DENNI_MENU;
   const pragueISO = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Prague', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
-  const tr = (o) => (lang === 'ru' && o.ru) || o.cs;
+  const tr = (o) => o[lang] || o.cs;
   const dm = (iso) => { const [, m, d] = iso.split('-'); return `${+d}. ${+m}.`; };
   function renderLunch() {
     if (!$('#lunchList') || !LUNCH) return;
@@ -263,7 +335,7 @@
     else if (phone.value.replace(/\D/g, '').length < 9) { msg = u.phone; bad = phone; }
     if (msg) { err.textContent = msg; err.hidden = false; bad.classList.add('is-invalid'); bad.focus(); return; }
     err.hidden = true;
-    const d = picked.toLocaleDateString(lang === 'ru' ? 'ru-RU' : 'cs-CZ', { day: 'numeric', month: 'long' });
+    const d = picked.toLocaleDateString(LOCALE[lang], { day: 'numeric', month: 'long' });
     $('#doneText').textContent = UI[lang].done(name.value.trim(), guests, d, timeIn.value);
     done.hidden = false;
   });
@@ -271,7 +343,7 @@
 
   /* ---------- Copy phone numbers ---------- */
   $$('.copy-btn').forEach((btn) => btn.addEventListener('click', () => {
-    const ok = () => { btn.textContent = UI[lang].copied; setTimeout(() => { btn.textContent = lang === 'ru' ? RU['foot.copy'] : btn.dataset.cs; }, 1800); };
+    const ok = () => { btn.textContent = UI[lang].copied; setTimeout(() => { btn.innerHTML = t('foot.copy') || btn.dataset.cs; }, 1800); };
     const fallback = () => { const r = document.createRange(); r.selectNodeContents(btn.previousElementSibling); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); };
     try { navigator.clipboard.writeText(btn.dataset.copy).then(ok, fallback); } catch { fallback(); }
   }));
