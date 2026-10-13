@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prostorica Restaurace</title>
+<meta name="description" content="Prostorica — restaurace s provensálskou duší. Sezónní kuchyně, levandule, víno a klid.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!--CONTENT-START-->
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#top" aria-label="Prostorica — nahoru">
+    <span class="nav__p">P</span><span class="nav__word">rostorica</span>
+  </a>
+  <nav class="nav__links" id="navLinks" aria-label="Hlavní navigace">
+    <a href="#o-nas" data-i18n="nav.about">O nás</a>
+    <a href="#menu" data-i18n="nav.menu">Menu</a>
+    <a href="#degustace" data-i18n="nav.tasting">Degustace</a>
+    <a href="#kontakt" data-i18n="nav.contact">Kontakt</a>
+  </nav>
+  <div class="nav__tools">
+    <div class="lang" role="group" aria-label="Jazyk">
+      <button type="button" class="lang__btn is-active" data-lang="cs">CZ</button>
+      <button type="button" class="lang__btn" data-lang="ru">RU</button>
+    </div>
+    <a class="btn btn--small" href="#rezervace" data-i18n="nav.book">Rezervace</a>
+    <button type="button" class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <canvas class="hero__petals" id="petals" aria-hidden="true"></canvas>
+    <div class="hero__text">
+      <p class="eyebrow load" style="--d:.1s" data-i18n="hero.eyebrow">Restaurace · Praha</p>
+      <h1 class="hero__title">
+        <span class="line"><span class="load" style="--d:.2s" data-i18n="hero.t1">Chuť Provence</span></span>
+        <span class="line"><em class="load" style="--d:.35s" data-i18n="hero.t2">v klidu</em></span>
+        <span class="line"><span class="load" style="--d:.5s" data-i18n="hero.t3">vašeho večera</span></span>
+      </h1>
+      <p class="hero__lead load" style="--d:.7s" data-i18n="hero.lead">Sezónní kuchyně, bylinky z vlastní zahrádky a víno z malých vinařství. Místo, kde se zpomalí čas.</p>
+      <div class="hero__cta load" style="--d:.85s">
+        <a class="btn magnetic" href="#rezervace"><span data-i18n="hero.book">Rezervovat stůl</span></a>
+        <a class="btn btn--ghost magnetic" href="#menu"><span data-i18n="hero.menu">Prohlédnout menu</span></a>
+      </div>
+      <p class="hero__status load" style="--d:1s"><span class="dot" id="statusDot"></span><span id="statusText">Dnes otevřeno</span></p>
+    </div>
+
+    <div class="hero__mark" id="heroMark" aria-hidden="true">
+      <svg class="ring" viewBox="0 0 500 500">
+        <path class="ring__a" d="M250 30 C 380 28, 472 120, 470 250 C 468 380, 380 470, 250 470 C 120 470, 32 382, 30 252 C 28 130, 112 40, 236 31"/>
+        <path class="ring__b" d="M120 70 C 190 20, 330 18, 410 90 C 490 160, 498 320, 420 410"/>
+        <path class="ring__c" d="M60 330 C 40 260, 52 170, 110 110"/>
+      </svg>
+      <div class="mark__p">P</div>
+      <img class="mark__bouquet sway" src="assets/bouquet.webp" alt="" width="574" height="728">
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span data-i18n="marquee">levandule · tymián · rozmarýn · lesní med · kozí sýr · olivy · fíky · šalvěj ·&nbsp;</span>
+      <span data-i18n="marquee">levandule · tymián · rozmarýn · lesní med · kozí sýr · olivy · fíky · šalvěj ·&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about section" id="o-nas">
+    <div class="about__art">
+      <img class="about__stem sway sway--slow parallax" data-speed="-0.06" src="assets/stem.webp" alt="" width="267" height="963">
+      <img class="about__sprig sway parallax" data-speed="0.08" src="assets/sprig.webp" alt="" width="395" height="321">
+    </div>
+    <div class="about__text">
+      <p class="eyebrow reveal" data-i18n="about.eyebrow">O nás</p>
+      <h2 class="h2 reveal" data-i18n="about.title">Prostor pro chuť, <em>čas</em> a rozhovor</h2>
+      <p class="reveal" data-i18n="about.p1">Prostorica vznikla z jednoduché myšlenky: vařit poctivě, se sezónou a s respektem k surovině. Inspirujeme se jihem Francie, ale nakupujeme u farmářů z okolí.</p>
+      <p class="reveal" data-i18n="about.p2">Menu měníme čtyřikrát do roka. Chléb pečeme každé ráno, bylinky trháme těsně před servisem a levandule z naší zahrádky najdete v dezertech i v limonádě.</p>
+      <dl class="facts reveal">
+        <div><dt class="count" data-to="42">42</dt><dd data-i18n="about.f1">míst u stolu</dd></div>
+        <div><dt class="count" data-to="4">4</dt><dd data-i18n="about.f2">sezónní menu za rok</dd></div>
+        <div><dt class="count" data-to="18">18</dt><dd data-i18n="about.f3">malých vinařství</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu section" id="menu">
+    <div class="menu__head">
+      <p class="eyebrow reveal" data-i18n="menu.eyebrow">Podzimní menu 2026</p>
+      <h2 class="h2 reveal" data-i18n="menu.title">Menu</h2>
+    </div>
+    <div class="tabs reveal" role="tablist" id="tabs">
+      <span class="tabs__ink" id="tabsInk" aria-hidden="true"></span>
+    </div>
+    <div class="menu__list" id="menuList" role="tabpanel"></div>
+    <p class="menu__note" data-i18n="menu.note">Čísla u jídel označují alergeny (1–14) dle nařízení EU 1169/2011. Seznam vám rádi přineseme ke stolu.</p>
+  </section>
+
+  <!-- TASTING -->
+  <section class="tasting" id="degustace">
+    <img class="tasting__sprig sway" src="assets/sprig-small.webp" alt="" width="145" height="288">
+    <div class="tasting__inner section">
+      <div class="tasting__intro">
+        <p class="eyebrow reveal" data-i18n="tasting.eyebrow">Čtvrtek – sobota, od 18:00</p>
+        <h2 class="h2 reveal" data-i18n="tasting.title">Degustační večer o pěti chodech</h2>
+        <p class="reveal" data-i18n="tasting.lead">Nechte se vést kuchyní. Každý chod doplníme sklenkou vína, kterou pro vás vybere náš sommelier.</p>
+        <div class="price reveal">
+          <div><span class="price__num">1 890 Kč</span><span class="price__lbl" data-i18n="tasting.p1">menu</span></div>
+          <div><span class="price__num">2 790 Kč</span><span class="price__lbl" data-i18n="tasting.p2">s párováním vín</span></div>
+        </div>
+      </div>
+      <ol class="courses" id="courses"></ol>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="quote section">
+    <blockquote class="reveal">
+      <p data-i18n="quote.text">„Dobré jídlo potřebuje tři věci: sezónu, trpělivost a stůl, u kterého se nikdo nespěchá.“</p>
+      <footer data-i18n="quote.by">— šéfkuchař Prostoriky</footer>
+    </blockquote>
+  </section>
+
+  <!-- RESERVATION -->
+  <section class="book section" id="rezervace">
+    <div class="book__info">
+      <p class="eyebrow reveal" data-i18n="book.eyebrow">Rezervace</p>
+      <h2 class="h2 reveal" data-i18n="book.title">Připravíme vám <em>stůl</em></h2>
+      <p class="reveal" data-i18n="book.lead">Pro skupiny nad 8 osob nebo soukromé akce nám prosím zavolejte.</p>
+      <table class="hours reveal" id="hours">
+        <caption data-i18n="book.hours">Otevírací doba</caption>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <form class="form reveal" id="bookForm" novalidate>
+      <div class="form__row">
+        <label class="field">
+          <span data-i18n="form.date">Datum</span>
+          <input type="date" id="f-date" name="date" required>
+        </label>
+        <label class="field">
+          <span data-i18n="form.time">Čas</span>
+          <select id="f-time" name="time" required></select>
+        </label>
+      </div>
+      <div class="field">
+        <span data-i18n="form.guests">Počet hostů</span>
+        <div class="guests" id="guests" role="radiogroup"></div>
+      </div>
+      <div class="form__row">
+        <label class="field">
+          <span data-i18n="form.name">Jméno</span>
+          <input type="text" id="f-name" name="name" autocomplete="name" required>
+        </label>
+        <label class="field">
+          <span data-i18n="form.phone">Telefon</span>
+          <input type="tel" id="f-phone" name="phone" autocomplete="tel" placeholder="+420" required>
+        </label>
+      </div>
+      <label class="field">
+        <span data-i18n="form.note">Poznámka (alergie, oslava…)</span>
+        <textarea id="f-note" name="note" rows="2"></textarea>
+      </label>
+      <p class="form__error" id="formError" role="alert" hidden></p>
+      <button class="btn btn--wide magnetic" type="submit"><span data-i18n="form.submit">Odeslat poptávku</span></button>
+
+      <div class="form__done" id="formDone" hidden>
+        <img src="assets/sprig-small.webp" alt="" width="145" height="288">
+        <h3 data-i18n="form.doneTitle">Děkujeme!</h3>
+        <p id="doneText"></p>
+        <button type="button" class="btn btn--ghost" id="formAgain" data-i18n="form.again">Nová rezervace</button>
+      </div>
+    </form>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="foot" id="kontakt">
+  <div class="foot__logo reveal" aria-label="Prostorica restaurace">
+    <svg class="foot__ellipse" viewBox="0 0 1000 260" aria-hidden="true">
+      <path d="M40 150 C 60 60, 420 30, 760 50 C 980 62, 1000 150, 900 190 C 760 240, 300 250, 120 215 C 30 195, 20 160, 60 120"/>
+      <path d="M160 70 C 400 30, 820 40, 940 110"/>
+    </svg>
+    <span class="foot__p">P</span><span class="foot__word">ROSTORICA</span>
+    <span class="foot__sub">RESTAURACE</span>
+  </div>
+  <div class="foot__cols">
+    <div>
+      <h3 data-i18n="foot.addr">Adresa</h3>
+      <p>Levandulová 12<br>110 00 Praha 1</p>
+      <a class="link" href="https://maps.google.com/?q=Praha+1" target="_blank" rel="noopener" data-i18n="foot.map">Otevřít mapu ↗</a>
+    </div>
+    <div>
+      <h3 data-i18n="foot.contact">Kontakt</h3>
+      <p><span class="copy" id="phone">+420 777 123 456</span><br><span class="copy">ahoj@prostorica.cz</span></p>
+      <button type="button" class="link" id="copyPhone" data-i18n="foot.copy">Zkopírovat telefon</button>
+    </div>
+    <div>
+      <h3 data-i18n="foot.follow">Sledujte nás</h3>
+      <p><a class="link" href="https://instagram.com" target="_blank" rel="noopener">Instagram ↗</a><br><a class="link" href="https://facebook.com" target="_blank" rel="noopener">Facebook ↗</a></p>
+    </div>
+  </div>
+  <p class="foot__copy">© 2026 Prostorica · <span data-i18n="foot.made">S láskou k levanduli</span></p>
+</footer>
+<!--CONTENT-END-->
+<script src="js/main.js"></script>
+</body>
+</html>
