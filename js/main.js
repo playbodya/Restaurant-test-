@@ -9,7 +9,7 @@
 
   /* ---------- Content ---------- */
   const RU = {
-    'nav.about': 'О нас', 'nav.menu': 'Меню', 'nav.tasting': 'Дегустация', 'nav.contact': 'Контакты', 'nav.where': 'Как добраться', 'nav.gallery': 'Галерея', 'nav.book': 'Бронь',
+    'nav.about': 'О нас', 'nav.menu': 'Меню', 'nav.lunch': 'Дневное меню', 'nav.contact': 'Контакты', 'nav.where': 'Как добраться', 'nav.gallery': 'Галерея', 'nav.book': 'Бронь',
     'hero.eyebrow': 'Ресторан · Слезска-Острава', 'hero.t1': 'Чешская кухня', 'hero.t2': 'с ноткой', 'hero.t3': 'французской деревни',
     'hero.lead': 'Мы готовим честную чешскую кухню с ноткой французской деревни. Сезонные продукты, травы и вино небольших виноделен.',
     'hero.book': 'Забронировать стол', 'hero.menu': 'Смотреть меню',
@@ -18,14 +18,12 @@
     'about.p1': 'Prostorica родилась из простой идеи: готовить честную чешскую кухню, по сезону и с уважением к продукту. Вдохновение ищем во французской деревне, а продукты покупаем у фермеров из окрестностей Остравы.',
     'about.p2': 'Меню меняется четыре раза в год. Хлеб печём каждое утро, травы срываем прямо перед подачей, а лаванду с нашего огорода вы найдёте и в десертах, и в лимонаде.',
     'about.f1': 'мест за столами', 'about.f2': 'сезонных меню в год', 'about.f3': 'малых виноделен',
-    'menu.eyebrow': 'Осеннее меню 2026', 'menu.title': 'Меню',
+    'menu.eyebrow': 'Основное меню', 'menu.title': 'Меню',
     'dishes.label': 'Чешская кухня в современном прочтении. Честно. Легко. Со вкусом.',
     'gallery.eyebrow': 'Галерея', 'gallery.title': 'Атмосфера <em>французской деревни</em>', 'gallery.c1': 'Полевые цветы на каждом столе', 'gallery.c2': 'Праздничный стол', 'gallery.c3': 'Лавандовые салфетки', 'gallery.c4': 'Салон', 'gallery.c5': 'Зал для праздников', 'gallery.c6': 'Длинный стол для семейных встреч',
     'hall.eyebrow': 'Аренда зала / кейтеринг', 'hall.title': 'Свадьбы, праздники <em>и корпоративы</em>', 'hall.lead': 'Сдадим весь зал с оформлением под ваше событие или приготовим и привезём кейтеринг туда, где празднуете вы.',
-    'menu.note': 'Цифры у блюд обозначают аллергены (1–14) по регламенту ЕС 1169/2011. Полный список принесём к столу.',
-    'tasting.eyebrow': 'Четверг – суббота, с 18:00', 'tasting.title': 'Дегустационный вечер из пяти подач',
-    'tasting.lead': 'Доверьтесь кухне. К каждой подаче — бокал вина, который подберёт наш сомелье.',
-    'tasting.p1': 'меню', 'tasting.p2': 'с винным сопровождением',
+    'menu.note': 'Половина порции — 70 % от цены блюда · вес указан в сыром виде · аллергены по запросу у персонала · упаковка с собой 15 Kč',
+    'lunch.eyebrow': 'Дневное меню · пн–пт', 'lunch.title': 'Обед, который меняется <em>каждую неделю</em>', 'lunch.lead': 'Суп дня и шесть основных блюд на выбор. Будни с 11:00 до 15:00.', 'lunch.from': 'блюда от', 'lunch.cta': 'Всё дневное меню →',
     'quote.text': '«Хорошей еде нужны три вещи: сезон, терпение и стол, за которым никто не спешит».', 'quote.by': '— шеф-повар Prostorica',
     'book.eyebrow': 'Бронирование', 'book.title': 'Мы подготовим для вас <em>стол</em>',
     'book.lead': 'Стол можно забронировать и по телефону. Аренду зала и кейтеринг обсуждаем по отдельному номеру.', 'book.telBook': 'Бронирование столов', 'book.telCater': 'Аренда зала / кейтеринг', 'book.hours': 'Часы работы',
@@ -44,6 +42,7 @@
       errors: { date: 'Vyberte prosím datum.', name: 'Napište prosím své jméno.', phone: 'Zadejte telefon, ať vám můžeme potvrdit rezervaci.', past: 'Toto datum už proběhlo.' },
       done: (n, g, d, t) => `${n}, poptávku na ${g} ${g === 1 ? 'osobu' : g < 5 ? 'osoby' : 'osob'} ${d} v ${t} jsme přijali. Ozveme se vám s potvrzením. (Ukázková stránka: zpráva se nikam neodesílá.)`,
       copied: 'Zkopírováno ✓',
+      lunch: { todaySoup: 'Dnešní polévka', weekend: 'O víkendu denní menu nevaříme, těšíme se v pondělí.', stale: 'Nové denní menu právě připravujeme.', soon: (d) => `Menu platí od ${d}` },
     },
     ru: {
       days: ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
@@ -52,41 +51,55 @@
       errors: { date: 'Выберите, пожалуйста, дату.', name: 'Укажите, пожалуйста, имя.', phone: 'Укажите телефон, чтобы мы могли подтвердить бронь.', past: 'Эта дата уже прошла.' },
       done: (n, g, d, t) => `${n}, запрос на столик для ${g} ${g === 1 ? 'персоны' : 'персон'} ${d} в ${t} принят. Мы свяжемся с вами для подтверждения. (Демо-страница: заявка никуда не отправляется.)`,
       copied: 'Скопировано ✓',
+      lunch: { todaySoup: 'Суп дня', weekend: 'В выходные дневного меню нет, ждём вас в понедельник.', stale: 'Новое дневное меню скоро появится.', soon: (d) => `Меню действует с ${d}` },
     },
   };
 
+  // Stálý jídelní lístek. p = cena v Kč, nebo text, když se cena mění.
+  const I = (cs, ru, dcs, dru, g, p) => ({ n: { cs, ru }, d: dcs ? { cs: dcs, ru: dru } : null, g, p });
   const MENU = [
     { cat: { cs: 'Předkrmy', ru: 'Закуски' }, items: [
-      { n: { cs: 'Kozí sýr s levandulovým medem', ru: 'Козий сыр с лавандовым мёдом' }, d: { cs: 'pečený fík, vlašské ořechy, kváskový chléb', ru: 'печёный инжир, грецкий орех, хлеб на закваске' }, g: '120 g', a: '1, 7, 8', p: 245, v: true },
-      { n: { cs: 'Tatarák z pstruha', ru: 'Тартар из форели' }, d: { cs: 'šalotka, kapary, citronová crème fraîche', ru: 'шалот, каперсы, лимонный крем-фреш' }, g: '90 g', a: '4, 7', p: 285 },
-      { n: { cs: 'Tapenáda a focaccia', ru: 'Тапенад и фокачча' }, d: { cs: 'černé olivy, rozmarýn, olivový olej z Provence', ru: 'чёрные оливки, розмарин, прованское оливковое масло' }, g: '150 g', a: '1', p: 165, v: true },
-      { n: { cs: 'Polévka z pečené dýně', ru: 'Суп из печёной тыквы' }, d: { cs: 'šalvějové máslo, dýňová semínka', ru: 'масло с шалфеем, тыквенные семечки' }, g: '0,3 l', a: '7, 9', p: 145, v: true },
+      I('Hovězí tatarák', 'Говяжий тартар', 'sušený žloutek · petrželová majonéza · nakládané hřiby · domácí pečivo', 'сушёный желток · петрушечный майонез · маринованные белые грибы · домашняя выпечка', '90 g', 235),
+      I('Carpaccio z pomalu pečené vepřové krkovice', 'Карпаччо из томлёной свиной шейки', 'křenová majonéza · nakládaná hořčičná semínka · domácí pečivo', 'майонез с хреном · маринованные зёрна горчицы · домашняя выпечка', '120 g', 189),
+    ] },
+    { cat: { cs: 'Polévky', ru: 'Супы' }, items: [
+      I('Hovězí vývar', 'Говяжий бульон', 'domácí těstovina · kořenová zelenina · hovězí maso', 'домашняя лапша · корнеплоды · говядина', '', 120),
+      I('Dýňový krém', 'Тыквенный крем-суп', 'kokosové mléko · koriandr · nakládaná dýně', 'кокосовое молоко · кинза · маринованная тыква', '', 119),
+      I('Krémová kyselica', 'Сливочная киселица', 'brambory · uzenina', 'картофель · копчёности', '', 115),
     ] },
     { cat: { cs: 'Hlavní chody', ru: 'Основные блюда' }, items: [
-      { n: { cs: 'Kachní prso s tymiánem', ru: 'Утиная грудка с тимьяном' }, d: { cs: 'pyré z celeru, višňová omáčka, pečená mrkev', ru: 'пюре из сельдерея, вишнёвый соус, печёная морковь' }, g: '180 g', a: '7, 9, 12', p: 445 },
-      { n: { cs: 'Ratatouille z pece', ru: 'Рататуй из печи' }, d: { cs: 'lilek, cuketa, rajčata, bazalkové pesto', ru: 'баклажан, цукини, томаты, песто из базилика' }, g: '300 g', a: '7, 8', p: 325, v: true },
-      { n: { cs: 'Candát na másle', ru: 'Судак на сливочном масле' }, d: { cs: 'beurre blanc, pórek, brambory s pažitkou', ru: 'бёр-блан, лук-порей, картофель с шнитт-луком' }, g: '160 g', a: '4, 7, 12', p: 465 },
-      { n: { cs: 'Jehněčí kýta po provensálsku', ru: 'Ягнёнок по-провански' }, d: { cs: 'bylinková krusta, fazole, pečený česnek', ru: 'травяная корочка, фасоль, запечённый чеснок' }, g: '200 g', a: '1, 3, 10', p: 525 },
+      I('Svíčková na smetaně', 'Свичкова на сметане', 'loupaná hovězí plec · karlovarský knedlík · brusinky', 'говяжья лопатка · карловарский кнедлик · брусника', '200 g', 365),
+      I('Konfitované kachní stehno', 'Утиная ножка конфи', 'červené zelí · povidlová omáčka · variace domácích knedlíků', 'красная капуста · соус из повидла · ассорти домашних кнедликов', '400 g', 389),
+      I('Daňčí hřbet', 'Спинка лани', 'topinambur · bramborová roláda · omáčka z jalovce', 'топинамбур · картофельный рулет · можжевёловый соус', '180 g', 489),
+      I('Čerstvé tagliolini', 'Свежие тальолини', 'krémová omáčka z lesních hub · podzimní lanýž', 'сливочный соус из лесных грибов · осенний трюфель', '', 289),
+      I('Čerstvé tagliolini s kuřecím prsem', 'Свежие тальолини с куриной грудкой', 'krémová omáčka z lesních hub · podzimní lanýž', 'сливочный соус из лесных грибов · осенний трюфель', '', 339),
+      I('Vepřová panenka', 'Свиная вырезка', 'pastiňákové pyré · divoká brokolice · bramborová kroketa s lanýžem', 'пюре из пастернака · дикая брокколи · картофельная крокета с трюфелем', '180 g', 369),
+      I('Králík', 'Кролик', 'pohanka · pečená červená řepa · slanina · hořčice', 'гречка · печёная свёкла · бекон · горчица', '180 g', 359),
+      I('Grilovaná vepřová krkovice', 'Свиная шейка на гриле', 'bramborové noky · omáčka z pečeného česneku · restovaná sezónní zelenina', 'картофельные ньокки · соус из печёного чеснока · обжаренные сезонные овощи', '250 g', 349),
+      I('Pstruh duhový', 'Радужная форель', 'máslové brambory · kopr', 'картофель со сливочным маслом · укроп', '200 g', 368),
+      I('Smažená gouda', 'Жареный сыр гауда', 'máslové brambory · domácí tatarská omáčka', 'картофель со сливочным маслом · домашний соус тартар', '150 g', 279),
+      I('Caesar salát s kuřecím masem', 'Салат «Цезарь» с курицей', 'římský salát · Caesar dresink · parmazán · slanina · domácí krutony · kuřecí prso', 'салат ромэн · соус «Цезарь» · пармезан · бекон · домашние крутоны · куриная грудка', '', 289),
+    ] },
+    { cat: { cs: 'Speciality', ru: 'Фирменное' }, items: [
+      I('Steak dne', 'Стейк дня', 'sezónní příloha · omáčka dle aktuální nabídky', 'сезонный гарнир · соус по текущему предложению', '', { cs: 'cena dle aktuální nabídky', ru: 'цена по текущему предложению' }),
+    ] },
+    { cat: { cs: 'Dětské menu', ru: 'Детское меню' }, items: [
+      I('Kuřecí řízek', 'Куриный шницель', 'hranolky · bramborová kaše', 'картофель фри · картофельное пюре', '100 g', 209),
+      I('Smažená gouda', 'Жареная гауда', 'hranolky · bramborová kaše', 'картофель фри · картофельное пюре', '100 g', 209),
+      I('Tagliolini', 'Тальолини', 'rajčatová omáčka · parmazán', 'томатный соус · пармезан', '150 g', 189),
     ] },
     { cat: { cs: 'Dezerty', ru: 'Десерты' }, items: [
-      { n: { cs: 'Levandulová crème brûlée', ru: 'Лавандовый крем-брюле' }, d: { cs: 'karamelizovaný cukr, máslová sušenka', ru: 'карамелизованный сахар, песочное печенье' }, g: '140 g', a: '1, 3, 7', p: 165, v: true },
-      { n: { cs: 'Tarte tatin', ru: 'Тарт татен' }, d: { cs: 'jablka z Polabí, vanilková zmrzlina', ru: 'яблоки из Полабья, ванильное мороженое' }, g: '160 g', a: '1, 3, 7', p: 175, v: true },
-      { n: { cs: 'Sýrový talíř', ru: 'Сырная тарелка' }, d: { cs: 'tři sýry z farmy Hrušov, hroznové chutney', ru: 'три сыра фермы Грушов, виноградный чатни' }, g: '120 g', a: '7, 8', p: 245, v: true },
+      I('Éclair', 'Эклер', 'šlehaný pařížský krém · pistácie', 'взбитый парижский крем · фисташки', '', 159),
+      I('Crème brûlée', 'Крем-брюле', 'pomeranč · crumble z bílé čokolády · perník', 'апельсин · крамбл из белого шоколада · пряник', '', 149),
     ] },
-    { cat: { cs: 'Nápoje', ru: 'Напитки' }, items: [
-      { n: { cs: 'Levandulová limonáda', ru: 'Лавандовый лимонад' }, d: { cs: 'domácí sirup, citron, perlivá voda', ru: 'домашний сироп, лимон, газированная вода' }, g: '0,4 l', a: '—', p: 95, v: true },
-      { n: { cs: 'Ryzlink rýnský, Morava', ru: 'Рислинг рейнский, Моравия' }, d: { cs: 'suché, svěží, minerální', ru: 'сухое, свежее, минеральное' }, g: '0,15 l', a: '12', p: 125 },
-      { n: { cs: 'Côtes de Provence rosé', ru: 'Côtes de Provence розе' }, d: { cs: 'jahody, grep, lehká slanost', ru: 'клубника, грейпфрут, лёгкая солоноватость' }, g: '0,15 l', a: '12', p: 145 },
-      { n: { cs: 'Bylinný čaj ze zahrádky', ru: 'Травяной чай с огорода' }, d: { cs: 'máta, meduňka, levandule', ru: 'мята, мелисса, лаванда' }, g: '0,5 l', a: '—', p: 85, v: true },
+    { cat: { cs: 'Chuťovky a omáčky', ru: 'Снеки и соусы' }, items: [
+      I('Domácí hranolky', 'Домашний картофель фри', '', '', '200 g', 69),
+      I('Domácí bramborové lupínky', 'Домашние картофельные чипсы', 'dip · naše tatarka + ďábelská omáčka', 'дип · наш тартар + «дьявольский» соус', '250 g', 189),
+      I('Pražené mandle', 'Жареный миндаль', '', '', '70 g', 99),
+      I('Domácí tatarka', 'Домашний соус тартар', '', '', '50 g', 49),
+      I('Ďábelská omáčka', '«Дьявольский» соус', '', '', '50 g', 49),
+      I('Kečup', 'Кетчуп', '', '', '50 g', 39),
     ] },
-  ];
-
-  const COURSES = [
-    { n: { cs: 'Chléb, máslo a levandulová sůl', ru: 'Хлеб, масло и лавандовая соль' }, d: { cs: 'kváskový chléb z ranního pečení', ru: 'хлеб на закваске утренней выпечки' }, w: 'Crémant de Loire' },
-    { n: { cs: 'Pstruh, okurka, kopr', ru: 'Форель, огурец, укроп' }, d: { cs: 'marinovaný pstruh z Pošumaví', ru: 'маринованная форель из Пошумавья' }, w: 'Sauvignon, Pálava' },
-    { n: { cs: 'Dýně, šalvěj, lískové ořechy', ru: 'Тыква, шалфей, фундук' }, d: { cs: 'ravioli z domácího těsta', ru: 'равиоли из домашнего теста' }, w: 'Chardonnay, Velké Žernoseky' },
-    { n: { cs: 'Kachna, višně, celer', ru: 'Утка, вишня, сельдерей' }, d: { cs: 'zrající kachní prso, tymiánová šťáva', ru: 'выдержанная утиная грудка, соус с тимьяном' }, w: 'Bandol rouge' },
-    { n: { cs: 'Levandule, med, broskev', ru: 'Лаванда, мёд, персик' }, d: { cs: 'parfait, pečená broskev, medová tuile', ru: 'парфе, печёный персик, медовое тюиль' }, w: 'Muscat de Beaumes-de-Venise' },
   ];
 
   // Mon..Sun, [open, close] in hours; null = closed
@@ -107,7 +120,7 @@
     });
     phNodes.forEach((el) => { el.placeholder = lang === 'ru' && RU[el.dataset.i18nPh] ? RU[el.dataset.i18nPh] : el.dataset.csPh; });
     $$('.lang__btn').forEach((b) => b.classList.toggle('is-active', b.dataset.lang === lang));
-    renderTabs(); renderMenu(false); renderCourses(); renderHours(); renderStatus();
+    renderTabs(); renderMenu(false); renderLunch(); renderHours(); renderStatus();
   }
   $$('.lang__btn').forEach((b) => b.addEventListener('click', () => {
     if (lang === b.dataset.lang) return;
@@ -143,21 +156,37 @@
   addEventListener('resize', moveInk);
 
   function renderMenu(animate) {
-    const veg = lang === 'ru' ? 'вегетарианское' : 'vegetariánské';
-    const al = lang === 'ru' ? 'аллергены' : 'alergeny';
     list.setAttribute('aria-labelledby', `tab-${activeCat}`);
-    list.innerHTML = MENU[activeCat].items.map((it, i) => `
+    list.innerHTML = MENU[activeCat].items.map((it, i) => {
+      const price = typeof it.p === 'number' ? fmt(it.p) : it.p[lang];
+      return `
       <article class="dish" style="--i:${animate ? i : 0};${animate ? '' : 'animation:none'}">
-        <div class="dish__top"><span class="dish__name">${it.n[lang]}</span><span class="dish__dots"></span><span class="dish__price">${fmt(it.p)}</span></div>
-        <p class="dish__desc">${it.d[lang]}</p>
-        <p class="dish__meta"><span>${it.g}</span><span>${al}: ${it.a}</span>${it.v ? `<span class="tag">● ${veg}</span>` : ''}</p>
-      </article>`).join('');
+        <div class="dish__top"><span class="dish__name">${it.n[lang]}${it.g ? ` <span class="dish__g">— ${it.g}</span>` : ''}</span><span class="dish__dots"></span><span class="dish__price${typeof it.p === 'number' ? '' : ' dish__price--text'}">${price}</span></div>
+        ${it.d ? `<p class="dish__desc">${it.d[lang]}</p>` : ''}
+      </article>`;
+    }).join('');
   }
 
-  function renderCourses() {
-    $('#courses').innerHTML = COURSES.map((c) => `
-      <li class="course reveal"><div><h3>${c.n[lang]}</h3><p>${c.d[lang]}</p><p class="wine">${c.w}</p></div></li>`).join('');
-    observeReveals($$('#courses .reveal'));
+  /* ---------- Weekly lunch teaser (data: js/denni-menu-data.js) ---------- */
+  const LUNCH = window.DENNI_MENU;
+  const pragueISO = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Prague', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+  const tr = (o) => (lang === 'ru' && o.ru) || o.cs;
+  const dm = (iso) => { const [, m, d] = iso.split('-'); return `${+d}. ${+m}.`; };
+  function renderLunch() {
+    if (!$('#lunchList') || !LUNCH) return;
+    const L = UI[lang].lunch, today = pragueISO();
+    const dayIdx = Math.round((Date.parse(today) - Date.parse(LUNCH.from)) / 864e5);
+    const soup = LUNCH.soups.find((s) => s.day === dayIdx);
+    let status;
+    if (today > LUNCH.to) status = L.stale;
+    else if (today < LUNCH.from) status = L.soon(dm(LUNCH.from));
+    else status = soup ? `${L.todaySoup}: <strong>${tr(soup)}</strong>` : L.weekend;
+    $('#lunchWeek').textContent = `${dm(LUNCH.from)} – ${dm(LUNCH.to)} ${LUNCH.to.slice(0, 4)} · ${LUNCH.hours}`;
+    $('#lunchStatus').innerHTML = status;
+    $('#lunchFrom').textContent = fmt(Math.min(...LUNCH.mains.map((m) => m.p)));
+    $('#lunchList').innerHTML = LUNCH.mains.map((m, i) => `
+      <li class="lunch__item reveal"><span class="lunch__no">${i + 1}.</span><span class="lunch__name">${tr(m)}<small>${m.g} · ${tr(m.side)}</small></span><span class="lunch__price">${fmt(m.p)}</span></li>`).join('');
+    observeReveals($$('#lunchList .reveal'));
   }
 
   /* ---------- Hours & live status (Prague time) ---------- */
