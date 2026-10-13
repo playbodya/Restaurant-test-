@@ -21,7 +21,7 @@
   <nav class="nav__links" id="navLinks" aria-label="Hlavní navigace">
     <a href="#o-nas" data-i18n="nav.about">O nás</a>
     <a href="#menu" data-i18n="nav.menu">Menu</a>
-    <a href="#degustace" data-i18n="nav.tasting">Degustace</a>
+    <a href="#galerie" data-i18n="nav.gallery">Galerie</a>
     <a href="#kudy" data-i18n="nav.where">Kudy k nám</a>
     <a href="#kontakt" data-i18n="nav.contact">Kontakt</a>
   </nav>
@@ -76,8 +76,10 @@
   <!-- ABOUT -->
   <section class="about section" id="o-nas">
     <div class="about__art">
-      <img class="about__stem sway sway--slow parallax" data-speed="-0.06" src="assets/stem.webp" alt="" width="267" height="963">
-      <img class="about__sprig sway parallax" data-speed="0.08" src="assets/sprig.webp" alt="" width="395" height="321">
+      <figure class="arch photo-reveal">
+        <img src="assets/photos/lustr.webp" alt="Prostřený kulatý stůl pod květinovým lustrem" width="1276" height="1726" loading="lazy" data-lb="0">
+      </figure>
+      <img class="about__stem sway sway--slow" src="assets/stem.webp" alt="" width="267" height="963">
     </div>
     <div class="about__text">
       <p class="eyebrow reveal" data-i18n="about.eyebrow">O nás</p>
@@ -102,6 +104,17 @@
       <span class="tabs__ink" id="tabsInk" aria-hidden="true"></span>
     </div>
     <div class="menu__list" id="menuList" role="tabpanel"></div>
+    <p class="dishes__label" data-i18n="dishes.label">Z naší kuchyně</p>
+    <div class="dishes" aria-label="Z naší kuchyně">
+      <div class="dishes__track" id="dishTrack">
+        <img src="assets/photos/jidlo-1.webp" alt="Polévka na talíři s modrým ubrusem" width="776" height="506" loading="lazy">
+        <img src="assets/photos/jidlo-2.webp" alt="Rizoto s krevetami" width="412" height="378" loading="lazy">
+        <img src="assets/photos/jidlo-3.webp" alt="Hlavní chod s omáčkou" width="556" height="362" loading="lazy">
+        <img src="assets/photos/jidlo-4.webp" alt="Pečené maso se zeleninou" width="270" height="362" loading="lazy">
+        <img src="assets/photos/jidlo-5.webp" alt="Maso na omáčce s fazolkami" width="264" height="348" loading="lazy">
+        <img src="assets/photos/jidlo-6.webp" alt="Předkrm s domácím chlebem" width="556" height="374" loading="lazy">
+      </div>
+    </div>
     <p class="menu__note" data-i18n="menu.note">Čísla u jídel označují alergeny (1–14) dle nařízení EU 1169/2011. Seznam vám rádi přineseme ke stolu.</p>
   </section>
 
@@ -119,6 +132,22 @@
         </div>
       </div>
       <ol class="courses" id="courses"></ol>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery section" id="galerie">
+    <div class="gallery__head">
+      <p class="eyebrow reveal" data-i18n="gallery.eyebrow">Galerie</p>
+      <h2 class="h2 reveal" data-i18n="gallery.title">Atmosféra <em>francouzského venkova</em></h2>
+    </div>
+    <div class="gallery__grid">
+      <figure class="g g--wide photo-reveal"><img src="assets/photos/stul-kvetiny.webp" alt="Stůl s lučními květinami a lampou" width="1222" height="810" loading="lazy" data-lb="1"><figcaption data-i18n="gallery.c1">Luční květiny na každém stole</figcaption></figure>
+      <figure class="g g--tall photo-reveal"><img src="assets/photos/kytice.webp" alt="Kytice na kulatém stole" width="1152" height="1724" loading="lazy" data-lb="2"><figcaption data-i18n="gallery.c2">Slavnostní tabule</figcaption></figure>
+      <figure class="g photo-reveal"><img src="assets/photos/stul-levandule.webp" alt="Dřevěný stůl s levandulovými ubrousky" width="1222" height="810" loading="lazy" data-lb="3"><figcaption data-i18n="gallery.c3">Levandulové ubrousky</figcaption></figure>
+      <figure class="g photo-reveal"><img src="assets/photos/salonek.webp" alt="Salonek s prostřenými stoly" width="1222" height="810" loading="lazy" data-lb="4"><figcaption data-i18n="gallery.c4">Salonek</figcaption></figure>
+      <figure class="g g--tall photo-reveal"><img src="assets/photos/sal-kulaty.webp" alt="Sál s kulatým stolem a květinovým věncem" width="1156" height="1480" loading="lazy" data-lb="5"><figcaption data-i18n="gallery.c5">Sál pro oslavy</figcaption></figure>
+      <figure class="g g--wide photo-reveal"><img src="assets/photos/dlouhy-stul.webp" alt="Dlouhý stůl v pruhované místnosti" width="1222" height="810" loading="lazy" data-lb="6"><figcaption data-i18n="gallery.c6">Dlouhý stůl pro rodinná setkání</figcaption></figure>
     </div>
   </section>
 
@@ -197,6 +226,20 @@
   </section>
 </main>
 
+<!-- HALL / CATERING -->
+<section class="hall section" id="sal">
+  <figure class="hall__photo" id="hallPhoto">
+    <img src="assets/photos/sal-zavesy.webp" alt="Velký sál za odhrnutými závěsy" width="1222" height="810" loading="lazy" data-lb="7">
+    <span class="curtain curtain--l" aria-hidden="true"></span><span class="curtain curtain--r" aria-hidden="true"></span>
+  </figure>
+  <div class="hall__text">
+    <p class="eyebrow reveal" data-i18n="hall.eyebrow">Pronájem sálu / catering</p>
+    <h2 class="h2 reveal" data-i18n="hall.title">Svatby, oslavy <em>a firemní večery</em></h2>
+    <p class="reveal" data-i18n="hall.lead">Pronajmeme vám celý sál s výzdobou na míru, nebo uvaříme a přivezeme catering tam, kde budete slavit vy.</p>
+    <a class="btn magnetic reveal" href="tel:+420602530838"><span>+420 602 530 838</span></a>
+  </div>
+</section>
+
 <!-- LOCATION -->
 <section class="where section" id="kudy">
   <div class="where__text">
@@ -265,6 +308,13 @@
   </div>
   <p class="foot__copy">© 2026 Restaurace Prostorica · prostorica.cz · <span data-i18n="foot.gdpr">GDPR – Zásady zpracování osobních údajů</span></p>
 </footer>
+<div class="lb" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Fotografie">
+  <button type="button" class="lb__btn lb__close" id="lbClose" aria-label="Zavřít">×</button>
+  <button type="button" class="lb__btn lb__prev" id="lbPrev" aria-label="Předchozí">‹</button>
+  <figure class="lb__fig"><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
+  <button type="button" class="lb__btn lb__next" id="lbNext" aria-label="Další">›</button>
+  <p class="lb__count" id="lbCount"></p>
+</div>
 <!--CONTENT-END-->
 <script src="js/main.js"></script>
 </body>

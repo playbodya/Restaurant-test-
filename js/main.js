@@ -9,7 +9,7 @@
 
   /* ---------- Content ---------- */
   const RU = {
-    'nav.about': 'О нас', 'nav.menu': 'Меню', 'nav.tasting': 'Дегустация', 'nav.contact': 'Контакты', 'nav.where': 'Как добраться', 'nav.book': 'Бронь',
+    'nav.about': 'О нас', 'nav.menu': 'Меню', 'nav.tasting': 'Дегустация', 'nav.contact': 'Контакты', 'nav.where': 'Как добраться', 'nav.gallery': 'Галерея', 'nav.book': 'Бронь',
     'hero.eyebrow': 'Ресторан · Слезска-Острава', 'hero.t1': 'Чешская кухня', 'hero.t2': 'с ноткой', 'hero.t3': 'французской деревни',
     'hero.lead': 'Мы готовим честную чешскую кухню с ноткой французской деревни. Сезонные продукты, травы и вино небольших виноделен.',
     'hero.book': 'Забронировать стол', 'hero.menu': 'Смотреть меню',
@@ -19,6 +19,9 @@
     'about.p2': 'Меню меняется четыре раза в год. Хлеб печём каждое утро, травы срываем прямо перед подачей, а лаванду с нашего огорода вы найдёте и в десертах, и в лимонаде.',
     'about.f1': 'мест за столами', 'about.f2': 'сезонных меню в год', 'about.f3': 'малых виноделен',
     'menu.eyebrow': 'Осеннее меню 2026', 'menu.title': 'Меню',
+    'dishes.label': 'Из нашей кухни',
+    'gallery.eyebrow': 'Галерея', 'gallery.title': 'Атмосфера <em>французской деревни</em>', 'gallery.c1': 'Полевые цветы на каждом столе', 'gallery.c2': 'Праздничный стол', 'gallery.c3': 'Лавандовые салфетки', 'gallery.c4': 'Салон', 'gallery.c5': 'Зал для праздников', 'gallery.c6': 'Длинный стол для семейных встреч',
+    'hall.eyebrow': 'Аренда зала / кейтеринг', 'hall.title': 'Свадьбы, праздники <em>и корпоративы</em>', 'hall.lead': 'Сдадим весь зал с оформлением под ваше событие или приготовим и привезём кейтеринг туда, где празднуете вы.',
     'menu.note': 'Цифры у блюд обозначают аллергены (1–14) по регламенту ЕС 1169/2011. Полный список принесём к столу.',
     'tasting.eyebrow': 'Четверг – суббота, с 18:00', 'tasting.title': 'Дегустационный вечер из пяти подач',
     'tasting.lead': 'Доверьтесь кухне. К каждой подаче — бокал вина, который подберёт наш сомелье.',
@@ -375,9 +378,55 @@
     resize(); addEventListener('resize', resize); frame();
   }
 
+  /* ---------- Dishes strip: duplicate for a seamless loop ---------- */
+  const track = $('#dishTrack');
+  if (track && !reduced) $$('img', track).forEach((im) => { const c = im.cloneNode(); c.alt = ''; c.setAttribute('aria-hidden', 'true'); track.appendChild(c); });
+
+  /* ---------- Hall curtains ---------- */
+  const hall = $('#hallPhoto');
+  if (reduced || !('IntersectionObserver' in window)) hall.classList.add('is-open');
+  else new IntersectionObserver(([en], o) => { if (en.isIntersecting) { hall.classList.add('is-open'); o.disconnect(); } }, { threshold: 0.35 }).observe(hall);
+
+  /* ---------- Lightbox ---------- */
+  const lb = $('#lightbox'), lbImg = $('#lbImg'), lbCap = $('#lbCap'), lbCount = $('#lbCount');
+  const shots = $$('[data-lb]').sort((a, b) => a.dataset.lb - b.dataset.lb);
+  let cur = 0, lastFocus = null;
+  const capOf = (im) => im.closest('figure')?.querySelector('figcaption')?.textContent || im.alt;
+  function show(i) {
+    cur = (i + shots.length) % shots.length;
+    const im = shots[cur];
+    lbImg.src = im.currentSrc || im.src; lbImg.alt = im.alt;
+    lbImg.style.animation = 'none'; void lbImg.offsetWidth; lbImg.style.animation = '';
+    lbCap.textContent = capOf(im); lbCount.textContent = `${cur + 1} / ${shots.length}`;
+  }
+  function openLb(i) { lastFocus = document.activeElement; show(i); lb.hidden = false; document.body.style.overflow = 'hidden'; $('#lbClose').focus(); }
+  function closeLb() { lb.hidden = true; document.body.style.overflow = ''; lastFocus?.focus?.(); }
+  shots.forEach((im, i) => {
+    im.tabIndex = 0;
+    im.addEventListener('click', () => openLb(i));
+    im.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLb(i); } });
+  });
+  $('#lbClose').addEventListener('click', closeLb);
+  $('#lbPrev').addEventListener('click', () => show(cur - 1));
+  $('#lbNext').addEventListener('click', () => show(cur + 1));
+  lb.addEventListener('click', (e) => { if (e.target === lb || e.target.classList.contains('lb__fig')) closeLb(); });
+  addEventListener('keydown', (e) => {
+    if (lb.hidden) return;
+    if (e.key === 'Escape') closeLb();
+    if (e.key === 'ArrowLeft') show(cur - 1);
+    if (e.key === 'ArrowRight') show(cur + 1);
+  });
+  let tx = null;
+  lb.addEventListener('touchstart', (e) => { tx = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend', (e) => {
+    if (tx === null) return;
+    const dx = e.changedTouches[0].clientX - tx; tx = null;
+    if (Math.abs(dx) > 50) show(cur + (dx < 0 ? 1 : -1));
+  });
+
   /* ---------- Boot ---------- */
   initForm();
   applyLang();
-  observeReveals($$('.reveal'));
+  observeReveals($$('.reveal, .photo-reveal'));
   petals();
 })();
