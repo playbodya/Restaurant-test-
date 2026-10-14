@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Denní menu · Prostorica</title>
+<meta name="description" content="Denní menu restaurace Prostorica, Slezská Ostrava. Polévka dne a šest hlavních chodů, Po–Pá 11:00–15:00.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/denni.css">
+</head>
+<body class="dm-page">
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav is-scrolled" id="nav">
+  <a class="nav__brand" href="index.html" aria-label="Prostorica — hlavní stránka">
+    <span class="nav__p">P</span><span class="nav__word">rostorica</span>
+  </a>
+  <a class="dm-back" href="index.html" data-i18n="back">← Hlavní stránka</a>
+  <div class="nav__tools">
+    <div class="lang" role="group" aria-label="Jazyk">
+      <button type="button" class="lang__btn is-active" data-lang="cs">CZ</button>
+      <button type="button" class="lang__btn" data-lang="ru">RU</button>
+      <button type="button" class="lang__btn" data-lang="en">EN</button>
+      <button type="button" class="lang__btn" data-lang="pl">PL</button>
+    </div>
+    <a class="btn btn--small" href="index.html#rezervace" data-i18n="book">Rezervace</a>
+  </div>
+</header>
+
+<main class="dm">
+  <section class="dm-hero">
+    <img class="dm-hero__sprig sway" src="assets/sprig.webp" alt="" width="395" height="321">
+    <p class="eyebrow load" style="--d:.05s" data-i18n="eyebrow">Polední nabídka · Po–Pá</p>
+    <h1 class="dm-hero__title">
+      <span class="line"><span class="load" style="--d:.15s" data-i18n="t1">Denní</span></span>
+      <span class="line"><em class="load" style="--d:.3s" data-i18n="t2">menu</em></span>
+    </h1>
+    <div class="dm-hero__meta load" style="--d:.5s">
+      <p class="dm-week" id="dmWeek"></p>
+      <p class="dm-hours"><span class="dot" id="dmDot"></span><span id="dmStatus"></span></p>
+    </div>
+  </section>
+
+  <section class="dm-block">
+    <div class="dm-block__head">
+      <h2 class="dm-h2" data-i18n="soups">Polévky</h2>
+      <p class="dm-hint" data-i18n="soupsHint">Každý den jiná. Dnešní je zvýrazněná.</p>
+    </div>
+    <ol class="dm-days" id="dmDays"></ol>
+  </section>
+
+  <section class="dm-block">
+    <div class="dm-block__head">
+      <h2 class="dm-h2" data-i18n="mains">Hlavní chody</h2>
+      <p class="dm-hint" data-i18n="mainsHint">Objednávejte podle čísla. Platí celý týden.</p>
+    </div>
+    <ol class="dm-mains" id="dmMains"></ol>
+  </section>
+
+  <section class="dm-block dm-notes">
+    <details class="dm-allergens">
+      <summary data-i18n="allergens">Seznam alergenů (1–14)</summary>
+      <ol id="dmAllergens"></ol>
+    </details>
+    <ul class="dm-small">
+      <li data-i18n="n1">Hmotnost v syrovém stavu</li>
+      <li data-i18n="n2">Alergeny vám rády upřesní obsluha</li>
+      <li data-i18n="n3">Obaly na jídlo 15 Kč</li>
+    </ul>
+  </section>
+
+  <section class="dm-cta">
+    <h2 class="h2" data-i18n="ctaTitle">Přijďte na <em>oběd</em></h2>
+    <p data-i18n="ctaLead">Stůl na poledne vám rádi podržíme. Stačí zavolat.</p>
+    <div class="dm-cta__row">
+      <a class="btn magnetic" href="tel:+420725988208"><span>+420 725 988 208</span></a>
+      <a class="btn btn--ghost magnetic" href="index.html#kudy"><span data-i18n="route">Kudy k nám</span></a>
+    </div>
+    <p class="dm-addr">Švédská 42/58a, 712 00 Slezská Ostrava</p>
+  </section>
+</main>
+
+<footer class="dm-foot">
+  <p>© 2026 Restaurace Prostorica · <a class="link" href="https://www.instagram.com/prostoricaostrava/" target="_blank" rel="noopener">Instagram ↗</a> · <a class="link" href="https://www.facebook.com/share/1Hs7WHj2ds/" target="_blank" rel="noopener">Facebook ↗</a></p>
+</footer>
+
+<script src="js/denni-menu-data.js"></script>
+<script src="js/denni.js"></script>
+</body>
+</html>
