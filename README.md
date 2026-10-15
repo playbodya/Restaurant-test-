@@ -30,3 +30,8 @@ photos: ['assets/photos/prostory/modry-1.webp', 'assets/photos/prostory/modry-2.
 ```
 
 První fotka je velká, další dvě menší. Dokud fotka chybí, zobrazí se rámeček „Fotografie doplníme“.
+
+## Nápojový a vinný lístek
+
+Stránka `napoje.html` (odkaz `napoje.html#vina` otevře rovnou vína). Ceny a položky upravujte v **`js/napoje-data.js`**:
+`drinks` = nápojový lístek, `wine` = vinný lístek. Návod k položkám je nahoře v souboru.

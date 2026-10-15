@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nápojový a vinný lístek · Prostorica</title>
+<meta name="description" content="Nápojový a vinný lístek restaurace Prostorica, Slezská Ostrava: káva, čaje, limonády, pivo, koktejly, destiláty a moravská i italská vína.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&family=Courier+Prime:wght@400;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/denni.css">
+<link rel="stylesheet" href="css/napoje.css">
+</head>
+<body class="dm-page">
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav is-scrolled" id="nav">
+  <a class="nav__brand" href="index.html" aria-label="Prostorica — hlavní stránka">
+    <span class="nav__p">P</span><span class="nav__word">rostorica</span>
+  </a>
+  <a class="dm-back" href="index.html#menu" data-i18n="back">← Jídelní lístek</a>
+  <div class="nav__tools">
+    <div class="lang" role="group" aria-label="Jazyk">
+      <button type="button" class="lang__btn is-active" data-lang="cs">CZ</button>
+      <button type="button" class="lang__btn" data-lang="ru">RU</button>
+      <button type="button" class="lang__btn" data-lang="en">EN</button>
+      <button type="button" class="lang__btn" data-lang="pl">PL</button>
+    </div>
+    <a class="btn btn--small" href="index.html#rezervace" data-i18n="book">Rezervace</a>
+  </div>
+</header>
+
+<main class="dm nl">
+  <section class="dm-hero nl-hero">
+    <img class="dm-hero__sprig sway" src="assets/sprig.webp" alt="" width="395" height="321">
+    <p class="eyebrow load" style="--d:.05s" data-i18n="eyebrow">Restaurace Prostorica</p>
+    <h1 class="dm-hero__title nl-title">
+      <span class="line"><span class="load" style="--d:.15s" data-i18n="t1">Nápojový</span></span>
+      <span class="line"><em class="load" style="--d:.3s" data-i18n="t2">a vinný lístek</em></span>
+    </h1>
+  </section>
+
+  <div class="nl-switch" role="tablist" aria-label="Lístek">
+    <button type="button" class="nl-switch__btn" role="tab" id="tab-drinks" aria-controls="panel-drinks" data-panel="drinks"><span data-i18n="drinks">Nápoje</span><small id="countDrinks"></small></button>
+    <button type="button" class="nl-switch__btn" role="tab" id="tab-wine" aria-controls="panel-wine" data-panel="wine"><span data-i18n="wine">Vína</span><small id="countWine"></small></button>
+    <span class="nl-switch__ink" aria-hidden="true"></span>
+  </div>
+  <nav class="nl-jump" id="jump" aria-label="Kategorie"></nav>
+
+  <section class="nl-panel" id="panel-drinks" role="tabpanel" aria-labelledby="tab-drinks"></section>
+  <section class="nl-panel nl-panel--wine" id="panel-wine" role="tabpanel" aria-labelledby="tab-wine" hidden></section>
+</main>
+
+<footer class="dm-foot">
+  <p>© 2026 Restaurace Prostorica · <a class="link" href="denni-menu.html" data-i18n="lunch">Denní menu</a> · <a class="link" href="https://www.instagram.com/prostoricaostrava/" target="_blank" rel="noopener">Instagram ↗</a> · <a class="link" href="https://www.facebook.com/share/1Hs7WHj2ds/" target="_blank" rel="noopener">Facebook ↗</a></p>
+</footer>
+
+<script src="js/napoje-data.js"></script>
+<script src="js/napoje.js"></script>
+</body>
+</html>

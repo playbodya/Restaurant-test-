@@ -1,0 +1,87 @@
+/* Drinks & wine list: two-panel card. Drinks read like the printed lístek (volume · name · price);
+   wines echo the printed vinná karta with a typewriter face for names and winery lines. */
+:root { --type: "Courier Prime", "Courier New", Courier, monospace; }
+
+.nl-hero { border-bottom: 0; padding-bottom: clamp(16px, 3vw, 32px); }
+.nl-title { font-size: clamp(3rem, 1.6rem + 6.4vw, 7rem); }
+
+/* Two-way switch */
+.nl-switch {
+  position: sticky; top: calc(64px + env(safe-area-inset-top, 0px)); z-index: 5;
+  display: grid; grid-template-columns: 1fr 1fr; margin-top: 1rem;
+  border: 1px solid var(--line); border-radius: 999px; background: var(--paper); padding: 4px; max-width: 520px;
+}
+.nl-switch__btn {
+  position: relative; z-index: 1; display: flex; align-items: baseline; justify-content: center; gap: .5rem;
+  border: 0; background: transparent; cursor: pointer; padding: .85rem 1rem; border-radius: 999px;
+  font: 400 var(--step--1)/1 var(--body); letter-spacing: .18em; text-transform: uppercase; color: var(--muted);
+  transition: color .4s var(--ease);
+}
+.nl-switch__btn small { font-size: .7rem; letter-spacing: .04em; opacity: .7; font-variant-numeric: tabular-nums; }
+.nl-switch__btn[aria-selected="true"] { color: var(--paper); }
+.nl-switch__ink {
+  position: absolute; top: 4px; bottom: 4px; left: 4px; width: calc(50% - 4px); border-radius: 999px;
+  background: var(--ink); transition: transform .55s var(--ease), background .4s;
+}
+.nl-switch[data-active="wine"] .nl-switch__ink { transform: translateX(100%); background: var(--lavender); }
+
+/* Category jump chips */
+.nl-jump { display: flex; gap: .5rem; overflow-x: auto; scrollbar-width: none; padding: 1.4rem 0 .4rem; margin-bottom: .6rem; }
+.nl-jump::-webkit-scrollbar { display: none; }
+.nl-jump a {
+  flex: none; padding: .5em 1em; border: 1px solid var(--line); border-radius: 999px; text-decoration: none;
+  font-size: .8rem; color: var(--muted); background: var(--paper); transition: all .3s var(--ease);
+}
+.nl-jump a:hover, .nl-jump a.is-current { border-color: var(--lavender); color: var(--lavender); }
+
+/* Categories */
+.nl-panel { padding-bottom: clamp(48px, 7vw, 96px); }
+.nl-cat { padding-block: clamp(32px, 5vw, 56px); border-bottom: 1px solid var(--line); scroll-margin-top: 150px; animation: up .7s var(--ease) both; animation-delay: calc(var(--i) * 50ms); }
+.nl-ready .nl-cat { animation: none; }
+.nl-cat__head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .4rem 2rem; margin-bottom: 1.2rem; }
+.nl-cat__title { margin: 0; font-family: var(--display); font-weight: 400; font-size: var(--step-2); line-height: 1.1; }
+.nl-cat__note { margin: 0; color: var(--muted); font-size: var(--step--1); font-style: italic; }
+
+/* Drink rows */
+.nl-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(32px, 6vw, 80px); }
+.nl-item { display: grid; grid-template-columns: 4.2rem minmax(0, 1fr) auto; gap: .2rem .9rem; align-items: baseline; padding: .85rem 0; border-bottom: 1px dotted color-mix(in srgb, var(--muted) 35%, transparent); min-width: 0; }
+.nl-item__v { font-size: .8rem; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.nl-item__n { font-family: var(--display); font-size: 1.12rem; line-height: 1.3; min-width: 0; }
+.nl-item__d { display: block; font-family: var(--body); font-size: .86rem; color: var(--muted); line-height: 1.45; margin-top: .15rem; }
+.nl-prices { display: grid; gap: .15rem; justify-items: end; }
+.nl-price { font-family: var(--display); font-size: 1.12rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.nl-price small { font-family: var(--body); font-size: .75rem; color: var(--muted); margin-right: .45rem; }
+
+/* Wines */
+.nl-panel--wine .nl-cat__title { font-family: var(--type); font-size: var(--step-1); letter-spacing: .14em; text-transform: uppercase; color: var(--lavender); }
+.nl-wines { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 2vw, 24px); }
+.nl-wine {
+  display: grid; gap: .5rem; align-content: start; padding: 1.4rem 1.4rem 1.3rem; min-width: 0;
+  border: 1px solid var(--line); border-radius: 4px; background: var(--paper);
+  transition: border-color .4s var(--ease), transform .5s var(--ease);
+}
+.nl-wine:hover { border-color: var(--lavender-soft); transform: translateY(-3px); }
+.nl-wine__top { display: flex; justify-content: space-between; gap: 1rem; align-items: start; }
+.nl-wine__n { margin: 0; font-family: var(--type); font-weight: 700; font-size: 1.05rem; letter-spacing: .04em; text-transform: uppercase; line-height: 1.3; min-width: 0; }
+.nl-wine__s { font-family: var(--type); font-size: .9rem; color: var(--ink); }
+.nl-wine__w { font-family: var(--type); font-size: .8rem; color: var(--lavender); letter-spacing: .02em; }
+.nl-wine__d { margin: .2rem 0 0; font-size: .92rem; color: var(--muted); line-height: 1.6; }
+.nl-wine .nl-price { font-family: var(--type); font-size: 1rem; }
+.nl-badge { display: inline-block; padding: .25em .7em; border-radius: 999px; background: var(--sage); color: var(--paper); font-family: var(--body); font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; vertical-align: middle; margin-left: .4rem; }
+
+.nl-recommend {
+  margin-top: clamp(32px, 5vw, 56px); padding: 1.6rem 1.8rem; border-radius: 4px 80px 4px 4px;
+  background: var(--band); color: var(--band-fg); display: grid; gap: .3rem;
+}
+.nl-recommend span { font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; color: var(--band-accent); }
+.nl-recommend strong { font-family: var(--type); font-weight: 400; font-size: var(--step-1); letter-spacing: .04em; }
+.nl-winenote { margin: 1.4rem 0 0; font-size: .85rem; color: var(--muted); max-width: 70ch; }
+
+@media (max-width: 900px) {
+  .nl-list, .nl-wines { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .nl-item { grid-template-columns: 3.4rem minmax(0, 1fr) auto; gap: .2rem .6rem; }
+  .nl-wine { padding: 1.1rem; }
+  .nl-switch { top: calc(58px + env(safe-area-inset-top, 0px)); }
+}

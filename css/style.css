@@ -525,6 +525,8 @@ em { font-style: italic; color: var(--lavender); }
 @media (max-width: 640px) { .rooms__grid { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .slot--empty { animation: none; } .room.is-pending .room__range { transform: none; } }
 
+.menu__more { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.8rem; }
+
 /* Scroll reveal: only hidden when JS has confirmed it's below the fold */
 .reveal { transition: opacity 1s var(--ease), transform 1s var(--ease); }
 .reveal.is-pending { opacity: 0; transform: translateY(28px); }
