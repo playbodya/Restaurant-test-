@@ -35,3 +35,10 @@ První fotka je velká, další dvě menší. Dokud fotka chybí, zobrazí se r�
 
 Stránka `napoje.html` (odkaz `napoje.html#vina` otevře rovnou vína). Ceny a položky upravujte v **`js/napoje-data.js`**:
 `drinks` = nápojový lístek, `wine` = vinný lístek. Návod k položkám je nahoře v souboru.
+
+## GDPR a cookies
+
+- `gdpr.html`: Zásady zpracování osobních údajů (text z PDF ze dne 23. 2. 2026, PDF je v `assets/docs/`).
+- `js/consent.js`: cookie lišta. Kategorie: nezbytné / marketingové (Seznam Sklik retargeting, `rtgId 1704701`) / externí obsah (Google Maps).
+  Sklik ani mapa se nenačtou, dokud návštěvník nedá souhlas. Volbu lze změnit odkazem „Nastavení cookies“ v patičce.
+- Fonty jsou uložené přímo na webu (`assets/fonts/`, `css/fonts.css`) – web se kvůli nim nepřipojuje ke Googlu.

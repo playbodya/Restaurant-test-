@@ -28,7 +28,7 @@
     'book.eyebrow': 'Бронирование', 'book.title': 'Мы подготовим для вас <em>стол</em>',
     'book.lead': 'Стол можно забронировать и по телефону. Аренду зала и кейтеринг обсуждаем по отдельному номеру.', 'book.telBook': 'Бронирование столов', 'book.telCater': 'Аренда зала / кейтеринг', 'book.hours': 'Часы работы',
     'form.date': 'Дата', 'form.time': 'Время', 'form.guests': 'Количество гостей', 'form.name': 'Имя', 'form.phone': 'Телефон',
-    'form.note': 'Комментарий (аллергии, праздник…)', 'form.submit': 'Отправить запрос', 'form.doneTitle': 'Спасибо!', 'form.again': 'Новая бронь', 'form.gdpr': 'Отправляя форму, вы соглашаетесь на обработку персональных данных для оформления брони (GDPR).',
+    'form.note': 'Комментарий (аллергии, праздник…)', 'form.submit': 'Отправить запрос', 'form.doneTitle': 'Спасибо!', 'form.again': 'Новая бронь', 'form.gdpr': 'Ваши данные мы используем только для оформления брони.', 'form.gdprLink': 'Политика обработки персональных данных', 'where.mapNote': 'Карта Google загрузится только после вашего согласия. При этом Google получит ваш IP-адрес.', 'where.mapBtn': 'Показать карту', 'foot.cookies': 'Настройки cookies',
     'where.eyebrow': 'Как добраться', 'where.title': 'Švédská 42/58a, <em>Слезска-Острава</em>', 'where.lead': 'Мы находимся в районе Муглинов. Укажите, откуда едете, и Google Карты покажут маршрут на машине, общественном транспорте или пешком.', 'where.from': 'Откуда вы едете?', 'where.fromPh': 'например, Hlavní nádraží Ostrava', 'where.car': 'На машине', 'where.transit': 'Транспорт', 'where.walk': 'Пешком', 'where.go': 'Построить маршрут ↗', 'where.here': 'От моего места ↗',
     'foot.addr': 'Как добраться', 'foot.map': 'Открыть в Google Картах ↗', 'foot.route': 'Построить маршрут', 'foot.contact': 'Контакты', 'foot.copy': 'Скопировать', 'foot.telBook': 'Бронирование столов', 'foot.telCater': 'Аренда зала / кейтеринг', 'foot.hours': 'Часы работы', 'foot.monsat': 'Понедельник – суббота', 'foot.sun': 'Воскресенье', 'foot.tagline': 'Мы готовим честную чешскую кухню с ноткой французской деревни.', 'foot.gdpr': 'GDPR – Политика обработки персональных данных',
     
@@ -54,7 +54,7 @@
     'book.eyebrow': 'Reservations', 'book.title': 'We’ll have a <em>table</em> ready for you',
     'book.lead': 'You can also book by phone. Hall hire and catering have their own number.', 'book.telBook': 'Table reservations', 'book.telCater': 'Hall hire / catering', 'book.hours': 'Opening hours',
     'form.date': 'Date', 'form.time': 'Time', 'form.guests': 'Guests', 'form.name': 'Name', 'form.phone': 'Phone',
-    'form.note': 'Note (allergies, celebration…)', 'form.submit': 'Send request', 'form.doneTitle': 'Thank you!', 'form.again': 'New booking', 'form.gdpr': 'By sending the form you agree to the processing of your personal data to handle the booking (GDPR).',
+    'form.note': 'Note (allergies, celebration…)', 'form.submit': 'Send request', 'form.doneTitle': 'Thank you!', 'form.again': 'New booking', 'form.gdpr': 'We only use your details to handle the booking.', 'form.gdprLink': 'Privacy policy', 'where.mapNote': 'The Google map loads only with your consent. Google then receives your IP address.', 'where.mapBtn': 'Show map', 'foot.cookies': 'Cookie settings',
     'where.eyebrow': 'Find us', 'where.title': 'Švédská 42/58a, <em>Slezská Ostrava</em>', 'where.lead': 'We are in Muglinov. Tell us where you’re coming from and Google Maps will show the way by car, public transport or on foot.', 'where.from': 'Where are you coming from?', 'where.fromPh': 'e.g. Ostrava main station', 'where.car': 'By car', 'where.transit': 'Transit', 'where.walk': 'Walking', 'where.go': 'Get directions ↗', 'where.here': 'From my location ↗',
     'foot.addr': 'Find us', 'foot.map': 'Open in Google Maps ↗', 'foot.route': 'Get directions', 'foot.contact': 'Contact', 'foot.copy': 'Copy', 'foot.telBook': 'Table reservations', 'foot.telCater': 'Hall hire / catering', 'foot.hours': 'Opening hours', 'foot.monsat': 'Monday – Saturday', 'foot.sun': 'Sunday', 'foot.tagline': 'We serve honest Czech cooking with a touch of the French countryside.', 'foot.gdpr': 'GDPR – Privacy policy',
   };
@@ -79,7 +79,7 @@
     'book.eyebrow': 'Rezerwacja', 'book.title': 'Przygotujemy dla Was <em>stolik</em>',
     'book.lead': 'Stolik można zarezerwować także telefonicznie. Wynajem sali i catering ustalamy pod osobnym numerem.', 'book.telBook': 'Rezerwacja stolików', 'book.telCater': 'Wynajem sali / catering', 'book.hours': 'Godziny otwarcia',
     'form.date': 'Data', 'form.time': 'Godzina', 'form.guests': 'Liczba gości', 'form.name': 'Imię', 'form.phone': 'Telefon',
-    'form.note': 'Uwagi (alergie, uroczystość…)', 'form.submit': 'Wyślij zapytanie', 'form.doneTitle': 'Dziękujemy!', 'form.again': 'Nowa rezerwacja', 'form.gdpr': 'Wysyłając formularz, zgadzasz się na przetwarzanie danych osobowych w celu obsługi rezerwacji (RODO).',
+    'form.note': 'Uwagi (alergie, uroczystość…)', 'form.submit': 'Wyślij zapytanie', 'form.doneTitle': 'Dziękujemy!', 'form.again': 'Nowa rezerwacja', 'form.gdpr': 'Twoje dane wykorzystamy wyłącznie do obsługi rezerwacji.', 'form.gdprLink': 'Zasady przetwarzania danych osobowych', 'where.mapNote': 'Mapa Google załaduje się dopiero po Twojej zgodzie. Google otrzyma wtedy Twój adres IP.', 'where.mapBtn': 'Pokaż mapę', 'foot.cookies': 'Ustawienia cookies',
     'where.eyebrow': 'Dojazd', 'where.title': 'Švédská 42/58a, <em>Slezská Ostrava</em>', 'where.lead': 'Jesteśmy w dzielnicy Muglinov. Wpisz, skąd jedziesz, a Mapy Google pokażą trasę samochodem, komunikacją lub pieszo.', 'where.from': 'Skąd jedziesz?', 'where.fromPh': 'np. dworzec główny Ostrava', 'where.car': 'Samochodem', 'where.transit': 'Komunikacją', 'where.walk': 'Pieszo', 'where.go': 'Wyznacz trasę ↗', 'where.here': 'Z mojej lokalizacji ↗',
     'foot.addr': 'Dojazd', 'foot.map': 'Otwórz w Mapach Google ↗', 'foot.route': 'Wyznacz trasę', 'foot.contact': 'Kontakt', 'foot.copy': 'Kopiuj', 'foot.telBook': 'Rezerwacja stolików', 'foot.telCater': 'Wynajem sali / catering', 'foot.hours': 'Godziny otwarcia', 'foot.monsat': 'Poniedziałek – sobota', 'foot.sun': 'Niedziela', 'foot.tagline': 'Gotujemy uczciwą kuchnię czeską z nutą francuskiej wsi.', 'foot.gdpr': 'RODO – Zasady przetwarzania danych osobowych',
   };
@@ -572,6 +572,19 @@
     const dx = e.changedTouches[0].clientX - tx; tx = null;
     if (Math.abs(dx) > 50) show(cur + (dx < 0 ? 1 : -1));
   });
+
+  /* ---------- Google map, only with consent for external content ---------- */
+  const MAP_SRC = 'https://www.google.com/maps?q=Restaurace%20Prostorica%2C%20%C5%A0v%C3%A9dsk%C3%A1%2042%2F58a%2C%20712%2000%20Slezsk%C3%A1%20Ostrava&z=15&output=embed';
+  function showMap() {
+    const gate = $('#mapGate');
+    if (!gate) return;
+    const f = document.createElement('iframe');
+    f.className = 'where__iframe'; f.title = 'Mapa: Restaurace Prostorica'; f.loading = 'lazy';
+    f.referrerPolicy = 'no-referrer-when-downgrade'; f.src = MAP_SRC;
+    gate.replaceWith(f);
+  }
+  $('#mapLoad')?.addEventListener('click', () => { window.ProstoricaConsent ? window.ProstoricaConsent.grant('external') : showMap(); });
+  window.ProstoricaConsent?.onChange((c) => { if (c.external) showMap(); });
 
   /* ---------- Boot ---------- */
   initForm();

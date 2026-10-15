@@ -5,9 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Prostorica Restaurace</title>
 <meta name="description" content="Restaurace Prostorica, Slezská Ostrava. Poctivá česká kuchyně s nádechem francouzského venkova. Rezervace: +420 725 988 208.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="css/fonts.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -232,7 +230,7 @@
       </label>
       <p class="form__error" id="formError" role="alert" hidden></p>
       <button class="btn btn--wide magnetic" type="submit"><span data-i18n="form.submit">Odeslat poptávku</span></button>
-      <p class="form__gdpr" data-i18n="form.gdpr">Odesláním souhlasíte se zpracováním osobních údajů za účelem vyřízení rezervace (GDPR).</p>
+      <p class="form__gdpr"><span data-i18n="form.gdpr">Vaše údaje použijeme jen k vyřízení rezervace.</span> <a href="gdpr.html" data-i18n="form.gdprLink">Zásady zpracování osobních údajů</a></p>
 
       <div class="form__done" id="formDone" hidden>
         <img src="assets/sprig-small.webp" alt="" width="145" height="288">
@@ -282,8 +280,10 @@
   </div>
   <div class="where__map reveal">
     <!--MAP-EMBED-START-->
-    <iframe class="where__iframe" title="Mapa: Restaurace Prostorica" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-      src="https://www.google.com/maps?q=Restaurace%20Prostorica%2C%20%C5%A0v%C3%A9dsk%C3%A1%2042%2F58a%2C%20712%2000%20Slezsk%C3%A1%20Ostrava&amp;z=15&amp;output=embed"></iframe>
+    <div class="where__gate" id="mapGate">
+      <p data-i18n="where.mapNote">Mapa Google se načte až po vašem souhlasu. Google při tom získá vaši IP adresu.</p>
+      <button type="button" class="btn btn--small" id="mapLoad"><span data-i18n="where.mapBtn">Zobrazit mapu</span></button>
+    </div>
     <!--MAP-EMBED-END-->
     <div class="where__card">
       <img src="assets/sprig-small.webp" alt="" width="145" height="288">
@@ -319,7 +319,7 @@
       <p><a class="link" href="https://www.instagram.com/prostoricaostrava/" target="_blank" rel="noopener">Instagram ↗</a> &nbsp; <a class="link" href="https://www.facebook.com/share/1Hs7WHj2ds/" target="_blank" rel="noopener">Facebook ↗</a></p>
     </div>
   </div>
-  <p class="foot__copy">© 2026 Restaurace Prostorica · prostorica.cz · <span data-i18n="foot.gdpr">GDPR – Zásady zpracování osobních údajů</span></p>
+  <p class="foot__copy">© 2026 Restaurace Prostorica · prostorica.cz · <a class="link" href="gdpr.html" data-i18n="foot.gdpr">GDPR – Zásady zpracování osobních údajů</a> · <button type="button" class="link" data-cookie-settings data-i18n="foot.cookies">Nastavení cookies</button></p>
 </footer>
 <div class="lb" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Fotografie">
   <button type="button" class="lb__btn lb__close" id="lbClose" aria-label="Zavřít">×</button>
@@ -329,6 +329,7 @@
   <p class="lb__count" id="lbCount"></p>
 </div>
 <!--CONTENT-END-->
+<script src="js/consent.js"></script>
 <script src="js/denni-menu-data.js"></script>
 <script src="js/prostory-data.js"></script>
 <script src="js/main.js"></script>

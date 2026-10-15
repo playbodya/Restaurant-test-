@@ -546,6 +546,38 @@ em { font-style: italic; color: var(--lavender); }
   .nav__brand .logo, .nav.is-scrolled .nav__brand .logo { width: 120px; }
 }
 
+/* Map gate (Google Maps loads only after consent) */
+.where__gate { position: absolute; inset: 0; z-index: 1; display: grid; place-content: center; justify-items: center; gap: 1rem; padding: 2rem 2rem 9rem; text-align: center; }
+.where__gate p { margin: 0; max-width: 30ch; font-size: .9rem; color: var(--muted); background: color-mix(in srgb, var(--paper) 85%, transparent); padding: .6rem .9rem; border-radius: 4px; }
+.form__gdpr a { color: var(--lavender); }
+
+/* Cookie banner */
+.cc {
+  position: fixed; left: 16px; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 300;
+  max-width: 560px; margin-left: auto; animation: up .6s var(--ease) both;
+}
+.cc__inner {
+  display: grid; gap: .9rem; padding: 1.4rem 1.5rem; border-radius: 6px;
+  background: var(--paper); color: var(--ink); border: 1px solid var(--line);
+  box-shadow: 0 30px 70px -30px color-mix(in srgb, var(--ink) 55%, transparent);
+}
+.cc__title { margin: 0; font-family: var(--display); font-size: var(--step-1); }
+.cc__text { margin: 0; font-size: .9rem; color: var(--muted); line-height: 1.55; }
+.cc__text a { color: var(--lavender); }
+.cc__opts { display: grid; gap: .7rem; padding: .4rem 0; border-block: 1px solid var(--line); }
+.cc__opt { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .7rem; align-items: start; font-size: .9rem; cursor: pointer; }
+.cc__opt input { margin-top: .25rem; accent-color: var(--lavender); width: 1.05rem; height: 1.05rem; }
+.cc__opt em { color: var(--muted); font-style: normal; font-size: .8rem; }
+.cc__opt small { display: block; color: var(--muted); font-size: .82rem; margin-top: .15rem; line-height: 1.45; }
+.cc__btns { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: flex-end; }
+.cc__btn {
+  border: 1px solid var(--ink); background: var(--ink); color: var(--paper); border-radius: 999px; cursor: pointer;
+  padding: .75em 1.3em; font: 400 .74rem/1 var(--body); letter-spacing: .14em; text-transform: uppercase;
+}
+.cc__btn--ghost { background: transparent; color: var(--ink); }
+.cc__btn:hover { border-color: var(--lavender); background: var(--lavender); color: var(--paper); }
+@media (max-width: 520px) { .cc__btns { justify-content: stretch; } .cc__btn { flex: 1 1 auto; } }
+
 /* Scroll reveal: only hidden when JS has confirmed it's below the fold */
 .reveal { transition: opacity 1s var(--ease), transform 1s var(--ease); }
 .reveal.is-pending { opacity: 0; transform: translateY(28px); }
