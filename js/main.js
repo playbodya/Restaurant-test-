@@ -9,7 +9,7 @@
 
   /* ---------- Content ---------- */
   const RU = {
-    'nav.about': 'О нас', 'nav.menu': 'Меню', 'nav.lunch': 'Дневное меню', 'nav.contact': 'Контакты', 'nav.where': 'Как добраться', 'nav.gallery': 'Галерея', 'nav.book': 'Бронь',
+    'nav.about': 'О нас', 'nav.menu': 'Меню', 'nav.lunch': 'Дневное меню', 'nav.rooms': 'Залы', 'nav.contact': 'Контакты', 'nav.where': 'Как добраться', 'nav.gallery': 'Галерея', 'nav.book': 'Бронь',
     'hero.eyebrow': 'Ресторан · Слезска-Острава', 'hero.t1': 'Чешская кухня', 'hero.t2': 'с ноткой', 'hero.t3': 'французской деревни',
     'hero.lead': 'Мы готовим честную чешскую кухню с ноткой французской деревни. Сезонные продукты, травы и вино небольших виноделен.',
     'hero.book': 'Забронировать стол', 'hero.menu': 'Смотреть меню',
@@ -20,6 +20,7 @@
     'menu.eyebrow': 'Основное меню', 'menu.title': 'Меню',
     'dishes.label': 'Чешская кухня в современном прочтении. Честно. Легко. Со вкусом.',
     'gallery.eyebrow': 'Галерея', 'gallery.title': 'Атмосфера <em>французской деревни</em>', 'gallery.c1': 'Полевые цветы на каждом столе', 'gallery.c2': 'Праздничный стол', 'gallery.c3': 'Лавандовые салфетки', 'gallery.c4': 'Салон', 'gallery.c5': 'Зал для праздников', 'gallery.c6': 'Длинный стол для семейных встреч',
+    'rooms.eyebrow': 'Залы', 'rooms.title': 'Салоны и зал <em>для вашего праздника</em>', 'rooms.lead': 'Три помещения на десять–сто гостей. Выберите подходящее для вашего события, остальное обсудим по телефону.',
     'hall.eyebrow': 'Аренда зала / кейтеринг', 'hall.title': 'Свадьбы, праздники <em>и корпоративы</em>', 'hall.lead': 'Сдадим весь зал с оформлением под ваше событие или приготовим и привезём кейтеринг туда, где празднуете вы.',
     'menu.note': 'Половина порции — 70 % от цены блюда · вес указан в сыром виде · аллергены по запросу у персонала · упаковка с собой 15 Kč',
     'lunch.eyebrow': 'Дневное меню · пн–пт', 'lunch.title': 'Обед, который меняется <em>каждую неделю</em>', 'lunch.lead': 'Суп дня и шесть основных блюд на выбор. Будни с 11:00 до 15:00.', 'lunch.from': 'блюда от', 'lunch.cta': 'Всё дневное меню →',
@@ -34,7 +35,7 @@
   };
 
   const EN = {
-    'nav.about': 'About', 'nav.menu': 'Menu', 'nav.lunch': 'Lunch menu', 'nav.contact': 'Contact', 'nav.where': 'Find us', 'nav.gallery': 'Gallery', 'nav.book': 'Book',
+    'nav.about': 'About', 'nav.menu': 'Menu', 'nav.lunch': 'Lunch menu', 'nav.rooms': 'Spaces', 'nav.contact': 'Contact', 'nav.where': 'Find us', 'nav.gallery': 'Gallery', 'nav.book': 'Book',
     'hero.eyebrow': 'Restaurant · Slezská Ostrava', 'hero.t1': 'Czech cuisine', 'hero.t2': 'with a touch', 'hero.t3': 'of the French countryside',
     'hero.lead': 'We serve honest Czech cooking with a touch of the French countryside. Seasonal produce, herbs and wine from small wineries.',
     'hero.book': 'Book a table', 'hero.menu': 'See the menu',
@@ -45,6 +46,7 @@
     'menu.eyebrow': 'À la carte', 'menu.title': 'Menu',
     'dishes.label': 'Czech cuisine, the modern way. Honest. Light. Full of flavour.',
     'gallery.eyebrow': 'Gallery', 'gallery.title': 'The feel of the <em>French countryside</em>', 'gallery.c1': 'Wild flowers on every table', 'gallery.c2': 'A festive table', 'gallery.c3': 'Lavender napkins', 'gallery.c4': 'The salon', 'gallery.c5': 'A hall for celebrations', 'gallery.c6': 'A long table for family gatherings',
+    'rooms.eyebrow': 'Our spaces', 'rooms.title': 'Salons and a hall <em>for your celebration</em>', 'rooms.lead': 'Three spaces for ten to a hundred guests. Pick the one that suits your event and we’ll arrange the rest by phone.',
     'hall.eyebrow': 'Hall hire / catering', 'hall.title': 'Weddings, parties <em>and company evenings</em>', 'hall.lead': 'Hire the whole hall, decorated to suit your event, or let us cook and deliver catering wherever you celebrate.',
     'menu.note': 'Half portion 70 % of the price · weights are raw weights · ask our staff about allergens · takeaway box 15 Kč',
     'lunch.eyebrow': 'Lunch menu · Mon–Fri', 'lunch.title': 'A lunch that changes <em>every week</em>', 'lunch.lead': 'Soup of the day and six main courses to choose from. Weekdays 11:00–15:00.', 'lunch.from': 'mains from', 'lunch.cta': 'Full lunch menu →',
@@ -58,7 +60,7 @@
   };
 
   const PL = {
-    'nav.about': 'O nas', 'nav.menu': 'Menu', 'nav.lunch': 'Menu dnia', 'nav.contact': 'Kontakt', 'nav.where': 'Dojazd', 'nav.gallery': 'Galeria', 'nav.book': 'Rezerwacja',
+    'nav.about': 'O nas', 'nav.menu': 'Menu', 'nav.lunch': 'Menu dnia', 'nav.rooms': 'Sale', 'nav.contact': 'Kontakt', 'nav.where': 'Dojazd', 'nav.gallery': 'Galeria', 'nav.book': 'Rezerwacja',
     'hero.eyebrow': 'Restauracja · Slezská Ostrava', 'hero.t1': 'Kuchnia czeska', 'hero.t2': 'z nutą', 'hero.t3': 'francuskiej wsi',
     'hero.lead': 'Gotujemy uczciwą kuchnię czeską z nutą francuskiej wsi. Sezonowe produkty, zioła i wino z małych winnic.',
     'hero.book': 'Zarezerwuj stolik', 'hero.menu': 'Zobacz menu',
@@ -69,6 +71,7 @@
     'menu.eyebrow': 'Karta dań', 'menu.title': 'Menu',
     'dishes.label': 'Kuchnia czeska w nowoczesnym wydaniu. Uczciwie. Lekko. Ze smakiem.',
     'gallery.eyebrow': 'Galeria', 'gallery.title': 'Atmosfera <em>francuskiej wsi</em>', 'gallery.c1': 'Polne kwiaty na każdym stole', 'gallery.c2': 'Odświętny stół', 'gallery.c3': 'Lawendowe serwetki', 'gallery.c4': 'Salonik', 'gallery.c5': 'Sala na uroczystości', 'gallery.c6': 'Długi stół na rodzinne spotkania',
+    'rooms.eyebrow': 'Sale', 'rooms.title': 'Saloniki i sala <em>na Wasze przyjęcie</em>', 'rooms.lead': 'Trzy przestrzenie dla dziesięciu do stu gości. Wybierzcie tę, która pasuje do Waszego wydarzenia, resztę ustalimy telefonicznie.',
     'hall.eyebrow': 'Wynajem sali / catering', 'hall.title': 'Wesela, przyjęcia <em>i imprezy firmowe</em>', 'hall.lead': 'Wynajmiemy całą salę z dekoracją dopasowaną do okazji albo przygotujemy i dowieziemy catering tam, gdzie świętujecie.',
     'menu.note': 'Pół porcji 70 % ceny dania · gramatura w stanie surowym · alergeny na życzenie u obsługi · opakowanie na wynos 15 Kč',
     'lunch.eyebrow': 'Menu dnia · pon.–pt.', 'lunch.title': 'Obiad, który zmienia się <em>co tydzień</em>', 'lunch.lead': 'Zupa dnia i sześć dań głównych do wyboru. W dni robocze 11:00–15:00.', 'lunch.from': 'dania od', 'lunch.cta': 'Całe menu dnia →',
@@ -91,6 +94,7 @@
       errors: { date: 'Vyberte prosím datum.', name: 'Napište prosím své jméno.', phone: 'Zadejte telefon, ať vám můžeme potvrdit rezervaci.', past: 'Toto datum už proběhlo.' },
       done: (n, g, d, t) => `${n}, poptávku na ${g} ${g === 1 ? 'osobu' : g < 5 ? 'osoby' : 'osob'} ${d} v ${t} jsme přijali. Ozveme se vám s potvrzením. (Ukázková stránka: zpráva se nikam neodesílá.)`,
       copied: 'Zkopírováno ✓',
+      rooms: { unit: 'hostů', fit: 'Vhodné pro', priv: 'Nejvíce soukromí', cta: 'Poptat prostor', soon: 'Fotografie doplníme', scale: 'kapacita', tags: { birthday: 'Narozeniny', family: 'Rodinný oběd', reunion: 'Sraz absolventů', wedding: 'Svatby', ball: 'Maturitní plesy', company: 'Firemní večírky', business: 'Obchodní schůzky' } },
       lunch: { todaySoup: 'Dnešní polévka', weekend: 'O víkendu denní menu nevaříme, těšíme se v pondělí.', stale: 'Nové denní menu právě připravujeme.', soon: (d) => `Menu platí od ${d}` },
     },
     ru: {
@@ -100,6 +104,7 @@
       errors: { date: 'Выберите, пожалуйста, дату.', name: 'Укажите, пожалуйста, имя.', phone: 'Укажите телефон, чтобы мы могли подтвердить бронь.', past: 'Эта дата уже прошла.' },
       done: (n, g, d, t) => `${n}, запрос на столик для ${g} ${g === 1 ? 'персоны' : 'персон'} ${d} в ${t} принят. Мы свяжемся с вами для подтверждения. (Демо-страница: заявка никуда не отправляется.)`,
       copied: 'Скопировано ✓',
+      rooms: { unit: 'гостей', fit: 'Подходит для', priv: 'Больше всего приватности', cta: 'Узнать о зале', soon: 'Фото скоро появятся', scale: 'вместимость', tags: { birthday: 'Дни рождения', family: 'Семейный обед', reunion: 'Встреча выпускников', wedding: 'Свадьбы', ball: 'Выпускные балы', company: 'Корпоративы', business: 'Бизнес-встречи' } },
       lunch: { todaySoup: 'Суп дня', weekend: 'В выходные дневного меню нет, ждём вас в понедельник.', stale: 'Новое дневное меню скоро появится.', soon: (d) => `Меню действует с ${d}` },
     },
     en: {
@@ -109,6 +114,7 @@
       errors: { date: 'Please choose a date.', name: 'Please enter your name.', phone: 'Please enter a phone number so we can confirm the booking.', past: 'This date has already passed.' },
       done: (n, g, d, t) => `${n}, we have your request for ${g} ${g === 1 ? 'guest' : 'guests'} on ${d} at ${t}. We will get back to you to confirm. (Demo page: the request is not sent anywhere.)`,
       copied: 'Copied ✓',
+      rooms: { unit: 'guests', fit: 'Ideal for', priv: 'Most private', cta: 'Enquire', soon: 'Photos coming soon', scale: 'capacity', tags: { birthday: 'Birthdays', family: 'Family lunches', reunion: 'Class reunions', wedding: 'Weddings', ball: 'Graduation balls', company: 'Company parties', business: 'Business meetings' } },
       lunch: { todaySoup: 'Today’s soup', weekend: 'No lunch menu at weekends. See you on Monday.', stale: 'The new lunch menu is on its way.', soon: (d) => `Valid from ${d}` },
     },
     pl: {
@@ -118,6 +124,7 @@
       errors: { date: 'Wybierz datę.', name: 'Podaj swoje imię.', phone: 'Podaj numer telefonu, abyśmy mogli potwierdzić rezerwację.', past: 'Ta data już minęła.' },
       done: (n, g, d, t) => `${n}, przyjęliśmy zapytanie o stolik dla ${g} ${g === 1 ? 'osoby' : 'osób'} na ${d}, godz. ${t}. Odezwiemy się z potwierdzeniem. (Strona demonstracyjna: zapytanie nie jest nigdzie wysyłane.)`,
       copied: 'Skopiowano ✓',
+      rooms: { unit: 'gości', fit: 'Idealna na', priv: 'Najwięcej prywatności', cta: 'Zapytaj o salę', soon: 'Zdjęcia wkrótce', scale: 'pojemność', tags: { birthday: 'Urodziny', family: 'Rodzinny obiad', reunion: 'Zjazd absolwentów', wedding: 'Wesela', ball: 'Studniówki', company: 'Imprezy firmowe', business: 'Spotkania biznesowe' } },
       lunch: { todaySoup: 'Zupa dnia', weekend: 'W weekend nie ma menu dnia. Zapraszamy w poniedziałek.', stale: 'Nowe menu dnia właśnie przygotowujemy.', soon: (d) => `Obowiązuje od ${d}` },
     },
   };
@@ -191,7 +198,7 @@
     });
     phNodes.forEach((el) => { el.placeholder = t(el.dataset.i18nPh) || el.dataset.csPh; });
     $$('.lang__btn').forEach((b) => b.classList.toggle('is-active', b.dataset.lang === lang));
-    renderTabs(); renderMenu(false); renderLunch(); renderHours(); renderStatus();
+    renderTabs(); renderMenu(false); renderLunch(); renderRooms(); renderHours(); renderStatus();
   }
   $$('.lang__btn').forEach((b) => b.addEventListener('click', () => {
     if (lang === b.dataset.lang) return;
@@ -258,6 +265,45 @@
     $('#lunchList').innerHTML = LUNCH.mains.map((m, i) => `
       <li class="lunch__item reveal"><span class="lunch__no">${i + 1}.</span><span class="lunch__name">${tr(m)}<small>${m.g} · ${tr(m.side)}</small></span><span class="lunch__price">${fmt(m.p)}</span></li>`).join('');
     observeReveals($$('#lunchList .reveal'));
+  }
+
+  /* ---------- Rooms (data: js/prostory-data.js) ---------- */
+  const ROOMS = window.PROSTORY;
+  const SCALE = 100;
+  function renderRooms() {
+    const grid = $('#roomsGrid');
+    if (!grid || !ROOMS) return;
+    const R = UI[lang].rooms;
+    let lb = 100;
+    grid.innerHTML = ROOMS.map((r, i) => {
+      const slots = [0, 1, 2].map((n) => {
+        const src = r.photos[n];
+        return src
+          ? `<figure class="slot${n ? '' : ' slot--main'}"><img src="${src}" alt="${r.name}" loading="lazy" data-lb="${lb++}"><figcaption hidden>${r.name}</figcaption></figure>`
+          : `<div class="slot slot--empty${n ? '' : ' slot--main'}" aria-hidden="true"><img src="assets/sprig-small.webp" alt="" width="145" height="288"><span>${n ? '' : R.soon}</span></div>`;
+      }).join('');
+      const left = (r.min / SCALE) * 100, width = ((r.max - r.min) / SCALE) * 100;
+      return `
+      <article class="room reveal${r.private ? ' room--private' : ''}" style="--i:${i}" id="prostor-${r.id}">
+        <div class="room__photos">${slots}</div>
+        <div class="room__body">
+          ${r.private ? `<span class="room__badge">${R.priv}</span>` : ''}
+          <h3 class="room__name">${r.name}</h3>
+          ${lang !== 'cs' && r.sub[lang] ? `<p class="room__sub">${r.sub[lang]}</p>` : ''}
+          <p class="room__cap"><span class="room__num">${r.min}–${r.max}</span> ${R.unit}</p>
+          <div class="room__scale" role="img" aria-label="${R.scale}: ${r.min}–${r.max} ${R.unit}">
+            <span class="room__range" style="left:${left}%;width:${width}%"></span>
+          </div>
+          <div class="room__ticks" aria-hidden="true"><span>0</span><span>50</span><span>100</span></div>
+          <p class="room__fit">${R.fit}</p>
+          <ul class="room__tags">${r.tags.map((t) => `<li>${R.tags[t]}</li>`).join('')}</ul>
+          <p class="room__text">${tr(r.text)}</p>
+          <a class="link room__cta" href="tel:+420602530838">${R.cta} · +420 602 530 838</a>
+        </div>
+      </article>`;
+    }).join('');
+    observeReveals($$('.room', grid));
+    $$('[data-lb]', grid).forEach((im) => { im.tabIndex = 0; });
   }
 
   /* ---------- Hours & live status (Prague time) ---------- */
@@ -489,8 +535,9 @@
 
   /* ---------- Lightbox ---------- */
   const lb = $('#lightbox'), lbImg = $('#lbImg'), lbCap = $('#lbCap'), lbCount = $('#lbCount');
-  const shots = $$('[data-lb]').sort((a, b) => a.dataset.lb - b.dataset.lb);
-  let cur = 0, lastFocus = null;
+  // collected on every open, so photos rendered later (rooms, language switch) are included
+  let shots = [], cur = 0, lastFocus = null;
+  const collectShots = () => { shots = $$('[data-lb]').sort((a, b) => a.dataset.lb - b.dataset.lb); };
   const capOf = (im) => im.closest('figure')?.querySelector('figcaption')?.textContent || im.alt;
   function show(i) {
     cur = (i + shots.length) % shots.length;
@@ -501,11 +548,13 @@
   }
   function openLb(i) { lastFocus = document.activeElement; show(i); lb.hidden = false; document.body.style.overflow = 'hidden'; $('#lbClose').focus(); }
   function closeLb() { lb.hidden = true; document.body.style.overflow = ''; lastFocus?.focus?.(); }
-  shots.forEach((im, i) => {
-    im.tabIndex = 0;
-    im.addEventListener('click', () => openLb(i));
-    im.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLb(i); } });
+  const openFrom = (im) => { collectShots(); openLb(shots.indexOf(im)); };
+  document.addEventListener('click', (e) => { const im = e.target.closest('[data-lb]'); if (im) openFrom(im); });
+  document.addEventListener('keydown', (e) => {
+    const im = e.target.closest?.('[data-lb]');
+    if (im && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); openFrom(im); }
   });
+  const focusable = () => $$('[data-lb]').forEach((im) => { im.tabIndex = 0; });
   $('#lbClose').addEventListener('click', closeLb);
   $('#lbPrev').addEventListener('click', () => show(cur - 1));
   $('#lbNext').addEventListener('click', () => show(cur + 1));
@@ -528,5 +577,6 @@
   initForm();
   applyLang();
   observeReveals($$('.reveal, .photo-reveal'));
+  focusable();
   petals();
 })();

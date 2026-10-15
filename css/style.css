@@ -482,6 +482,49 @@ em { font-style: italic; color: var(--lavender); }
 .lunch__name small { display: block; font-family: var(--body); font-size: .86rem; color: var(--band-muted); margin-top: .25rem; line-height: 1.45; }
 .lunch__price { font-family: var(--display); font-size: var(--step-1); white-space: nowrap; font-variant-numeric: tabular-nums; }
 
+/* Rooms: three cards, capacity drawn on one shared 0–100 guest scale */
+.rooms__head { max-width: 44rem; }
+.rooms__head > p:last-child { color: var(--muted); max-width: 52ch; }
+.rooms__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 32px); margin-top: 2.6rem; align-items: start; }
+.room { display: grid; gap: 1.4rem; min-width: 0; padding: 14px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); transition: border-color .4s var(--ease), transform .5s var(--ease), box-shadow .5s var(--ease); }
+.room:hover { border-color: var(--lavender-soft); transform: translateY(-4px); box-shadow: 0 24px 50px -30px color-mix(in srgb, var(--ink) 35%, transparent); }
+.room--private { border-color: var(--lavender); box-shadow: 0 0 0 1px var(--lavender) inset; }
+.room__photos { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.slot { position: relative; margin: 0; aspect-ratio: 1; overflow: hidden; border-radius: 3px; background: var(--paper-2); }
+.slot--main { grid-column: span 2; aspect-ratio: 4 / 3; border-radius: 120px 120px 3px 3px; }
+.slot img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+.slot:hover img { transform: scale(1.05); }
+.slot--empty {
+  display: grid; place-content: center; justify-items: center; gap: .5rem; text-align: center;
+  border: 1px dashed color-mix(in srgb, var(--lavender) 55%, transparent);
+  background:
+    linear-gradient(110deg, transparent 35%, color-mix(in srgb, var(--paper) 70%, transparent) 50%, transparent 65%) var(--paper-2);
+  background-size: 250% 100%; animation: sheen 3.6s ease-in-out infinite;
+}
+.slot--empty img { width: 22px; height: auto; opacity: .55; }
+.slot--main.slot--empty img { width: 34px; }
+.slot--empty span { font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.room__body { display: grid; gap: .55rem; padding: 0 6px 6px; min-width: 0; justify-items: start; }
+.room__badge { padding: .35em .8em; border-radius: 999px; background: var(--lavender); color: var(--paper); font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; }
+.room__name { margin: 0; font-family: var(--display); font-weight: 400; font-size: var(--step-2); line-height: 1.05; }
+.room__sub { margin: -.2rem 0 0; font-family: var(--display); font-style: italic; color: var(--muted); }
+.room__cap { margin: .4rem 0 0; color: var(--muted); font-size: .9rem; letter-spacing: .06em; }
+.room__num { font-family: var(--display); font-size: var(--step-2); color: var(--lavender); font-variant-numeric: tabular-nums; margin-right: .2rem; }
+.room__scale { position: relative; width: 100%; height: 6px; border-radius: 999px; background: var(--line); overflow: hidden; }
+.room__range { position: absolute; top: 0; bottom: 0; border-radius: 999px; background: var(--lavender); transform-origin: left; transition: transform 1.2s var(--ease) .2s; }
+.room.is-pending .room__range { transform: scaleX(0); }
+.room__ticks { display: flex; justify-content: space-between; width: 100%; font-size: .66rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.room__fit { margin: .6rem 0 0; font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: var(--lavender); }
+.room__tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .4rem; }
+.room__tags li { padding: .4em .85em; border: 1px solid var(--line); border-radius: 999px; font-size: .8rem; background: var(--paper-2); }
+.room--private .room__tags li:last-child { border-color: var(--lavender); color: var(--lavender); }
+.room__text { margin: .4rem 0 0; color: var(--muted); font-size: .95rem; }
+.room__cta { margin-top: .4rem; font-size: .9rem; }
+@keyframes sheen { 0% { background-position: 120% 0; } 60%, 100% { background-position: -120% 0; } }
+@media (max-width: 1000px) { .rooms__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .rooms__grid { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .slot--empty { animation: none; } .room.is-pending .room__range { transform: none; } }
+
 /* Scroll reveal: only hidden when JS has confirmed it's below the fold */
 .reveal { transition: opacity 1s var(--ease), transform 1s var(--ease); }
 .reveal.is-pending { opacity: 0; transform: translateY(28px); }
