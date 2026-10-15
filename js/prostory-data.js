@@ -13,7 +13,7 @@ window.PROSTORY = [
     id: 'modry',
     name: 'Modrý salónek',
     sub: { ru: 'Синий салон', en: 'Blue salon', pl: 'Niebieski salonik' },
-    min: 10, max: 20,
+    min: 10, max: 15,
     tags: ['birthday', 'family', 'reunion'],
     private: false,
     photos: [],
