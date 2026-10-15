@@ -21,7 +21,7 @@ Upravte jen soubor **`js/denni-menu-data.js`**:
 Hlavní stránka i stránka denního menu se z tohoto souboru vyplní samy. Dnešní polévka se zvýrazní automaticky.
 Po datu `to` web místo starého menu ukáže „Nové denní menu právě připravujeme“.
 
-## Prostory (salonky a sál)
+## Prostory (salónky a sál)
 
 Upravte soubor **`js/prostory-data.js`**. Fotky nahrajte do `assets/photos/prostory/` a cesty vepište do `photos`:
 

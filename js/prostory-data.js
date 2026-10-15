@@ -1,5 +1,5 @@
 /*
- * PROSTORY — salonky a sál.
+ * PROSTORY — salónky a sál.
  *
  * min / max … kapacita (počet hostů)
  * tags      … pro co se prostor hodí (klíče: birthday, family, reunion, wedding, ball, company, business)
@@ -11,14 +11,14 @@
 window.PROSTORY = [
   {
     id: 'modry',
-    name: 'Modrý salonek',
+    name: 'Modrý salónek',
     sub: { ru: 'Синий салон', en: 'Blue salon', pl: 'Niebieski salonik' },
     min: 10, max: 20,
     tags: ['birthday', 'family', 'reunion'],
     private: false,
     photos: [],
     text: {
-      cs: 'Útulný salonek pro menší společnost. Oslavte narozeniny, sejděte se s rodinou u oběda nebo s bývalými spolužáky.',
+      cs: 'Útulný salónek pro menší společnost. Oslavte narozeniny, sejděte se s rodinou u oběda nebo s bývalými spolužáky.',
       ru: 'Уютный салон для небольшой компании. Отметьте день рождения, соберитесь семьёй на обед или встретьтесь с одноклассниками.',
       en: 'A cosy salon for smaller groups. Celebrate a birthday, gather the family for lunch or meet up with old classmates.',
       pl: 'Przytulny salonik dla mniejszego grona. Świętujcie urodziny, spotkajcie się z rodziną na obiedzie albo z dawnymi kolegami ze szkoły.',
@@ -41,7 +41,7 @@ window.PROSTORY = [
   },
   {
     id: 'spodni',
-    name: 'Spodní salonek',
+    name: 'Spodní salónek',
     sub: { ru: 'Нижний салон', en: 'Lower salon', pl: 'Dolny salonik' },
     min: 10, max: 25,
     tags: ['birthday', 'family', 'reunion', 'business'],
