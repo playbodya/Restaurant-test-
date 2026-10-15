@@ -87,9 +87,9 @@
       <h2 class="h2 reveal" data-i18n="about.title">Prostor pro chuť, <em>čas</em> a rozhovor</h2>
       <p class="reveal" data-i18n="about.p1">Prostorica vznikla z jednoduché myšlenky: vařit poctivou českou kuchyni, se sezónou a s respektem k surovině. Inspiraci hledáme na francouzském venkově, suroviny nakupujeme u farmářů z okolí Ostravy.</p>
       <dl class="facts reveal">
-        <div><dt class="count" data-to="42">42</dt><dd data-i18n="about.f1">míst u stolu</dd></div>
+        <div><dt class="facts__word" data-i18n="about.f1v">Po–Ne</dt><dd data-i18n="about.f1">otevřeno každý den</dd></div>
         <div><dt class="count" data-to="4">4</dt><dd data-i18n="about.f2">sezónní menu za rok</dd></div>
-        <div><dt class="count" data-to="18">18</dt><dd data-i18n="about.f3">malých vinařství</dd></div>
+        <div><dt class="count" data-to="13">13</dt><dd data-i18n="about.f3">vinařství na vinném lístku</dd></div>
       </dl>
     </div>
   </section>
@@ -180,7 +180,7 @@
     <div class="book__info">
       <p class="eyebrow reveal" data-i18n="book.eyebrow">Rezervace</p>
       <h2 class="h2 reveal" data-i18n="book.title">Připravíme vám <em>stůl</em></h2>
-      <p class="reveal" data-i18n="book.lead">Stůl vám rádi rezervujeme i telefonicky. Pronájem sálu a catering domlouváme na samostatném čísle.</p>
+      <p class="reveal" data-i18n="book.lead">Rezervace stolů přijímáme telefonicky. Pronájem sálu a catering domlouváme na samostatném čísle.</p>
       <div class="phones reveal">
         <div class="phone">
           <span class="phone__lbl" data-i18n="book.telBook">Rezervace stolu</span>
@@ -199,46 +199,21 @@
       </table>
     </div>
 
-    <form class="form reveal" id="bookForm" novalidate>
-      <div class="form__row">
-        <label class="field">
-          <span data-i18n="form.date">Datum</span>
-          <input type="date" id="f-date" name="date" required>
-        </label>
-        <label class="field">
-          <span data-i18n="form.time">Čas</span>
-          <select id="f-time" name="time" required></select>
-        </label>
+    <div class="form callcard reveal" id="callCard">
+      <img class="callcard__sprig" src="assets/sprig-small.webp" alt="" width="145" height="288">
+      <p class="eyebrow" data-i18n="call.eyebrow">Rezervace stolu</p>
+      <h3 class="callcard__title" data-i18n="call.title">Rezervujte telefonicky</h3>
+      <p class="callcard__lead" data-i18n="call.lead">Zavolejte nám a domluvíme datum, čas i počet hostů. Rádi poradíme i s výběrem salónku.</p>
+      <button type="button" class="btn btn--wide magnetic" id="callReveal" aria-expanded="false" aria-controls="callNumber"><span data-i18n="call.show">Zobrazit telefonní číslo</span></button>
+      <div class="callcard__number" id="callNumber" hidden>
+        <a class="callcard__tel" href="tel:+420725988208">+420 725 988 208</a>
+        <div class="callcard__actions">
+          <a class="btn" href="tel:+420725988208"><span data-i18n="call.dial">Zavolat</span></a>
+          <button type="button" class="btn btn--ghost copy-btn" data-copy="+420 725 988 208" data-i18n="foot.copy">Zkopírovat</button>
+        </div>
       </div>
-      <div class="field">
-        <span data-i18n="form.guests">Počet hostů</span>
-        <div class="guests" id="guests" role="radiogroup"></div>
-      </div>
-      <div class="form__row">
-        <label class="field">
-          <span data-i18n="form.name">Jméno</span>
-          <input type="text" id="f-name" name="name" autocomplete="name" required>
-        </label>
-        <label class="field">
-          <span data-i18n="form.phone">Telefon</span>
-          <input type="tel" id="f-phone" name="phone" autocomplete="tel" placeholder="+420" required>
-        </label>
-      </div>
-      <label class="field">
-        <span data-i18n="form.note">Poznámka (alergie, oslava…)</span>
-        <textarea id="f-note" name="note" rows="2"></textarea>
-      </label>
-      <p class="form__error" id="formError" role="alert" hidden></p>
-      <button class="btn btn--wide magnetic" type="submit"><span data-i18n="form.submit">Odeslat poptávku</span></button>
-      <p class="form__gdpr"><span data-i18n="form.gdpr">Vaše údaje použijeme jen k vyřízení rezervace.</span> <a href="gdpr.html" data-i18n="form.gdprLink">Zásady zpracování osobních údajů</a></p>
-
-      <div class="form__done" id="formDone" hidden>
-        <img src="assets/sprig-small.webp" alt="" width="145" height="288">
-        <h3 data-i18n="form.doneTitle">Děkujeme!</h3>
-        <p id="doneText"></p>
-        <button type="button" class="btn btn--ghost" id="formAgain" data-i18n="form.again">Nová rezervace</button>
-      </div>
-    </form>
+      <p class="callcard__note" data-i18n="call.note">Pronájem sálu a catering: +420 602 530 838</p>
+    </div>
   </section>
 </main>
 
@@ -319,6 +294,7 @@
       <p><a class="link" href="https://www.instagram.com/prostoricaostrava/" target="_blank" rel="noopener">Instagram ↗</a> &nbsp; <a class="link" href="https://www.facebook.com/share/1Hs7WHj2ds/" target="_blank" rel="noopener">Facebook ↗</a></p>
     </div>
   </div>
+  <p class="foot__op"><span data-i18n="foot.op">Provozovatel</span>: Žaneta Pospíšilová, IČO 73784346, Javorová 36, 742 83 Zbyslavice · <span data-i18n="foot.reg">zapsaná v živnostenském rejstříku</span></p>
   <p class="foot__copy">© 2026 Restaurace Prostorica · prostorica.cz · <a class="link" href="gdpr.html" data-i18n="foot.gdpr">GDPR – Zásady zpracování osobních údajů</a> · <button type="button" class="link" data-cookie-settings data-i18n="foot.cookies">Nastavení cookies</button></p>
 </footer>
 <div class="lb" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Fotografie">

@@ -578,6 +578,21 @@ em { font-style: italic; color: var(--lavender); }
 .cc__btn:hover { border-color: var(--lavender); background: var(--lavender); color: var(--paper); }
 @media (max-width: 520px) { .cc__btns { justify-content: stretch; } .cc__btn { flex: 1 1 auto; } }
 
+/* Phone reservation card (replaces the booking form for now) */
+.callcard { display: grid; gap: 1rem; align-content: start; overflow: hidden; }
+.callcard .eyebrow { margin: 0; }
+.callcard__sprig { position: absolute; right: 18px; top: -10px; width: 70px; transform: rotate(14deg); opacity: .8; pointer-events: none; }
+.callcard__title { margin: 0; font-family: var(--display); font-weight: 400; font-size: var(--step-2); line-height: 1.1; }
+.callcard__lead { margin: 0; color: var(--muted); max-width: 40ch; }
+.callcard__number { display: grid; gap: 1rem; animation: up .6s var(--ease) both; }
+.callcard__tel { font-family: var(--display); font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem); line-height: 1.1; text-decoration: none; color: var(--lavender); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.callcard__actions { display: flex; flex-wrap: wrap; gap: .6rem; }
+.callcard__note { margin: .4rem 0 0; font-size: .86rem; color: var(--muted); }
+.facts__word { font-family: var(--display); font-size: var(--step-3); line-height: 1; color: var(--lavender); }
+.foot__op { margin: 3rem 0 0; font-size: var(--step--1); color: var(--muted); }
+.foot__op + .foot__copy { margin-top: .6rem; }
+.dm-foot .foot__op { margin: 0 0 .6rem; }
+
 /* Scroll reveal: only hidden when JS has confirmed it's below the fold */
 .reveal { transition: opacity 1s var(--ease), transform 1s var(--ease); }
 .reveal.is-pending { opacity: 0; transform: translateY(28px); }
@@ -640,3 +655,5 @@ em { font-style: italic; color: var(--lavender); }
 }
 .lunch .tasting__sprig { top: auto; bottom: -40px; right: -24px; transform: rotate(-14deg); opacity: .7; }
 .lunch__list { position: relative; z-index: 1; }
+.callcard__title, .callcard .eyebrow { padding-right: 64px; }
+@media (max-width: 520px) { .callcard__sprig { width: 48px; right: 10px; top: -6px; opacity: .6; } }

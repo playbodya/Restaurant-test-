@@ -16,7 +16,7 @@
     'marquee': 'лаванда · тимьян · розмарин · лесной мёд · козий сыр · оливки · инжир · шалфей · ',
     'about.eyebrow': 'О нас', 'about.title': 'Пространство для вкуса, <em>времени</em> и разговора',
     'about.p1': 'Prostorica родилась из простой идеи: готовить честную чешскую кухню, по сезону и с уважением к продукту. Вдохновение ищем во французской деревне, а продукты покупаем у фермеров из окрестностей Остравы.',
-    'about.f1': 'мест за столами', 'about.f2': 'сезонных меню в год', 'about.f3': 'малых виноделен',
+    'about.f1v': 'Пн–Вс', 'about.f1': 'открыто каждый день', 'about.f2': 'сезонных меню в год', 'about.f3': 'виноделен в винной карте',
     'menu.eyebrow': 'Основное меню', 'menu.drinks': 'Меню напитков →', 'menu.wine': 'Винная карта →', 'menu.title': 'Меню',
     'dishes.label': 'Чешская кухня в современном прочтении. Честно. Легко. Со вкусом.',
     'gallery.eyebrow': 'Галерея', 'gallery.title': 'Атмосфера <em>французской деревни</em>', 'gallery.c1': 'Полевые цветы на каждом столе', 'gallery.c2': 'Праздничный стол', 'gallery.c3': 'Лавандовые салфетки', 'gallery.c4': 'Салон', 'gallery.c5': 'Зал для праздников', 'gallery.c6': 'Длинный стол для семейных встреч',
@@ -26,7 +26,7 @@
     'lunch.eyebrow': 'Дневное меню · пн–пт', 'lunch.title': 'Обед, который меняется <em>каждую неделю</em>', 'lunch.lead': 'Суп дня и шесть основных блюд на выбор. Будни с 11:00 до 15:00.', 'lunch.from': 'блюда от', 'lunch.cta': 'Всё дневное меню →',
     'quote.text': '«Хорошей еде нужны три вещи: сезон, терпение и стол, за которым никто не спешит».', 'quote.by': '— шеф-повар Prostorica',
     'book.eyebrow': 'Бронирование', 'book.title': 'Мы подготовим для вас <em>стол</em>',
-    'book.lead': 'Стол можно забронировать и по телефону. Аренду зала и кейтеринг обсуждаем по отдельному номеру.', 'book.telBook': 'Бронирование столов', 'book.telCater': 'Аренда зала / кейтеринг', 'book.hours': 'Часы работы',
+    'book.lead': 'Столы бронируем по телефону. Аренду зала и кейтеринг обсуждаем по отдельному номеру.', 'call.eyebrow': 'Бронирование стола', 'call.title': 'Забронируйте по телефону', 'call.lead': 'Позвоните нам, и мы договоримся о дате, времени и количестве гостей. Поможем и с выбором салона.', 'call.show': 'Показать номер телефона', 'call.dial': 'Позвонить', 'call.note': 'Аренда зала и кейтеринг: +420 602 530 838', 'foot.op': 'Владелец', 'foot.reg': 'внесена в реестр предпринимателей', 'book.telBook': 'Бронирование столов', 'book.telCater': 'Аренда зала / кейтеринг', 'book.hours': 'Часы работы',
     'form.date': 'Дата', 'form.time': 'Время', 'form.guests': 'Количество гостей', 'form.name': 'Имя', 'form.phone': 'Телефон',
     'form.note': 'Комментарий (аллергии, праздник…)', 'form.submit': 'Отправить запрос', 'form.doneTitle': 'Спасибо!', 'form.again': 'Новая бронь', 'form.gdpr': 'Ваши данные мы используем только для оформления брони.', 'form.gdprLink': 'Политика обработки персональных данных', 'where.mapNote': 'Карта Google загрузится только после вашего согласия. При этом Google получит ваш IP-адрес.', 'where.mapBtn': 'Показать карту', 'foot.cookies': 'Настройки cookies',
     'where.eyebrow': 'Как добраться', 'where.title': 'Švédská 42/58a, <em>Слезска-Острава</em>', 'where.lead': 'Мы находимся в районе Муглинов. Укажите, откуда едете, и Google Карты покажут маршрут на машине, общественном транспорте или пешком.', 'where.from': 'Откуда вы едете?', 'where.fromPh': 'например, Hlavní nádraží Ostrava', 'where.car': 'На машине', 'where.transit': 'Транспорт', 'where.walk': 'Пешком', 'where.go': 'Построить маршрут ↗', 'where.here': 'От моего места ↗',
@@ -42,7 +42,7 @@
     'marquee': 'lavender · thyme · rosemary · wild honey · goat cheese · olives · figs · sage · ',
     'about.eyebrow': 'About us', 'about.title': 'A place for flavour, <em>time</em> and conversation',
     'about.p1': 'Prostorica grew from a simple idea: cook honest Czech food, follow the seasons and respect the ingredients. We look to the French countryside for inspiration and buy from farmers around Ostrava.',
-    'about.f1': 'seats', 'about.f2': 'seasonal menus a year', 'about.f3': 'small wineries',
+    'about.f1v': 'Mon–Sun', 'about.f1': 'open every day', 'about.f2': 'seasonal menus a year', 'about.f3': 'wineries on our wine list',
     'menu.eyebrow': 'À la carte', 'menu.drinks': 'Drinks list →', 'menu.wine': 'Wine list →', 'menu.title': 'Menu',
     'dishes.label': 'Czech cuisine, the modern way. Honest. Light. Full of flavour.',
     'gallery.eyebrow': 'Gallery', 'gallery.title': 'The feel of the <em>French countryside</em>', 'gallery.c1': 'Wild flowers on every table', 'gallery.c2': 'A festive table', 'gallery.c3': 'Lavender napkins', 'gallery.c4': 'The salon', 'gallery.c5': 'A hall for celebrations', 'gallery.c6': 'A long table for family gatherings',
@@ -52,7 +52,7 @@
     'lunch.eyebrow': 'Lunch menu · Mon–Fri', 'lunch.title': 'A lunch that changes <em>every week</em>', 'lunch.lead': 'Soup of the day and six main courses to choose from. Weekdays 11:00–15:00.', 'lunch.from': 'mains from', 'lunch.cta': 'Full lunch menu →',
     'quote.text': '“Good food needs three things: the season, patience and a table where nobody is in a hurry.”', 'quote.by': '— Prostorica head chef',
     'book.eyebrow': 'Reservations', 'book.title': 'We’ll have a <em>table</em> ready for you',
-    'book.lead': 'You can also book by phone. Hall hire and catering have their own number.', 'book.telBook': 'Table reservations', 'book.telCater': 'Hall hire / catering', 'book.hours': 'Opening hours',
+    'book.lead': 'We take table reservations by phone. Hall hire and catering have their own number.', 'call.eyebrow': 'Table reservations', 'call.title': 'Book by phone', 'call.lead': 'Give us a call and we’ll agree the date, time and number of guests. We’re happy to help you choose a salon too.', 'call.show': 'Show phone number', 'call.dial': 'Call', 'call.note': 'Hall hire and catering: +420 602 530 838', 'foot.op': 'Operator', 'foot.reg': 'registered in the Trade Register', 'book.telBook': 'Table reservations', 'book.telCater': 'Hall hire / catering', 'book.hours': 'Opening hours',
     'form.date': 'Date', 'form.time': 'Time', 'form.guests': 'Guests', 'form.name': 'Name', 'form.phone': 'Phone',
     'form.note': 'Note (allergies, celebration…)', 'form.submit': 'Send request', 'form.doneTitle': 'Thank you!', 'form.again': 'New booking', 'form.gdpr': 'We only use your details to handle the booking.', 'form.gdprLink': 'Privacy policy', 'where.mapNote': 'The Google map loads only with your consent. Google then receives your IP address.', 'where.mapBtn': 'Show map', 'foot.cookies': 'Cookie settings',
     'where.eyebrow': 'Find us', 'where.title': 'Švédská 42/58a, <em>Slezská Ostrava</em>', 'where.lead': 'We are in Muglinov. Tell us where you’re coming from and Google Maps will show the way by car, public transport or on foot.', 'where.from': 'Where are you coming from?', 'where.fromPh': 'e.g. Ostrava main station', 'where.car': 'By car', 'where.transit': 'Transit', 'where.walk': 'Walking', 'where.go': 'Get directions ↗', 'where.here': 'From my location ↗',
@@ -67,7 +67,7 @@
     'marquee': 'lawenda · tymianek · rozmaryn · miód leśny · kozi ser · oliwki · figi · szałwia · ',
     'about.eyebrow': 'O nas', 'about.title': 'Miejsce na smak, <em>czas</em> i rozmowę',
     'about.p1': 'Prostorica powstała z prostej myśli: gotować uczciwą kuchnię czeską, zgodnie z sezonem i z szacunkiem do produktu. Inspiracji szukamy na francuskiej wsi, a produkty kupujemy od rolników z okolic Ostrawy.',
-    'about.f1': 'miejsc przy stołach', 'about.f2': 'sezonowe menu w roku', 'about.f3': 'małych winnic',
+    'about.f1v': 'Pn–Nd', 'about.f1': 'otwarte codziennie', 'about.f2': 'sezonowe menu w roku', 'about.f3': 'winnic w karcie win',
     'menu.eyebrow': 'Karta dań', 'menu.drinks': 'Karta napojów →', 'menu.wine': 'Karta win →', 'menu.title': 'Menu',
     'dishes.label': 'Kuchnia czeska w nowoczesnym wydaniu. Uczciwie. Lekko. Ze smakiem.',
     'gallery.eyebrow': 'Galeria', 'gallery.title': 'Atmosfera <em>francuskiej wsi</em>', 'gallery.c1': 'Polne kwiaty na każdym stole', 'gallery.c2': 'Odświętny stół', 'gallery.c3': 'Lawendowe serwetki', 'gallery.c4': 'Salonik', 'gallery.c5': 'Sala na uroczystości', 'gallery.c6': 'Długi stół na rodzinne spotkania',
@@ -77,7 +77,7 @@
     'lunch.eyebrow': 'Menu dnia · pon.–pt.', 'lunch.title': 'Obiad, który zmienia się <em>co tydzień</em>', 'lunch.lead': 'Zupa dnia i sześć dań głównych do wyboru. W dni robocze 11:00–15:00.', 'lunch.from': 'dania od', 'lunch.cta': 'Całe menu dnia →',
     'quote.text': '„Dobre jedzenie potrzebuje trzech rzeczy: sezonu, cierpliwości i stołu, przy którym nikt się nie spieszy.”', 'quote.by': '— szef kuchni Prostoriki',
     'book.eyebrow': 'Rezerwacja', 'book.title': 'Przygotujemy dla Was <em>stolik</em>',
-    'book.lead': 'Stolik można zarezerwować także telefonicznie. Wynajem sali i catering ustalamy pod osobnym numerem.', 'book.telBook': 'Rezerwacja stolików', 'book.telCater': 'Wynajem sali / catering', 'book.hours': 'Godziny otwarcia',
+    'book.lead': 'Rezerwacje stolików przyjmujemy telefonicznie. Wynajem sali i catering ustalamy pod osobnym numerem.', 'call.eyebrow': 'Rezerwacja stolika', 'call.title': 'Zarezerwuj telefonicznie', 'call.lead': 'Zadzwoń do nas, a ustalimy datę, godzinę i liczbę gości. Chętnie pomożemy też wybrać salonik.', 'call.show': 'Pokaż numer telefonu', 'call.dial': 'Zadzwoń', 'call.note': 'Wynajem sali i catering: +420 602 530 838', 'foot.op': 'Właściciel', 'foot.reg': 'wpisana do rejestru działalności gospodarczej', 'book.telBook': 'Rezerwacja stolików', 'book.telCater': 'Wynajem sali / catering', 'book.hours': 'Godziny otwarcia',
     'form.date': 'Data', 'form.time': 'Godzina', 'form.guests': 'Liczba gości', 'form.name': 'Imię', 'form.phone': 'Telefon',
     'form.note': 'Uwagi (alergie, uroczystość…)', 'form.submit': 'Wyślij zapytanie', 'form.doneTitle': 'Dziękujemy!', 'form.again': 'Nowa rezerwacja', 'form.gdpr': 'Twoje dane wykorzystamy wyłącznie do obsługi rezerwacji.', 'form.gdprLink': 'Zasady przetwarzania danych osobowych', 'where.mapNote': 'Mapa Google załaduje się dopiero po Twojej zgodzie. Google otrzyma wtedy Twój adres IP.', 'where.mapBtn': 'Pokaż mapę', 'foot.cookies': 'Ustawienia cookies',
     'where.eyebrow': 'Dojazd', 'where.title': 'Švédská 42/58a, <em>Slezská Ostrava</em>', 'where.lead': 'Jesteśmy w dzielnicy Muglinov. Wpisz, skąd jedziesz, a Mapy Google pokażą trasę samochodem, komunikacją lub pieszo.', 'where.from': 'Skąd jedziesz?', 'where.fromPh': 'np. dworzec główny Ostrava', 'where.car': 'Samochodem', 'where.transit': 'Komunikacją', 'where.walk': 'Pieszo', 'where.go': 'Wyznacz trasę ↗', 'where.here': 'Z mojej lokalizacji ↗',
@@ -335,57 +335,14 @@
   }
   setInterval(renderStatus, 60000);
 
-  /* ---------- Reservation form ---------- */
-  const form = $('#bookForm'), err = $('#formError'), done = $('#formDone');
-  const dateIn = $('#f-date'), timeIn = $('#f-time');
-  let guests = 2;
-  const pad = (n) => String(n).padStart(2, '0');
-  const iso = (d) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
-
-  function initForm() {
-    const t = new Date(); dateIn.min = iso(t);
-    const next = new Date(t); next.setDate(t.getDate() + 1);
-    dateIn.value = iso(next);
-    fillSlots();
-    const g = $('#guests');
-    g.innerHTML = Array.from({ length: 8 }, (_, i) => `<button type="button" class="guest" role="radio" aria-checked="${i + 1 === guests}" data-g="${i + 1}">${i + 1}</button>`).join('');
-  }
-  $('#guests').addEventListener('click', (e) => {
-    const b = e.target.closest('.guest'); if (!b) return;
-    guests = +b.dataset.g;
-    $$('.guest', $('#guests')).forEach((x) => x.setAttribute('aria-checked', String(x === b)));
+  /* ---------- Phone reservation card ---------- */
+  const callBtn = $('#callReveal');
+  callBtn?.addEventListener('click', () => {
+    $('#callNumber').hidden = false;
+    callBtn.hidden = true;
+    callBtn.setAttribute('aria-expanded', 'true');
+    $('#callNumber .callcard__tel').focus();
   });
-
-  // last table one hour before closing
-  function fillSlots() {
-    const prev = timeIn.value || '18:00';
-    const d = dateIn.value ? new Date(`${dateIn.value}T12:00`) : new Date();
-    const [open, close] = HOURS[(d.getDay() + 6) % 7];
-    const slots = [];
-    for (let m = open * 60; m <= (close - 1) * 60; m += 30) slots.push(`${Math.floor(m / 60)}:${pad(m % 60)}`);
-    const pick = slots.includes(prev) ? prev : slots[slots.length - 1];
-    timeIn.innerHTML = slots.map((s) => `<option${s === pick ? ' selected' : ''}>${s}</option>`).join('');
-  }
-  dateIn.addEventListener('change', fillSlots);
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const u = UI[lang].errors;
-    const name = $('#f-name'), phone = $('#f-phone');
-    $$('.is-invalid', form).forEach((x) => x.classList.remove('is-invalid'));
-    let msg = '', bad = null;
-    const picked = dateIn.value ? new Date(`${dateIn.value}T12:00`) : null;
-    if (!picked) { msg = u.date; bad = dateIn; }
-    else if (dateIn.value < iso(new Date())) { msg = u.past; bad = dateIn; }
-    else if (!name.value.trim()) { msg = u.name; bad = name; }
-    else if (phone.value.replace(/\D/g, '').length < 9) { msg = u.phone; bad = phone; }
-    if (msg) { err.textContent = msg; err.hidden = false; bad.classList.add('is-invalid'); bad.focus(); return; }
-    err.hidden = true;
-    const d = picked.toLocaleDateString(LOCALE[lang], { day: 'numeric', month: 'long' });
-    $('#doneText').textContent = UI[lang].done(name.value.trim(), guests, d, timeIn.value);
-    done.hidden = false;
-  });
-  $('#formAgain').addEventListener('click', () => { done.hidden = true; form.reset(); initForm(); });
 
   /* ---------- Copy phone numbers ---------- */
   $$('.copy-btn').forEach((btn) => btn.addEventListener('click', () => {
@@ -587,7 +544,6 @@
   window.ProstoricaConsent?.onChange((c) => { if (c.external) showMap(); });
 
   /* ---------- Boot ---------- */
-  initForm();
   applyLang();
   observeReveals($$('.reveal, .photo-reveal'));
   focusable();
