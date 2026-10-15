@@ -527,6 +527,25 @@ em { font-style: italic; color: var(--lavender); }
 
 .menu__more { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.8rem; }
 
+/* Brand logo (image from the restaurant's logo; light-ink twin for dark theme) */
+.logo { display: block; height: auto; max-width: 100%; }
+.logo--light { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .logo--ink { display: none; }
+  :root:not([data-theme="light"]) .logo--light { display: block; }
+}
+:root[data-theme="dark"] .logo--ink { display: none; }
+:root[data-theme="dark"] .logo--light { display: block; }
+.nav__brand { display: block; line-height: 0; }
+.nav__brand .logo { width: 170px; transition: width .4s var(--ease); }
+.nav.is-scrolled .nav__brand .logo { width: 150px; }
+.foot__logo { display: flex; justify-content: center; padding-block: 1rem; }
+.foot__logo .logo { width: min(680px, 100%); transition: clip-path 1.8s var(--ease), opacity 1.2s var(--ease); clip-path: inset(0 0 0 0); }
+.foot__logo.is-pending .logo { clip-path: inset(0 100% 0 0); opacity: .2; }
+@media (max-width: 760px) {
+  .nav__brand .logo, .nav.is-scrolled .nav__brand .logo { width: 120px; }
+}
+
 /* Scroll reveal: only hidden when JS has confirmed it's below the fold */
 .reveal { transition: opacity 1s var(--ease), transform 1s var(--ease); }
 .reveal.is-pending { opacity: 0; transform: translateY(28px); }
