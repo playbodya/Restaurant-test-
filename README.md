@@ -40,5 +40,6 @@ Stránka `napoje.html` (odkaz `napoje.html#vina` otevře rovnou vína). Ceny a p
 
 - `gdpr.html`: Zásady zpracování osobních údajů (text z PDF ze dne 23. 2. 2026, PDF je v `assets/docs/`).
 - `js/consent.js`: cookie lišta. Kategorie: nezbytné / marketingové (Seznam Sklik retargeting, `rtgId 1704701`) / externí obsah (Google Maps).
-  Sklik ani mapa se nenačtou, dokud návštěvník nedá souhlas. Volbu lze změnit odkazem „Nastavení cookies“ v patičce.
+  Kód Sklik se načte vždy a posílá `consent: 1` (souhlas) nebo `0` (bez souhlasu) podle návodu Seznamu. Mapa Google se načte až po souhlasu.
+  Volbu lze změnit odkazem „Nastavení cookies“ v patičce.
 - Fonty jsou uložené přímo na webu (`assets/fonts/`, `css/fonts.css`) – web se kvůli nim nepřipojuje ke Googlu.

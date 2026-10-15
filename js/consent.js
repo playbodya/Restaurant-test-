@@ -3,7 +3,9 @@
  *
  * Kategorie:
  *   necessary … nezbytné (vždy zapnuté): uložení jazyka a této volby v prohlížeči
- *   marketing … Seznam Sklik retargeting (rtgId níže); kód se načte AŽ po souhlasu
+ *   marketing … Seznam Sklik retargeting (rtgId níže). Kód Seznamu se načte vždy a pošle
+ *               consent: 1 (souhlas) nebo 0 (bez souhlasu), přesně podle návodu Seznamu.
+ *               Při 0 Seznam návštěvu nepoužije pro retargeting.
  *   external  … externí obsah: mapa Google Maps
  *
  * Volba se ukládá do localStorage pod klíčem 'prostorica-consent'.
@@ -62,20 +64,32 @@
   let state = read();
   const listeners = [];
 
-  /* ---------- Seznam Sklik retargeting (only after marketing consent) ---------- */
-  let sklikSent = false;
+  /* ---------- Seznam Sklik retargeting: consent 0 | 1, as in Seznam's snippet ---------- */
+  // Sends one hit per page view with the current choice, and again if the visitor
+  // changes it (e.g. clicks "Přijmout" after the page loaded with 0).
+  let rcReady = false, lastSent = null;
   function sklik() {
-    if (sklikSent || !state || !state.marketing) return;
-    sklikSent = true;
+    if (!rcReady) return;
+    const consentGiven = !!(state && state.marketing);
+    const value = consentGiven ? 1 : 0;
+    if (value === lastSent) return;
+    lastSent = value;
+    try {
+      window.sznIVA.IS.updateIdentities({
+        eid: null /* email či zahashovaný email */
+      });
+      const retargetingConf = {
+        rtgId: SKLIK_RTG_ID,
+        consent: value /* 0 (není souhlas) nebo 1 (je souhlas) */
+      };
+      window.rc.retargetingHit(retargetingConf);
+    } catch { /* ad blockers etc. */ }
+  }
+  function loadSklik() {
     const s = document.createElement('script');
     s.src = 'https://c.seznam.cz/js/rc.js';
     s.async = true;
-    s.onload = () => {
-      try {
-        if (window.sznIVA && window.sznIVA.IS) window.sznIVA.IS.updateIdentities({ eid: null });
-        if (window.rc && window.rc.retargetingHit) window.rc.retargetingHit({ rtgId: SKLIK_RTG_ID, consent: 1 });
-      } catch { /* ad blockers etc. */ }
-    };
+    s.onload = () => { rcReady = !!(window.rc && window.sznIVA); sklik(); };
     document.head.appendChild(s);
   }
 
@@ -146,6 +160,6 @@
     open: () => render(true),
   };
 
-  const boot = () => { if (!state) render(false); else sklik(); };
+  const boot = () => { loadSklik(); if (!state) render(false); };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
 })();
