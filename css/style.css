@@ -627,10 +627,16 @@ em { font-style: italic; color: var(--lavender); }
   .burger { display: block; }
   .nav .btn--small { display: none; }
   .nav__links {
-    position: fixed; inset: 0; z-index: -1; flex-direction: column; justify-content: center; align-items: flex-start;
-    gap: 1.4rem; padding: 0 var(--gutter); background: var(--paper);
+    position: fixed; inset: 0; z-index: -1; height: 100vh; height: 100dvh; overflow-y: auto; overscroll-behavior: contain;
+    flex-direction: column; justify-content: center; align-items: flex-start;
+    gap: 1.4rem; padding: calc(96px + env(safe-area-inset-top, 0px)) var(--gutter) calc(32px + env(safe-area-inset-bottom, 0px));
+    background: var(--paper);
     clip-path: circle(0 at calc(100% - 40px) 40px); transition: clip-path .7s var(--ease);
   }
+  /* backdrop-filter would turn the nav into the containing block of the fixed menu,
+     shrinking the overlay to the header bar, so drop it while the menu is open */
+  .nav.is-open { backdrop-filter: none; -webkit-backdrop-filter: none; background: var(--paper); }
+  @media (max-height: 560px) { .nav__links { justify-content: flex-start; } }
   .nav__links a { font-family: var(--display); font-size: var(--step-3); letter-spacing: 0; text-transform: none; }
   .nav.is-open .nav__links { clip-path: circle(150% at calc(100% - 40px) 40px); }
   .nav__word { display: none; }

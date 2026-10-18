@@ -372,11 +372,17 @@
   const nav = $('#nav'), burger = $('#burger');
   const onScroll = () => nav.classList.toggle('is-scrolled', scrollY > 30);
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
-  burger.addEventListener('click', () => {
-    const open = !nav.classList.contains('is-open');
-    nav.classList.toggle('is-open', open); burger.setAttribute('aria-expanded', String(open));
-  });
-  $$('#navLinks a').forEach((a) => a.addEventListener('click', () => { nav.classList.remove('is-open'); burger.setAttribute('aria-expanded', 'false'); }));
+  // open/close the mobile menu; the page underneath must not scroll while it is open
+  function setMenu(open) {
+    nav.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    document.documentElement.style.overflow = open ? 'hidden' : '';
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  burger.addEventListener('click', () => setMenu(!nav.classList.contains('is-open')));
+  $$('#navLinks a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
+  addEventListener('keydown', (e) => { if (e.key === 'Escape' && nav.classList.contains('is-open')) setMenu(false); });
+  addEventListener('resize', () => { if (innerWidth > 760 && nav.classList.contains('is-open')) setMenu(false); });
 
   const sections = $$('main section[id], footer[id]');
   const linkFor = (id) => $(`#navLinks a[href="#${id}"]`);
