@@ -1,0 +1,188 @@
+(() => {
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const R = window.RAUT || { sections: [] };
+  const KEY = 'prostorica-raut';
+  const store = {
+    get() { try { return JSON.parse(localStorage.getItem(KEY)) || null; } catch { return null; } },
+    set(v) { try { localStorage.setItem(KEY, JSON.stringify(v)); } catch { /* storage unavailable */ } },
+  };
+
+  const kc = (n) => `${Math.round(n).toLocaleString('cs-CZ')} Kč`;
+  const num = (n) => n.toLocaleString('cs-CZ', { maximumFractionDigits: 2 });
+  const UNIT = { kg: 'kg', ks: 'ks', porce: 'porce', 'mísa': 'mísa', osoba: 'os.', hod: 'hod.', akce: 'akce' };
+  const stepOf = (it) => (it.unit === 'kg' ? 0.5 : 1);
+  const priced = (it) => typeof it.price === 'number' && it.price > 0;
+  const parse = (v) => {
+    const n = parseFloat(String(v).replace(/\s/g, '').replace(',', '.'));
+    return Number.isFinite(n) && n > 0 ? Math.round(n * 100) / 100 : 0;
+  };
+
+  // flat index: key = "sectionId:i"
+  const items = [];
+  R.sections.forEach((s) => s.items.forEach((it, i) => items.push({ ...it, key: `${s.id}:${i}`, sid: s.id })));
+  const byKey = Object.fromEntries(items.map((it) => [it.key, it]));
+
+  // quantities: demo data carries its own example quantities; the live site remembers the visitor's draft
+  let qty = {};
+  const saved = R.demo ? null : store.get();
+  if (saved && saved.q) qty = saved.q;
+  else items.forEach((it) => { if (it.qty) qty[it.key] = it.qty; });
+  qty = Object.fromEntries(Object.entries(qty).filter(([k, v]) => byKey[k] && v > 0));
+
+  if (R.demo) { $('#akDemo').hidden = false; document.body.classList.add('has-demo'); }
+
+  /* ---------- rooms ---------- */
+  const rooms = $('#akRooms');
+  if (rooms && window.PROSTORY) {
+    const scale = Math.ceil(Math.max(...window.PROSTORY.map((p) => p.max)) / 10) * 10;
+    const pct = (n) => `${(n / scale) * 100}%`;
+    rooms.innerHTML = window.PROSTORY.map((p) => `
+      <li class="ak-room">
+        <p class="ak-room__name">${p.name}</p>
+        <p class="ak-room__cap"><b>${p.min}–${p.max}</b>hostů</p>
+        <span class="ak-room__bar" aria-hidden="true"><i style="--a:${pct(p.min)};--b:${pct(p.max)}"></i></span>
+        ${p.private ? '<span class="ak-room__priv">Nejvíce soukromí</span>' : ''}
+      </li>`).join('');
+  }
+
+  /* ---------- list ---------- */
+  const list = $('#akList');
+  const priceLabel = (it) => (priced(it) ? `${kc(it.price)} / ${UNIT[it.unit] || it.unit || 'jedn.'}` : 'cena na dotaz');
+  list.innerHTML = R.sections.map((s) => `
+    <section class="ak-sec" id="sec-${s.id}" data-sec="${s.id}">
+      <h3 class="ak-sec__name">${s.name} <small>${s.items.length}</small></h3>
+      <ul class="ak-items">
+        ${s.items.map((it, i) => {
+          const k = `${s.id}:${i}`, id = `q-${s.id}-${i}`, f = byKey[k];
+          return `<li class="ak-item" data-key="${k}" data-name="${it.name.toLowerCase()}">
+            <span class="ak-item__name" id="${id}-n">${it.name}</span>
+            <span class="ak-item__price${priced(f) ? '' : ' is-ask'}">${priceLabel(f)}</span>
+            <span class="ak-step">
+              <button type="button" data-d="-1" aria-label="Ubrat: ${it.name}">−</button>
+              <label for="${id}"><input id="${id}" type="text" inputmode="decimal" autocomplete="off" aria-labelledby="${id}-n" placeholder="0"><small>${UNIT[f.unit] || ''}</small></label>
+              <button type="button" data-d="1" aria-label="Přidat: ${it.name}">+</button>
+            </span>
+            <span class="ak-item__total"></span>
+          </li>`;
+        }).join('')}
+      </ul>
+    </section>`).join('') + '<p class="ak-noresult" id="akNoRes" hidden>Nic jsme nenašli. Zkuste jiné slovo.</p>';
+
+  /* ---------- chips + search ---------- */
+  const chips = $('#akChips');
+  chips.innerHTML = R.sections.map((s) => `<a class="ak-chip" href="#sec-${s.id}" data-chip="${s.id}">${s.name}<b></b></a>`).join('');
+
+  const search = $('#akSearch');
+  const norm = (t) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  search.addEventListener('input', () => {
+    const q = norm(search.value.trim());
+    let any = false;
+    $$('.ak-sec', list).forEach((sec) => {
+      let n = 0;
+      $$('.ak-item', sec).forEach((li) => { const hit = !q || norm(li.dataset.name).includes(q); li.hidden = !hit; if (hit) n++; });
+      sec.hidden = n === 0; if (n) any = true;
+    });
+    $('#akNoRes').hidden = any;
+  });
+
+  /* ---------- quantities ---------- */
+  function setQty(key, v) {
+    if (v > 0) qty[key] = v; else delete qty[key];
+    paintRow(key); summary(); save();
+  }
+  function paintRow(key) {
+    const li = list.querySelector(`[data-key="${key}"]`); if (!li) return;
+    const it = byKey[key], q = qty[key] || 0;
+    const input = $('input', li);
+    if (document.activeElement !== input) input.value = q ? num(q) : '';
+    li.classList.toggle('is-on', q > 0);
+    $('.ak-item__total', li).textContent = q && priced(it) ? kc(q * it.price) : (q ? 'na dotaz' : '');
+  }
+  list.addEventListener('click', (e) => {
+    const b = e.target.closest('button[data-d]'); if (!b) return;
+    const key = b.closest('.ak-item').dataset.key, it = byKey[key];
+    const next = Math.max(0, Math.round(((qty[key] || 0) + stepOf(it) * Number(b.dataset.d)) * 100) / 100);
+    setQty(key, next);
+  });
+  list.addEventListener('input', (e) => {
+    if (!e.target.matches('.ak-step input')) return;
+    setQty(e.target.closest('.ak-item').dataset.key, parse(e.target.value));
+  });
+  list.addEventListener('change', (e) => {
+    if (e.target.matches('.ak-step input')) paintRow(e.target.closest('.ak-item').dataset.key);
+  });
+  list.addEventListener('focusout', (e) => {
+    if (e.target.matches('.ak-step input')) setTimeout(() => paintRow(e.target.closest('.ak-item').dataset.key));
+  });
+
+  /* ---------- summary ---------- */
+  const persons = $('#akPersons'), date = $('#akDate');
+  if (saved) { if (saved.p) persons.value = saved.p; if (saved.d) date.value = saved.d; }
+  else if (R.demo) persons.value = 40;
+  persons.addEventListener('input', () => { summary(); save(); });
+  date.addEventListener('input', save);
+
+  function selected() { return items.filter((it) => qty[it.key] > 0).map((it) => ({ ...it, q: qty[it.key] })); }
+  function summary() {
+    const sel = selected();
+    const total = sel.reduce((a, it) => a + (priced(it) ? it.q * it.price : 0), 0);
+    const ask = sel.filter((it) => !priced(it));
+    $('#akLines').innerHTML = sel.map((it) => `<li><span>${it.name}</span><small>${num(it.q)} ${UNIT[it.unit] || ''}${priced(it) ? ` × ${kc(it.price)}` : ''}</small><b>${priced(it) ? kc(it.q * it.price) : 'na dotaz'}</b></li>`).join('');
+    $('#akEmpty').hidden = sel.length > 0;
+    $('#akTotal').textContent = kc(total);
+    const p = parseInt(persons.value, 10);
+    $('#akPerPerson').textContent = p > 0 && total > 0 ? kc(total / p) : '–';
+    const askEl = $('#akAsk');
+    askEl.hidden = !ask.length;
+    askEl.textContent = ask.length ? `+ ${ask.length} ${ask.length === 1 ? 'položka' : ask.length < 5 ? 'položky' : 'položek'} s cenou na dotaz (${ask.length === 1 ? 'není' : 'nejsou'} v součtu)` : '';
+    // chips: count of chosen dishes per section
+    R.sections.forEach((s) => {
+      const n = sel.filter((it) => it.sid === s.id).length;
+      const c = chips.querySelector(`[data-chip="${s.id}"]`);
+      c.classList.toggle('is-on', n > 0); $('b', c).textContent = n || '';
+    });
+    const bar = $('#akBar');
+    bar.hidden = sel.length === 0;
+    $('#akBarTotal').textContent = kc(total);
+    $('#akBarCount').textContent = `· ${sel.length} ${sel.length === 1 ? 'položka' : sel.length < 5 ? 'položky' : 'položek'}`;
+    return { sel, total, p };
+  }
+  function save() { if (!R.demo) store.set({ q: qty, p: persons.value, d: date.value }); }
+
+  /* ---------- actions ---------- */
+  const toast = (t) => { const el = $('#akToast'); el.textContent = t; clearTimeout(toast.t); toast.t = setTimeout(() => { el.textContent = ''; }, 4000); };
+
+  function inquiry() {
+    const { sel, total, p } = summary();
+    const d = date.value ? new Date(date.value + 'T12:00').toLocaleDateString('cs-CZ') : '…';
+    const lines = sel.map((it) => `• ${it.name}: ${num(it.q)} ${UNIT[it.unit] || ''}${priced(it) ? ` × ${kc(it.price)} = ${kc(it.q * it.price)}` : ' (cena na dotaz)'}`);
+    return [
+      'Poptávka rautu – Restaurace Prostorica', '',
+      `Datum akce: ${d}`, `Počet osob: ${p > 0 ? p : '…'}`, '',
+      ...lines, '',
+      `Celkem (orientačně): ${kc(total)}${p > 0 && total > 0 ? ` · na osobu ${kc(total / p)}` : ''}`,
+    ].join('\n');
+  }
+  $('#akCopy').addEventListener('click', () => {
+    if (!selected().length) { toast('Nejdřív zadejte množství u alespoň jednoho pokrmu.'); return; }
+    const text = inquiry();
+    const fallback = () => {
+      const buf = $('#akCopyBuf'); buf.value = text; buf.select();
+      let ok = false; try { ok = document.execCommand('copy'); } catch { /* ignore */ }
+      toast(ok ? 'Poptávka je zkopírovaná. Vložte ji do zprávy.' : 'Kopírování se nepovedlo. Označte text ručně.');
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => toast('Poptávka je zkopírovaná. Vložte ji do zprávy.'), fallback);
+    } else fallback();
+  });
+  $('#akXlsx').addEventListener('click', (e) => {
+    if (R.demo) { e.preventDefault(); toast('V náhledu se soubor nestáhne. Na webu se stáhne tabulka Excel.'); }
+  });
+  $('#akClear').addEventListener('click', () => {
+    qty = {}; items.forEach((it) => paintRow(it.key)); summary(); save(); toast('Výběr je vymazaný.');
+  });
+
+  items.forEach((it) => paintRow(it.key));
+  summary();
+})();

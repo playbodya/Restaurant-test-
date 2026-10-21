@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Akce · Prostorica</title>
+<meta name="description" content="Svatby, oslavy, firemní večírky a rauty v restauraci Prostorica, Slezská Ostrava. Sestavte si raut a hned uvidíte orientační cenu.">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/akce.css">
+</head>
+<body class="ak-page">
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav is-scrolled" id="nav">
+  <a class="nav__brand" href="index.html" aria-label="Prostorica — hlavní stránka">
+    <img class="logo logo--ink" src="assets/logo-480.webp" srcset="assets/logo-480.webp 480w, assets/logo.webp 1400w" sizes="(max-width: 760px) 120px, 170px" width="1400" height="471" alt="Prostorica restaurace"><img class="logo logo--light" src="assets/logo-light-480.webp" srcset="assets/logo-light-480.webp 480w, assets/logo-light.webp 1400w" sizes="(max-width: 760px) 120px, 170px" width="1400" height="471" alt="" aria-hidden="true">
+  </a>
+  <a class="ak-back" href="index.html">← Hlavní stránka</a>
+  <div class="nav__tools">
+    <a class="btn btn--small" href="#raut">Sestavit raut</a>
+  </div>
+</header>
+
+<p class="ak-demo" id="akDemo" hidden>Náhled · ceny jsou smyšlené, jen pro ukázku výpočtu<span class="ak-demo__more"> · texty služeb doplníme z e-mailu</span></p>
+
+<main class="ak">
+  <section class="ak-hero">
+    <img class="ak-hero__sprig sway" src="assets/sprig.webp" alt="" width="395" height="321">
+    <p class="eyebrow load" style="--d:.05s">Svatby · oslavy · firemní večírky</p>
+    <h1 class="ak-hero__title">
+      <span class="line"><span class="load" style="--d:.15s">Vaše akce,</span></span>
+      <span class="line"><em class="load" style="--d:.3s">naše starost</em></span>
+    </h1>
+    <div class="ak-hero__meta load" style="--d:.5s">
+      <p class="ak-lead">Připravíme prostor, raut i obsluhu pro 10 až 140 hostů. Níže si sestavte raut a hned uvidíte orientační cenu.</p>
+      <p class="ak-phone"><span>Sál a catering</span><a href="tel:+420602530838">+420 602 530 838</a></p>
+    </div>
+  </section>
+
+  <section class="ak-block" aria-labelledby="akServicesTitle">
+    <div class="ak-block__head">
+      <h2 class="ak-h2" id="akServicesTitle">Co pro vás připravíme</h2>
+      <p class="ak-hint">Každou akci ladíme podle vás: menu, výzdobu i časový plán.</p>
+    </div>
+    <ul class="ak-services">
+      <li class="ak-svc"><p class="ak-svc__k">Svatby</p><p>Svatební hostina ve Velkém sále, od přípitku po večerní raut.</p></li>
+      <li class="ak-svc"><p class="ak-svc__k">Oslavy a narozeniny</p><p>Kulaté narozeniny, křtiny nebo výročí v salónku jen pro vaši společnost.</p></li>
+      <li class="ak-svc"><p class="ak-svc__k">Firemní akce a plesy</p><p>Večírky, plesy a firemní setkání až pro 140 hostů.</p></li>
+      <li class="ak-svc"><p class="ak-svc__k">Rodina a srazy</p><p>Rodinný oběd, setkání po letech nebo sraz spolužáků.</p></li>
+      <li class="ak-svc"><p class="ak-svc__k">Obchodní schůzky</p><p>Spodní salónek s nejvíce soukromí, s obědem nebo kávou.</p></li>
+      <li class="ak-svc ak-svc--accent"><p class="ak-svc__k">Raut a catering</p><p>Studený i teplý raut, kanapky, finger food, dezerty a veganská jídla. Vyberte si níže.</p><a class="ak-svc__go" href="#raut">Sestavit raut ↓</a></li>
+    </ul>
+  </section>
+
+  <section class="ak-block" aria-labelledby="akRoomsTitle">
+    <div class="ak-block__head">
+      <h2 class="ak-h2" id="akRoomsTitle">Kde to bude</h2>
+      <a class="link ak-hint" href="index.html#prostory">Prostory s fotkami →</a>
+    </div>
+    <ul class="ak-rooms" id="akRooms"></ul>
+  </section>
+
+  <section class="ak-block ak-calc" id="raut" aria-labelledby="akCalcTitle">
+    <div class="ak-block__head">
+      <h2 class="ak-h2" id="akCalcTitle">Sestavte si raut</h2>
+      <p class="ak-hint">Vyberte prostor a zadejte množství u pokrmů, které chcete. Cena je orientační, finální nabídku s vámi doladíme.</p>
+    </div>
+
+    <div class="ak-tools">
+      <label class="ak-search"><span class="sr-only">Hledat pokrm</span>
+        <input type="search" id="akSearch" placeholder="Hledat pokrm, např. losos" autocomplete="off">
+      </label>
+      <nav class="ak-chips" id="akChips" aria-label="Kategorie"></nav>
+    </div>
+
+    <div class="ak-calc__grid">
+      <div class="ak-list" id="akList"></div>
+
+      <aside class="ak-sum" id="akSum" aria-labelledby="akSumTitle">
+        <h3 class="ak-sum__title" id="akSumTitle">Váš výběr</h3>
+        <div class="ak-sum__fields">
+          <label for="akDate">Datum akce<input type="date" id="akDate"></label>
+          <label for="akPersons">Počet osob<input type="number" id="akPersons" min="1" step="1" inputmode="numeric" placeholder="např. 40"></label>
+        </div>
+        <ul class="ak-sum__lines" id="akLines"></ul>
+        <p class="ak-sum__empty" id="akEmpty">Zatím nic. Zadejte množství u pokrmů vlevo.</p>
+        <dl class="ak-sum__tot">
+          <div><dt>Celkem</dt><dd id="akTotal">0 Kč</dd></div>
+          <div class="ak-sum__pp"><dt>Na osobu</dt><dd id="akPerPerson">–</dd></div>
+        </dl>
+        <p class="ak-sum__ask" id="akAsk" hidden></p>
+        <div class="ak-sum__btns">
+          <button type="button" class="btn btn--wide" id="akCopy"><span>Zkopírovat poptávku</span></button>
+          <a class="btn btn--ghost btn--wide" id="akXlsx" href="assets/docs/Prostorica-banket-objednavka.xlsx" download><span>Stáhnout tabulku (Excel)</span></a>
+          <button type="button" class="link ak-sum__clear" id="akClear">Vymazat výběr</button>
+        </div>
+        <p class="ak-sum__how">Poptávku vložte do zprávy nebo nám ji přečtěte do telefonu: <a href="tel:+420602530838">+420 602 530 838</a></p>
+        <p class="ak-toast" id="akToast" role="status" aria-live="polite"></p>
+        <textarea class="sr-only" id="akCopyBuf" tabindex="-1" aria-hidden="true"></textarea>
+      </aside>
+    </div>
+  </section>
+
+  <section class="ak-block" aria-labelledby="akStepsTitle">
+    <div class="ak-block__head"><h2 class="ak-h2" id="akStepsTitle">Jak to probíhá</h2></div>
+    <ol class="ak-steps">
+      <li><p class="ak-steps__k">Vyberte</p><p>Sestavte raut tady na webu nebo v tabulce Excel.</p></li>
+      <li><p class="ak-steps__k">Ozvěte se</p><p>Zavolejte nám nebo pošlete poptávku. Domluvíme termín a prostor.</p></li>
+      <li><p class="ak-steps__k">Doladíme</p><p>Pošleme finální nabídku a postaráme se o zbytek.</p></li>
+    </ol>
+  </section>
+</main>
+
+<div class="ak-bar" id="akBar" hidden>
+  <span><b id="akBarTotal">0 Kč</b> <small id="akBarCount"></small></span>
+  <a class="btn btn--small" href="#akSum">Váš výběr ↓</a>
+</div>
+
+<footer class="ak-foot">
+  <p class="foot__op">Provozovatel: Žaneta Pospíšilová, IČO 73784346, Javorová 36, 742 83 Zbyslavice · zapsaná v živnostenském rejstříku</p>
+  <p>© 2026 Restaurace Prostorica · Švédská 42/58a, 712 00 Slezská Ostrava · <a class="link" href="gdpr.html">GDPR</a> · <button type="button" class="link" data-cookie-settings>Cookies</button></p>
+</footer>
+
+<script src="js/consent.js"></script>
+<script src="js/prostory-data.js"></script>
+<script src="js/raut-data.js"></script>
+<script src="js/akce.js"></script>
+</body>
+</html>

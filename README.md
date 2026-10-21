@@ -36,6 +36,22 @@ První fotka je velká, další dvě menší. Dokud fotka chybí, zobrazí se r�
 Stránka `napoje.html` (odkaz `napoje.html#vina` otevře rovnou vína). Ceny a položky upravujte v **`js/napoje-data.js`**:
 `drinks` = nápojový lístek, `wine` = vinný lístek. Návod k položkám je nahoře v souboru.
 
+## Akce a kalkulačka rautu
+
+Stránka `akce.html`. Ceny a položky kalkulačky upravujte v **`js/raut-data.js`**:
+
+```js
+{ name: "Vepřová panenka", price: 590, unit: "kg" },
+```
+
+- `price` je cena za jednotku v Kč. `null` znamená „cena na dotaz“ a do součtu se nepočítá.
+- `unit` je `kg`, `ks`, `porce`, `mísa`, `osoba`, `hod` nebo `akce`. U `kg` se množství přidává po 0,5.
+- První sekce `Pronájem prostor` obsahuje ceny za pronájem salónků a sálu.
+
+Tabulka pro zákazníky ke stažení je `assets/docs/Prostorica-banket-objednavka.xlsx`. List je zamčený heslem,
+zákazník může psát jen do žlutých polí. Ceny měňte po odemčení (Revize → Odemknout list) a pak list zase zamkněte.
+Stejné ceny vepište do tabulky i do `js/raut-data.js`.
+
 ## GDPR a cookies
 
 - `gdpr.html`: Zásady zpracování osobních údajů (text z PDF ze dne 23. 2. 2026, PDF je v `assets/docs/`).

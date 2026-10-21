@@ -9,7 +9,7 @@
 
   /* ---------- Content ---------- */
   const RU = {
-    'nav.about': 'О нас', 'nav.menu': 'Меню', 'nav.lunch': 'Дневное меню', 'nav.rooms': 'Залы', 'nav.contact': 'Контакты', 'nav.where': 'Как добраться', 'nav.gallery': 'Галерея', 'nav.book': 'Бронь',
+    'nav.about': 'О нас', 'nav.menu': 'Меню', 'nav.lunch': 'Дневное меню', 'nav.rooms': 'Залы', 'nav.events': 'Мероприятия', 'nav.contact': 'Контакты', 'nav.where': 'Как добраться', 'nav.gallery': 'Галерея', 'nav.book': 'Бронь',
     'hero.eyebrow': 'Ресторан · Слезска-Острава', 'hero.t1': 'Чешская кухня', 'hero.t2': 'с ноткой', 'hero.t3': 'французской деревни',
     'hero.lead': 'Мы готовим честную чешскую кухню с ноткой французской деревни. Сезонные продукты, травы и вино небольших виноделен.',
     'hero.book': 'Забронировать стол', 'hero.menu': 'Смотреть меню',
@@ -35,7 +35,7 @@
   };
 
   const EN = {
-    'nav.about': 'About', 'nav.menu': 'Menu', 'nav.lunch': 'Lunch menu', 'nav.rooms': 'Spaces', 'nav.contact': 'Contact', 'nav.where': 'Find us', 'nav.gallery': 'Gallery', 'nav.book': 'Book',
+    'nav.about': 'About', 'nav.menu': 'Menu', 'nav.lunch': 'Lunch menu', 'nav.rooms': 'Spaces', 'nav.events': 'Events', 'nav.contact': 'Contact', 'nav.where': 'Find us', 'nav.gallery': 'Gallery', 'nav.book': 'Book',
     'hero.eyebrow': 'Restaurant · Slezská Ostrava', 'hero.t1': 'Czech cuisine', 'hero.t2': 'with a touch', 'hero.t3': 'of the French countryside',
     'hero.lead': 'We serve honest Czech cooking with a touch of the French countryside. Seasonal produce, herbs and wine from small wineries.',
     'hero.book': 'Book a table', 'hero.menu': 'See the menu',
@@ -60,7 +60,7 @@
   };
 
   const PL = {
-    'nav.about': 'O nas', 'nav.menu': 'Menu', 'nav.lunch': 'Menu dnia', 'nav.rooms': 'Sale', 'nav.contact': 'Kontakt', 'nav.where': 'Dojazd', 'nav.gallery': 'Galeria', 'nav.book': 'Rezerwacja',
+    'nav.about': 'O nas', 'nav.menu': 'Menu', 'nav.lunch': 'Menu dnia', 'nav.rooms': 'Sale', 'nav.events': 'Imprezy', 'nav.contact': 'Kontakt', 'nav.where': 'Dojazd', 'nav.gallery': 'Galeria', 'nav.book': 'Rezerwacja',
     'hero.eyebrow': 'Restauracja · Slezská Ostrava', 'hero.t1': 'Kuchnia czeska', 'hero.t2': 'z nutą', 'hero.t3': 'francuskiej wsi',
     'hero.lead': 'Gotujemy uczciwą kuchnię czeską z nutą francuskiej wsi. Sezonowe produkty, zioła i wino z małych winnic.',
     'hero.book': 'Zarezerwuj stolik', 'hero.menu': 'Zobacz menu',
@@ -269,7 +269,8 @@
 
   /* ---------- Rooms (data: js/prostory-data.js) ---------- */
   const ROOMS = window.PROSTORY;
-  const SCALE = 100;
+  // capacity scale: largest room rounded up to tens (e.g. 140)
+  const SCALE = ROOMS ? Math.ceil(Math.max(...ROOMS.map((r) => r.max)) / 10) * 10 : 100;
   function renderRooms() {
     const grid = $('#roomsGrid');
     if (!grid || !ROOMS) return;
@@ -294,7 +295,7 @@
           <div class="room__scale" role="img" aria-label="${R.scale}: ${r.min}–${r.max} ${R.unit}">
             <span class="room__range" style="left:${left}%;width:${width}%"></span>
           </div>
-          <div class="room__ticks" aria-hidden="true"><span>0</span><span>50</span><span>100</span></div>
+          <div class="room__ticks" aria-hidden="true"><span>0</span><span>${SCALE / 2}</span><span>${SCALE}</span></div>
           <p class="room__fit">${R.fit}</p>
           <ul class="room__tags">${r.tags.map((t) => `<li>${R.tags[t]}</li>`).join('')}</ul>
           <p class="room__text">${tr(r.text)}</p>

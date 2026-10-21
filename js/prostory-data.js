@@ -28,7 +28,7 @@ window.PROSTORY = [
     id: 'velky',
     name: 'Velký sál',
     sub: { ru: 'Большой зал', en: 'Grand hall', pl: 'Duża sala' },
-    min: 30, max: 100,
+    min: 30, max: 140,
     tags: ['wedding', 'ball', 'company'],
     private: false,
     photos: [],
