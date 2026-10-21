@@ -11,9 +11,9 @@ window.RAUT = {
   sections: [
     { id: "pronajem", name: "Pronájem prostor", items: [
       { name: "Modrý salónek", price: null, unit: "akce" },
-      { name: "Spodní salónek", price: null, unit: "akce" },
-      { name: "Velký sál s terasou", price: null, unit: "akce" },
-      { name: "Velký sál – uzavření celé restaurace", price: null, unit: "akce" },
+      { name: "Spodní salónek", price: 5000, unit: "akce" },
+      { name: "Velký sál s terasou", price: 20000, unit: "akce" },
+      { name: "Velký sál – uzavření celé restaurace", price: 25000, unit: "akce" },
     ] },
     { id: "salaty", name: "Saláty", items: [
       { name: "Šopský salát", price: 550, unit: "kg" },
