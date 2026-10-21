@@ -30,8 +30,8 @@ window.RAUT = {
       { name: "Ovocný salát", price: 300, unit: "kg" },
     ] },
     { id: "studeny", name: "Studený raut", items: [
-      { name: "Salámová mísa zdobená zeleninou", price: 800, unit: "mísa" },
-      { name: "Sýrová mísa s chutney, zdobená ovocem a oříšky", price: 700, unit: "mísa" },
+      { name: "Salámová mísa zdobená zeleninou", price: 800, unit: "kg" },
+      { name: "Sýrová mísa s chutney, zdobená ovocem a oříšky", price: 700, unit: "kg" },
       { name: "Masové plněné rolády – kuřecí", price: 650, unit: "kg" },
       { name: "Masové plněné rolády – bůčkové", price: 650, unit: "kg" },
       { name: "Tatarský biftek s topinkami", price: 1600, unit: "kg" },
