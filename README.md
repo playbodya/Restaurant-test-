@@ -48,9 +48,12 @@ Stránka `akce.html`. Ceny a položky kalkulačky upravujte v **`js/raut-data.js
 - `unit` je `kg`, `ks`, `porce`, `mísa`, `osoba`, `hod` nebo `akce`. U `kg` se množství přidává po 0,5.
 - První sekce `Pronájem prostor` obsahuje ceny za pronájem salónků a sálu.
 
-Tabulka pro zákazníky ke stažení je `assets/docs/Prostorica-banket-objednavka.xlsx`. List je zamčený heslem,
-zákazník může psát jen do žlutých polí. Ceny měňte po odemčení (Revize → Odemknout list) a pak list zase zamkněte.
-Stejné ceny vepište do tabulky i do `js/raut-data.js`.
+Tlačítko „Stáhnout objednávku (Excel)“ vytvoří tabulku přímo v prohlížeči z `js/raut-data.js` (soubor `js/akce-xlsx.js`,
+knihovna ExcelJS v `js/vendor/`). Ceny v tabulce jsou proto vždy stejné jako na webu, stačí je měnit jen v `js/raut-data.js`.
+Zákazník v ní může psát jen do žlutých polí, list je zamčený náhodným heslem.
+
+`assets/docs/Prostorica-banket-objednavka.xlsx` je prázdná tabulka pro posílání e-mailem (na webu se neodkazuje).
+Má vlastní heslo. Když změníte ceny, upravte je v ní ručně po odemčení (Revize → Odemknout list).
 
 ## GDPR a cookies
 

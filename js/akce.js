@@ -146,6 +146,7 @@
     bar.hidden = sel.length === 0;
     $('#akBarTotal').textContent = kc(total);
     $('#akBarCount').textContent = `· ${sel.length} ${sel.length === 1 ? 'položka' : sel.length < 5 ? 'položky' : 'položek'}`;
+    $('#akXlsxLabel').textContent = sel.length ? 'Stáhnout vyplněnou objednávku (Excel)' : 'Stáhnout prázdnou tabulku (Excel)';
     return { sel, total, p };
   }
   function save() { if (!R.demo) store.set({ q: qty, p: persons.value, d: date.value }); }
@@ -153,12 +154,20 @@
   /* ---------- actions ---------- */
   const toast = (t) => { const el = $('#akToast'); el.textContent = t; clearTimeout(toast.t); toast.t = setTimeout(() => { el.textContent = ''; }, 4000); };
 
+  // contact fields are not stored in the browser, they only go into the copied text and the Excel file
+  const contact = () => ({ name: $('#akName').value.trim(), phone: $('#akPhone').value.trim(), email: $('#akEmail').value.trim(), note: $('#akNote').value.trim() });
+  function contactLines() {
+    const c = contact();
+    return [c.name && `Jméno: ${c.name}`, c.phone && `Telefon: ${c.phone}`, c.email && `E-mail: ${c.email}`, c.note && `Poznámka: ${c.note}`].filter(Boolean);
+  }
+
   function inquiry() {
     const { sel, total, p } = summary();
     const d = date.value ? new Date(date.value + 'T12:00').toLocaleDateString('cs-CZ') : '…';
     const lines = sel.map((it) => `• ${it.name}: ${num(it.q)} ${UNIT[it.unit] || ''}${priced(it) ? ` × ${kc(it.price)} = ${kc(it.q * it.price)}` : ' (cena na dotaz)'}`);
     return [
       'Poptávka rautu – Restaurace Prostorica', '',
+      ...contactLines(),
       `Datum akce: ${d}`, `Počet osob: ${p > 0 ? p : '…'}`, '',
       ...lines, '',
       `Celkem (orientačně): ${kc(total)}${p > 0 && total > 0 ? ` · na osobu ${kc(total / p)}` : ''}`,
@@ -176,8 +185,36 @@
       navigator.clipboard.writeText(text).then(() => toast('Poptávka je zkopírovaná. Vložte ji do zprávy.'), fallback);
     } else fallback();
   });
-  $('#akXlsx').addEventListener('click', (e) => {
-    if (R.demo) { e.preventDefault(); toast('V náhledu se soubor nestáhne. Na webu se stáhne tabulka Excel.'); }
+  /* Excel: ExcelJS (~1 MB) loads only on the first click */
+  let excelLib = null;
+  const loadExcel = () => excelLib || (excelLib = new Promise((ok, fail) => {
+    if (window.ExcelJS) { ok(window.ExcelJS); return; }
+    const s = document.createElement('script');
+    s.src = 'js/vendor/exceljs.min.js';
+    s.onload = () => (window.ExcelJS ? ok(window.ExcelJS) : fail(new Error('ExcelJS missing')));
+    s.onerror = () => { excelLib = null; fail(new Error('ExcelJS failed to load')); };
+    document.head.appendChild(s);
+  }));
+  const xlsxBtn = $('#akXlsx');
+  xlsxBtn.addEventListener('click', async () => {
+    if (R.demo) { toast('V náhledu se soubor nestáhne. Na webu se stáhne tabulka Excel.'); return; }
+    if (xlsxBtn.disabled) return;
+    xlsxBtn.disabled = true;
+    toast('Připravujeme tabulku…');
+    try {
+      const ExcelJS = await loadExcel();
+      const filled = selected().length > 0;
+      const wb = await window.ProstoricaXlsx.build(ExcelJS, R, { qty, persons: persons.value, date: date.value, ...contact() });
+      const blob = new Blob([await wb.xlsx.writeBuffer()], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = filled ? `Prostorica-objednavka-${date.value || new Date().toISOString().slice(0, 10)}.xlsx` : 'Prostorica-banket-objednavka.xlsx';
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(a.href), 10000);
+      toast(filled ? 'Objednávka je stažená. Pošlete nám ji nebo zavolejte.' : 'Tabulka je stažená.');
+    } catch {
+      toast('Tabulku se nepodařilo vytvořit. Zkuste to znovu nebo nám zavolejte.');
+    } finally { xlsxBtn.disabled = false; }
   });
   $('#akClear').addEventListener('click', () => {
     qty = {}; items.forEach((it) => paintRow(it.key)); summary(); save(); toast('Výběr je vymazaný.');

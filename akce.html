@@ -90,12 +90,19 @@
           <div class="ak-sum__pp"><dt>Na osobu</dt><dd id="akPerPerson">–</dd></div>
         </dl>
         <p class="ak-sum__ask" id="akAsk" hidden></p>
+        <fieldset class="ak-sum__contact">
+          <legend>Kontakt do objednávky</legend>
+          <label for="akName">Jméno a příjmení<input type="text" id="akName" autocomplete="name"></label>
+          <label for="akPhone">Telefon<input type="tel" id="akPhone" autocomplete="tel" inputmode="tel"></label>
+          <label for="akEmail">E-mail<input type="email" id="akEmail" autocomplete="email"></label>
+          <label for="akNote">Poznámka<textarea id="akNote" rows="3" placeholder="Alergie, přání, čas servírování…"></textarea></label>
+        </fieldset>
         <div class="ak-sum__btns">
-          <button type="button" class="btn btn--wide" id="akCopy"><span>Zkopírovat poptávku</span></button>
-          <a class="btn btn--ghost btn--wide" id="akXlsx" href="assets/docs/Prostorica-banket-objednavka.xlsx" download><span>Stáhnout tabulku (Excel)</span></a>
+          <button type="button" class="btn btn--wide" id="akXlsx"><span id="akXlsxLabel">Stáhnout objednávku (Excel)</span></button>
+          <button type="button" class="btn btn--ghost btn--wide" id="akCopy"><span>Zkopírovat poptávku</span></button>
           <button type="button" class="link ak-sum__clear" id="akClear">Vymazat výběr</button>
         </div>
-        <p class="ak-sum__how">Poptávku vložte do zprávy nebo nám ji přečtěte do telefonu: <a href="tel:+420602530838">+420 602 530 838</a></p>
+        <p class="ak-sum__how">Stažený soubor nám pošlete, nebo poptávku vložte do zprávy či přečtěte do telefonu: <a href="tel:+420602530838">+420 602 530 838</a></p>
         <p class="ak-toast" id="akToast" role="status" aria-live="polite"></p>
         <textarea class="sr-only" id="akCopyBuf" tabindex="-1" aria-hidden="true"></textarea>
       </aside>
@@ -125,6 +132,7 @@
 <script src="js/consent.js"></script>
 <script src="js/prostory-data.js"></script>
 <script src="js/raut-data.js"></script>
+<script src="js/akce-xlsx.js"></script>
 <script src="js/akce.js"></script>
 </body>
 </html>
