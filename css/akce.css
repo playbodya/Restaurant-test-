@@ -205,3 +205,19 @@
 .ak-sum { max-height: calc(100vh - 96px - 16px - env(safe-area-inset-top, 0px)); max-height: calc(100dvh - 96px - 16px - env(safe-area-inset-top, 0px)); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
 .ak-sum__lines { max-height: none; overflow: visible; }
 @media (max-width: 900px) { .ak-sum { max-height: none; overflow: visible; } }
+
+/* Date + persons: one field per row, same height, a calendar icon on the date.
+   iOS Safari gives date inputs their own width and an empty look, so reset the native appearance. */
+.ak-sum__fields { grid-template-columns: minmax(0, 1fr); gap: .8rem; }
+.ak-sum__fields input, .ak-sum__contact input {
+  -webkit-appearance: none; appearance: none; display: block; box-sizing: border-box; max-width: 100%; height: 2.9rem; margin: 0; line-height: 1.4;
+}
+.ak-sum__fields input[type="date"] {
+  position: relative; padding-right: 2.8rem; text-align: left;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c3aef5' stroke-width='1.6' stroke-linecap='round'%3E%3Crect x='3.5' y='5' width='17' height='15.5' rx='2'/%3E%3Cpath d='M3.5 10h17M8 3v4M16 3v4'/%3E%3C/svg%3E") right .85rem center / 1.15rem no-repeat,
+              color-mix(in srgb, var(--band-fg) 6%, transparent);
+}
+.ak-sum__fields input[type="date"]::-webkit-date-and-time-value { text-align: left; margin: 0; }
+.ak-sum__fields input[type="date"]::-webkit-calendar-picker-indicator { position: absolute; right: 0; top: 0; width: 2.8rem; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.ak-sum__fields input[type="number"] { -moz-appearance: textfield; }
+.ak-sum__fields input[type="number"]::-webkit-inner-spin-button, .ak-sum__fields input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
