@@ -206,11 +206,21 @@
       const filled = selected().length > 0;
       const wb = await window.ProstoricaXlsx.build(ExcelJS, R, { qty, persons: persons.value, date: date.value, ...contact() });
       const blob = new Blob([await wb.xlsx.writeBuffer()], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = filled ? `Prostorica-objednavka-${date.value || new Date().toISOString().slice(0, 10)}.xlsx` : 'Prostorica-banket-objednavka.xlsx';
-      document.body.appendChild(a); a.click(); a.remove();
-      setTimeout(() => URL.revokeObjectURL(a.href), 10000);
+      const filename = filled ? `Prostorica-objednavka-${date.value || new Date().toISOString().slice(0, 10)}.xlsx` : 'Prostorica-banket-objednavka.xlsx';
+      // inside the claude.ai preview downloads go through its own save dialog
+      const viewer = window.claude && window.claude.use ? await window.claude.use('downloads') : null;
+      if (viewer) {
+        try { await viewer.save({ filename, data: blob }); } catch (err) {
+          toast(err && err.code === 'declined' ? 'Stažení jste zrušili.' : 'Soubor se nepodařilo uložit.');
+          return;
+        }
+      } else {
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = filename;
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(() => URL.revokeObjectURL(a.href), 10000);
+      }
       toast(filled ? 'Objednávka je stažená. Pošlete nám ji nebo zavolejte.' : 'Tabulka je stažená.');
     } catch {
       toast('Tabulku se nepodařilo vytvořit. Zkuste to znovu nebo nám zavolejte.');
