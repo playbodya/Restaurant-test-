@@ -12,7 +12,7 @@ window.DENNI_MENU = {
   to: '2026-10-16',
   hours: '11:00–15:00',
   soups: [
-    { day: 0, cs: 'Smetanová polévka s čočkou Beluga', ru: 'Сливочный суп с чечевицей белуга', en: 'Cream soup with Beluga lentils', pl: 'Zupa śmietanowa z soczewicą Beluga', a: '1, 7, 9' },
+    { day: 0, cs: 'Smetanová polévka s čočkou Beluga', ru: 'Хуй с солью', en: 'Cream soup with Beluga lentils', pl: 'Zupa śmietanowa z soczewicą Beluga', a: '1, 7, 9' },
     { day: 1, cs: 'Rajská polévka s rýží', ru: 'Томатный суп с рисом', en: 'Tomato soup with rice', pl: 'Zupa pomidorowa z ryżem', a: '1, 7, 9' },
     { day: 2, cs: 'Krém z pečeného česneku s krutony', ru: 'Крем-суп из печёного чеснока с крутонами', en: 'Roasted garlic cream soup with croutons', pl: 'Krem z pieczonego czosnku z grzankami', a: '1, 7, 9' },
     { day: 3, cs: 'Masový vývar', ru: 'Мясной бульон', en: 'Meat broth', pl: 'Rosół mięsny', a: '1, 3, 7, 9' },
