@@ -4,13 +4,14 @@
  * price … cena za jednotku v Kč (číslo, např. 590). null = „cena na dotaz“ (do součtu se nepočítá).
  * unit  … 'kg', 'ks', 'porce', 'mísa', 'osoba', 'hod' nebo 'akce' (pronájem za celou akci). Pro 'kg' se množství přidává po 0,5.
  *
+ * choice: "one" … v sekci jde vybrat jen jedna položka (jednou); required: true … bez výběru nejde objednávku odeslat.
+ *
  * Stejné položky a ceny vepište i do tabulky assets/docs/Prostorica-banket-objednavka.xlsx.
  */
 window.RAUT = {
   demo: false,
   sections: [
-    { id: "pronajem", name: "Pronájem prostor", items: [
-      { name: "Modrý salónek", price: null, unit: "akce" },
+    { id: "pronajem", name: "Pronájem prostor", choice: "one", required: true, items: [
       { name: "Spodní salónek", price: 5000, unit: "akce" },
       { name: "Velký sál s terasou", price: 20000, unit: "akce" },
       { name: "Velký sál – uzavření celé restaurace", price: 25000, unit: "akce" },

@@ -221,3 +221,21 @@
 .ak-sum__fields input[type="date"]::-webkit-calendar-picker-indicator { position: absolute; right: 0; top: 0; width: 2.8rem; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
 .ak-sum__fields input[type="number"] { -moz-appearance: textfield; }
 .ak-sum__fields input[type="number"]::-webkit-inner-spin-button, .ak-sum__fields input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+
+/* "Choose one" section (room rental): a radio pill instead of the stepper */
+.ak-pick { grid-area: step; justify-self: end; display: inline-flex; align-items: center; gap: .5rem; padding: .45rem 1rem .45rem .7rem; border: 1px solid var(--line); border-radius: 999px; background: var(--field); cursor: pointer; font-size: .9rem; transition: border-color .3s, background .3s, color .3s; }
+.ak-pick:hover { border-color: var(--lavender); }
+.ak-pick input { appearance: none; -webkit-appearance: none; width: 1.05rem; height: 1.05rem; margin: 0; border: 1.5px solid var(--muted); border-radius: 50%; display: grid; place-content: center; cursor: pointer; }
+.ak-pick input::before { content: ""; width: .5rem; height: .5rem; border-radius: 50%; background: var(--paper); transform: scale(0); transition: transform .2s var(--ease); }
+.ak-pick input:checked { border-color: var(--paper); }
+.ak-pick input:checked::before { transform: scale(1); }
+.ak-pick:has(input:focus-visible) { outline: 2px solid var(--lavender); outline-offset: 2px; }
+.ak-item.is-on .ak-pick { background: var(--lavender); border-color: var(--lavender); color: var(--paper); }
+.ak-sec.is-missing .ak-sec__name small { color: var(--lavender); font-weight: 500; }
+.ak-sec.is-missing .ak-items { animation: ak-need 1.2s var(--ease); border-radius: 4px; }
+@keyframes ak-need { 0%, 60% { box-shadow: 0 0 0 2px var(--lavender); } 100% { box-shadow: 0 0 0 2px transparent; } }
+.ak-sum__need { margin: 0; padding: .6rem .8rem; border-radius: 4px; border: 1px solid var(--band-accent); color: var(--band-fg); font-size: .85rem; }
+.ak-sum__need a { color: var(--band-accent); white-space: nowrap; }
+@media (max-width: 560px) { .ak-pick { justify-self: start; } }
+@media (prefers-reduced-motion: reduce) { .ak-sec.is-missing .ak-items { animation: none; box-shadow: 0 0 0 2px var(--lavender); } .ak-pick input::before { transition: none; } }
+.ak-sec__name { flex-wrap: wrap; row-gap: .2rem; }

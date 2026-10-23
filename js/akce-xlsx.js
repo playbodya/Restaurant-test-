@@ -78,10 +78,12 @@
     let total = 0;
     data.sections.forEach((s) => {
       ws.mergeCells(`A${row}:E${row}`);
-      put(`A${row}`, s.name, { bold: true, fill: LAV2, border: true });
+      const one = s.choice === 'one';
+      put(`A${row}`, one ? `${s.name} – ${s.required ? 'povinné, ' : ''}vyberte jeden (napište 1)` : s.name, { bold: true, fill: LAV2, border: true });
       row++;
       const rows = s.items.map((it, i) => ({ it, q: qty[`${s.id}:${i}`] || 0 }));
-      for (let k = 0; k < (opts.extraRows || 0); k++) rows.push({ it: null, q: 0 });
+      if (!one) for (let k = 0; k < (opts.extraRows || 0); k++) rows.push({ it: null, q: 0 });
+      const from = row, to = row + rows.length - 1;
       rows.forEach(({ it, q }) => {
         const price = it && typeof it.price === 'number' && it.price > 0 ? it.price : null;
         const line = price && q > 0 ? Math.round(price * q * 100) / 100 : '';
@@ -92,7 +94,10 @@
         put(`D${row}`, q > 0 ? q : null, { border: true, h: 'right', open: true, bold: q > 0, fill: it ? YEL : undefined });
         const e = put(`E${row}`, undefined, { border: true, h: 'right', bold: true, fmt: KC });
         e.value = { formula: `IF(OR(B${row}="",D${row}=""),"",B${row}*D${row})`, result: line };
-        ws.getCell(`D${row}`).dataValidation = qtyRule;
+        ws.getCell(`D${row}`).dataValidation = one
+          ? { type: 'custom', formulae: [`AND(OR(D${row}=0,D${row}=1),SUM($D$${from}:$D$${to})<=1)`], allowBlank: true, showErrorMessage: true,
+            errorTitle: s.name, error: 'Vyberte jen jeden prostor: napište 1 u jednoho z nich.' }
+          : qtyRule;
         ws.getCell(`C${row}`).dataValidation = { type: 'list', formulae: [UNITS], allowBlank: true };
         row++;
       });

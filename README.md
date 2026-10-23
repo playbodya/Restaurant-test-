@@ -46,7 +46,8 @@ Stránka `akce.html`. Ceny a položky kalkulačky upravujte v **`js/raut-data.js
 
 - `price` je cena za jednotku v Kč. `null` znamená „cena na dotaz“ a do součtu se nepočítá.
 - `unit` je `kg`, `ks`, `porce`, `mísa`, `osoba`, `hod` nebo `akce`. U `kg` se množství přidává po 0,5.
-- První sekce `Pronájem prostor` obsahuje ceny za pronájem salónků a sálu.
+- První sekce `Pronájem prostor` obsahuje ceny za pronájem salónků a sálu. Má `choice: "one"` (jde vybrat jen jeden prostor)
+  a `required: true` (bez vybraného prostoru nejde vyplněnou objednávku stáhnout ani zkopírovat).
 
 Tlačítko „Stáhnout objednávku (Excel)“ vytvoří tabulku přímo v prohlížeči z `js/raut-data.js` (soubor `js/akce-xlsx.js`,
 knihovna ExcelJS v `js/vendor/`). Ceny v tabulce jsou proto vždy stejné jako na webu, stačí je měnit jen v `js/raut-data.js`.
