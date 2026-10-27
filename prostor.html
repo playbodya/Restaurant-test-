@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prostory · Prostorica</title>
+<meta name="description" content="Salónky a velký sál restaurace Prostorica ve Slezské Ostravě: kapacita, ceny pronájmu, výzdoba a program na vaši akci.">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/prostor.css">
+</head>
+<body class="pr-page">
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav is-scrolled" id="nav">
+  <a class="nav__brand" href="index.html" aria-label="Prostorica — hlavní stránka">
+    <img class="logo logo--ink" src="assets/logo-480.webp" srcset="assets/logo-480.webp 480w, assets/logo.webp 1400w" sizes="(max-width: 760px) 120px, 170px" width="1400" height="471" alt="Prostorica restaurace"><img class="logo logo--light" src="assets/logo-light-480.webp" srcset="assets/logo-light-480.webp 480w, assets/logo-light.webp 1400w" sizes="(max-width: 760px) 120px, 170px" width="1400" height="471" alt="" aria-hidden="true">
+  </a>
+  <a class="pr-back" href="index.html#prostory">← Všechny prostory</a>
+  <div class="nav__tools">
+    <a class="btn btn--small" href="tel:+420602530838">Poptat prostor</a>
+  </div>
+</header>
+
+<main class="pr" id="prMain">
+  <nav class="pr-tabs" id="prTabs" aria-label="Prostory"></nav>
+
+  <section class="pr-hero">
+    <p class="eyebrow" id="prEyebrow">Prostory</p>
+    <h1 class="pr-title" id="prTitle">Prostory</h1>
+    <div class="pr-hero__meta">
+      <p class="pr-cap" id="prCap"></p>
+      <ul class="pr-prices" id="prPrices"></ul>
+    </div>
+  </section>
+
+  <div class="pr-photos" id="prPhotos"></div>
+
+  <section class="pr-block pr-about">
+    <div>
+      <h2 class="pr-h2">O prostoru</h2>
+      <p class="pr-text" id="prText"></p>
+      <p class="pr-suits" id="prSuits"></p>
+      <ul class="pr-tags" id="prTags"></ul>
+    </div>
+    <div id="prInfoWrap">
+      <h2 class="pr-h2">Co nabízí</h2>
+      <ul class="pr-info" id="prInfo"></ul>
+    </div>
+  </section>
+
+  <section class="pr-block" aria-labelledby="prPartnersTitle">
+    <div class="pr-block__head">
+      <h2 class="pr-h2" id="prPartnersTitle">Ať je akce ještě živější</h2>
+      <p class="pr-hint">Výzdobu a program zajistí naši osvědčení partneři. Rádi vás propojíme.</p>
+    </div>
+    <ul class="pr-partners" id="prPartners"></ul>
+  </section>
+
+  <section class="pr-block pr-raut">
+    <div>
+      <h2 class="pr-h2">Raut a catering</h2>
+      <p class="pr-text">Studený i teplý raut, kanapky, dezerty a veganská jídla připravíme z kvalitních surovin, včetně obsluhy. Sestavte si raut na webu a hned uvidíte orientační cenu.</p>
+    </div>
+    <a class="btn magnetic" href="akce.html#raut"><span>Sestavit raut →</span></a>
+  </section>
+
+  <section class="pr-block pr-cta">
+    <h2 class="pr-h2">Poptejte termín</h2>
+    <p class="pr-text">Zavolejte nám, domluvíme termín, menu i výzdobu.</p>
+    <p class="pr-phone"><span>Pronájem sálu a catering</span><a href="tel:+420602530838">+420 602 530 838</a></p>
+    <p class="pr-addr">Švédská 42/58a, 712 00 Slezská Ostrava · <a class="link" href="index.html#kudy">Kudy k nám</a></p>
+  </section>
+</main>
+
+<footer class="pr-foot">
+  <p class="foot__op">Provozovatel: Žaneta Pospíšilová, IČO 73784346, Javorová 36, 742 83 Zbyslavice · zapsaná v živnostenském rejstříku</p>
+  <p>© 2026 Restaurace Prostorica · <a class="link" href="gdpr.html">GDPR</a> · <button type="button" class="link" data-cookie-settings>Cookies</button></p>
+</footer>
+
+<script src="js/consent.js"></script>
+<script src="js/prostory-data.js"></script>
+<script src="js/raut-data.js"></script>
+<script src="js/partneri-data.js"></script>
+<script src="js/prostor.js"></script>
+</body>
+</html>

@@ -663,3 +663,4 @@ em { font-style: italic; color: var(--lavender); }
 .lunch__list { position: relative; z-index: 1; }
 .callcard__title, .callcard .eyebrow { padding-right: 64px; }
 @media (max-width: 520px) { .callcard__sprig { width: 48px; right: 10px; top: -6px; opacity: .6; } }
+.room__more { margin-top: .6rem; }

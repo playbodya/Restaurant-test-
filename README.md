@@ -56,6 +56,12 @@ Zákazník v ní může psát jen do žlutých polí, list je zamčený náhodn�
 `assets/docs/Prostorica-banket-objednavka.xlsx` je prázdná tabulka pro posílání e-mailem (na webu se neodkazuje).
 Má vlastní heslo. Když změníte ceny, upravte je v ní ručně po odemčení (Revize → Odemknout list).
 
+## Stránka prostoru (Více info)
+
+`prostor.html#modry`, `#velky`, `#spodni`: detail jednoho prostoru, odkaz „Více info“ v sekci Prostory.
+Texty a fotky jsou v `js/prostory-data.js` (`info`, `suits`, `photos`), ceny pronájmu se berou z `js/raut-data.js`
+(sekce Pronájem prostor, pole `rent`). Partneři (květiny, balónky, program) jsou v `js/partneri-data.js`.
+
 ## GDPR a cookies
 
 - `gdpr.html`: Zásady zpracování osobních údajů (text z PDF ze dne 23. 2. 2026, PDF je v `assets/docs/`).

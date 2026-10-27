@@ -94,7 +94,7 @@
       errors: { date: 'Vyberte prosím datum.', name: 'Napište prosím své jméno.', phone: 'Zadejte telefon, ať vám můžeme potvrdit rezervaci.', past: 'Toto datum už proběhlo.' },
       done: (n, g, d, t) => `${n}, poptávku na ${g} ${g === 1 ? 'osobu' : g < 5 ? 'osoby' : 'osob'} ${d} v ${t} jsme přijali. Ozveme se vám s potvrzením. (Ukázková stránka: zpráva se nikam neodesílá.)`,
       copied: 'Zkopírováno ✓',
-      rooms: { unit: 'hostů', fit: 'Vhodné pro', priv: 'Nejvíce soukromí', cta: 'Poptat prostor', soon: 'Fotografie doplníme', scale: 'kapacita', tags: { birthday: 'Narozeniny', family: 'Rodinný oběd', reunion: 'Sraz absolventů', wedding: 'Svatby', ball: 'Maturitní plesy', company: 'Firemní večírky', business: 'Obchodní schůzky' } },
+      rooms: { unit: 'hostů', fit: 'Vhodné pro', priv: 'Nejvíce soukromí', cta: 'Poptat prostor', more: 'Více info', soon: 'Fotografie doplníme', scale: 'kapacita', tags: { birthday: 'Narozeniny', family: 'Rodinný oběd', reunion: 'Sraz absolventů', wedding: 'Svatby', ball: 'Maturitní plesy', company: 'Firemní večírky', business: 'Obchodní schůzky' } },
       lunch: { todaySoup: 'Dnešní polévka', weekend: 'O víkendu denní menu nevaříme, těšíme se v pondělí.', stale: 'Nové denní menu právě připravujeme.', soon: (d) => `Menu platí od ${d}` },
     },
     ru: {
@@ -104,7 +104,7 @@
       errors: { date: 'Выберите, пожалуйста, дату.', name: 'Укажите, пожалуйста, имя.', phone: 'Укажите телефон, чтобы мы могли подтвердить бронь.', past: 'Эта дата уже прошла.' },
       done: (n, g, d, t) => `${n}, запрос на столик для ${g} ${g === 1 ? 'персоны' : 'персон'} ${d} в ${t} принят. Мы свяжемся с вами для подтверждения. (Демо-страница: заявка никуда не отправляется.)`,
       copied: 'Скопировано ✓',
-      rooms: { unit: 'гостей', fit: 'Подходит для', priv: 'Больше всего приватности', cta: 'Узнать о зале', soon: 'Фото скоро появятся', scale: 'вместимость', tags: { birthday: 'Дни рождения', family: 'Семейный обед', reunion: 'Встреча выпускников', wedding: 'Свадьбы', ball: 'Выпускные балы', company: 'Корпоративы', business: 'Бизнес-встречи' } },
+      rooms: { unit: 'гостей', fit: 'Подходит для', priv: 'Больше всего приватности', cta: 'Узнать о зале', more: 'Подробнее', soon: 'Фото скоро появятся', scale: 'вместимость', tags: { birthday: 'Дни рождения', family: 'Семейный обед', reunion: 'Встреча выпускников', wedding: 'Свадьбы', ball: 'Выпускные балы', company: 'Корпоративы', business: 'Бизнес-встречи' } },
       lunch: { todaySoup: 'Суп дня', weekend: 'В выходные дневного меню нет, ждём вас в понедельник.', stale: 'Новое дневное меню скоро появится.', soon: (d) => `Меню действует с ${d}` },
     },
     en: {
@@ -114,7 +114,7 @@
       errors: { date: 'Please choose a date.', name: 'Please enter your name.', phone: 'Please enter a phone number so we can confirm the booking.', past: 'This date has already passed.' },
       done: (n, g, d, t) => `${n}, we have your request for ${g} ${g === 1 ? 'guest' : 'guests'} on ${d} at ${t}. We will get back to you to confirm. (Demo page: the request is not sent anywhere.)`,
       copied: 'Copied ✓',
-      rooms: { unit: 'guests', fit: 'Ideal for', priv: 'Most private', cta: 'Enquire', soon: 'Photos coming soon', scale: 'capacity', tags: { birthday: 'Birthdays', family: 'Family lunches', reunion: 'Class reunions', wedding: 'Weddings', ball: 'Graduation balls', company: 'Company parties', business: 'Business meetings' } },
+      rooms: { unit: 'guests', fit: 'Ideal for', priv: 'Most private', cta: 'Enquire', more: 'More info', soon: 'Photos coming soon', scale: 'capacity', tags: { birthday: 'Birthdays', family: 'Family lunches', reunion: 'Class reunions', wedding: 'Weddings', ball: 'Graduation balls', company: 'Company parties', business: 'Business meetings' } },
       lunch: { todaySoup: 'Today’s soup', weekend: 'No lunch menu at weekends. See you on Monday.', stale: 'The new lunch menu is on its way.', soon: (d) => `Valid from ${d}` },
     },
     pl: {
@@ -124,7 +124,7 @@
       errors: { date: 'Wybierz datę.', name: 'Podaj swoje imię.', phone: 'Podaj numer telefonu, abyśmy mogli potwierdzić rezerwację.', past: 'Ta data już minęła.' },
       done: (n, g, d, t) => `${n}, przyjęliśmy zapytanie o stolik dla ${g} ${g === 1 ? 'osoby' : 'osób'} na ${d}, godz. ${t}. Odezwiemy się z potwierdzeniem. (Strona demonstracyjna: zapytanie nie jest nigdzie wysyłane.)`,
       copied: 'Skopiowano ✓',
-      rooms: { unit: 'gości', fit: 'Idealna na', priv: 'Najwięcej prywatności', cta: 'Zapytaj o salę', soon: 'Zdjęcia wkrótce', scale: 'pojemność', tags: { birthday: 'Urodziny', family: 'Rodzinny obiad', reunion: 'Zjazd absolwentów', wedding: 'Wesela', ball: 'Studniówki', company: 'Imprezy firmowe', business: 'Spotkania biznesowe' } },
+      rooms: { unit: 'gości', fit: 'Idealna na', priv: 'Najwięcej prywatności', cta: 'Zapytaj o salę', more: 'Więcej info', soon: 'Zdjęcia wkrótce', scale: 'pojemność', tags: { birthday: 'Urodziny', family: 'Rodzinny obiad', reunion: 'Zjazd absolwentów', wedding: 'Wesela', ball: 'Studniówki', company: 'Imprezy firmowe', business: 'Spotkania biznesowe' } },
       lunch: { todaySoup: 'Zupa dnia', weekend: 'W weekend nie ma menu dnia. Zapraszamy w poniedziałek.', stale: 'Nowe menu dnia właśnie przygotowujemy.', soon: (d) => `Obowiązuje od ${d}` },
     },
   };
@@ -299,6 +299,7 @@
           <p class="room__fit">${R.fit}</p>
           <ul class="room__tags">${r.tags.map((t) => `<li>${R.tags[t]}</li>`).join('')}</ul>
           <p class="room__text">${tr(r.text)}</p>
+          <a class="btn btn--small room__more" href="prostor.html#${r.id}"><span>${R.more} →</span></a>
           <a class="link room__cta" href="tel:+420602530838">${R.cta} · +420 602 530 838</a>
         </div>
       </article>`;
