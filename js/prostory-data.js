@@ -31,7 +31,7 @@ window.PROSTORY = [
     min: 30, max: 140,
     tags: ['wedding', 'ball', 'company'],
     private: false,
-    photos: [],
+    photos: ['assets/photos/prostory/velky-1.webp', 'assets/photos/prostory/velky-2.webp', 'assets/photos/prostory/velky-3.webp'],
     text: {
       cs: 'Náš největší prostor pro velké oslavy a společenské akce. Výzdobu i menu připravíme na míru vaší události.',
       ru: 'Наше самое большое помещение для больших праздников и светских мероприятий. Оформление и меню подготовим под ваше событие.',
