@@ -16,7 +16,7 @@ window.PROSTORY = [
     min: 10, max: 15,
     tags: ['birthday', 'family', 'reunion'],
     private: false,
-    photos: [],
+    photos: ['assets/photos/prostory/modry-1.webp', 'assets/photos/prostory/modry-2.webp', 'assets/photos/prostory/modry-3.webp'],
     text: {
       cs: 'Útulný salónek pro menší společnost. Oslavte narozeniny, sejděte se s rodinou u oběda nebo s bývalými spolužáky.',
       ru: 'Уютный салон для небольшой компании. Отметьте день рождения, соберитесь семьёй на обед или встретьтесь с одноклассниками.',
@@ -31,7 +31,7 @@ window.PROSTORY = [
     min: 30, max: 140,
     tags: ['wedding', 'ball', 'company'],
     private: false,
-    photos: [],
+    photos: ['assets/photos/prostory/velky-1.webp', 'assets/photos/prostory/velky-2.webp', 'assets/photos/prostory/velky-3.webp'],
     text: {
       cs: 'Náš největší prostor pro velké oslavy a společenské akce. Výzdobu i menu připravíme na míru vaší události.',
       ru: 'Наше самое большое помещение для больших праздников и светских мероприятий. Оформление и меню подготовим под ваше событие.',
@@ -46,7 +46,7 @@ window.PROSTORY = [
     min: 10, max: 25,
     tags: ['birthday', 'family', 'reunion', 'business'],
     private: true,
-    photos: [],
+    photos: ['assets/photos/prostory/spodni-1.webp', 'assets/photos/prostory/spodni-2.webp', 'assets/photos/prostory/spodni-3.webp'],
     text: {
       cs: 'Nejsoukromnější z našich prostor. Ideální, když chcete být jen mezi svými, nebo potřebujete v klidu a nerušeně jednat.',
       ru: 'Самое уединённое из наших помещений. Идеально, если хочется побыть только своим кругом или спокойно, без помех провести переговоры.',
