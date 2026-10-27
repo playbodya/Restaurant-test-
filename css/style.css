@@ -384,7 +384,7 @@ em { font-style: italic; color: var(--lavender); }
 /* Dishes strip */
 .dishes { overflow: hidden; position: relative; }
 .dishes__label { font-family: var(--display); font-style: italic; font-size: var(--step-1); color: var(--lavender); margin: 3rem 0 1rem; }
-.dishes__track { display: flex; gap: 14px; width: max-content; animation: marquee 50s linear infinite; }
+.dishes__track { display: flex; gap: 14px; width: max-content; animation: marquee 90s linear infinite; }
 .dishes:hover .dishes__track { animation-play-state: paused; }
 .dishes__track img { height: clamp(150px, 17vw, 230px); width: auto; max-width: none; border-radius: 4px; object-fit: cover; transition: transform .5s var(--ease); }
 .dishes__track img:nth-child(odd) { border-radius: 120px 120px 4px 4px; }
