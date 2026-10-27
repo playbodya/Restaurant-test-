@@ -46,7 +46,7 @@ window.PROSTORY = [
     min: 10, max: 25,
     tags: ['birthday', 'family', 'reunion', 'business'],
     private: true,
-    photos: [],
+    photos: ['assets/photos/prostory/spodni-1.webp', 'assets/photos/prostory/spodni-2.webp', 'assets/photos/prostory/spodni-3.webp'],
     text: {
       cs: 'Nejsoukromnější z našich prostor. Ideální, když chcete být jen mezi svými, nebo potřebujete v klidu a nerušeně jednat.',
       ru: 'Самое уединённое из наших помещений. Идеально, если хочется побыть только своим кругом или спокойно, без помех провести переговоры.',
