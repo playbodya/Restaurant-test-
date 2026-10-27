@@ -16,7 +16,7 @@ window.PROSTORY = [
     min: 10, max: 15,
     tags: ['birthday', 'family', 'reunion'],
     private: false,
-    photos: [],
+    photos: ['assets/photos/prostory/modry-1.webp', 'assets/photos/prostory/modry-2.webp', 'assets/photos/prostory/modry-3.webp'],
     text: {
       cs: 'Útulný salónek pro menší společnost. Oslavte narozeniny, sejděte se s rodinou u oběda nebo s bývalými spolužáky.',
       ru: 'Уютный салон для небольшой компании. Отметьте день рождения, соберитесь семьёй на обед или встретьтесь с одноклассниками.',
