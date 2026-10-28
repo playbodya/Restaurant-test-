@@ -8,8 +8,8 @@
  * ru, en, pl  … překlady (RU, EN, PL) jsou nepovinné; když chybí, zobrazí se čeština
  */
 window.DENNI_MENU = {
-  from: '2026-10-12',
-  to: '2026-10-16',
+  from: '2026-10-26',
+  to: '2026-10-30',
   hours: '11:00–15:00',
   soups: [
     { day: 0, cs: 'Smetanová polévka s čočkou Beluga', ru: 'Сливочный суп с чечевицей белуга', en: 'Cream soup with Beluga lentils', pl: 'Zupa śmietanowa z soczewicą Beluga', a: '1, 7, 9' },
