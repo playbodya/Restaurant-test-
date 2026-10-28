@@ -99,26 +99,6 @@
         ],
       },
       {
-        cat: L('Víno rozlévané', 'Вино в розлив', 'Wine by the glass', 'Wino na kieliszki'),
-        items: [
-          { n: 'Cuvée', d: L('bílé, suché', 'белое, сухое', 'white, dry', 'białe, wytrawne'), v: '1,5 dcl', p: 69 },
-          { n: 'Pálava', d: L('bílé, polosladké', 'белое, полусладкое', 'white, semi-sweet', 'białe, półsłodkie'), v: '1,5 dcl', p: 79 },
-          { n: 'Cuvée', d: L('červené, suché', 'красное, сухое', 'red, dry', 'czerwone, wytrawne'), v: '1,5 dcl', p: 69 },
-          { n: 'Frizzante', d: L('bílé, šumivé, suché', 'белое, игристое, сухое', 'white, sparkling, dry', 'białe, musujące, wytrawne'), v: '1,5 dcl', p: 89 },
-        ],
-      },
-      {
-        cat: L('Odrůdové jakostní víno', 'Сортовое качественное вино', 'Varietal quality wine', 'Wino odmianowe jakościowe'),
-        items: [
-          { n: L('Tramín červený', 'Траминер красный', 'Tramín červený (Gewürztraminer)', 'Tramín červený (Gewürztraminer)'), d: L('bílé, suché', 'белое, сухое', 'white, dry', 'białe, wytrawne'), v: '0,75 l', p: 279 },
-          { n: 'Sauvignon', d: L('bílé, suché', 'белое, сухое', 'white, dry', 'białe, wytrawne'), v: '0,75 l', p: 279 },
-          { n: L('Frankovka rosé', 'Франковка розе', 'Frankovka rosé', 'Frankovka rosé'), d: L('růžové, suché', 'розовое, сухое', 'rosé, dry', 'różowe, wytrawne'), v: '0,75 l', p: 279 },
-          { n: 'Modrý Portugal', d: L('červené, suché', 'красное, сухое', 'red, dry', 'czerwone, wytrawne'), v: '0,75 l', p: 279 },
-          { n: 'Frizzante', d: L('bílé, šumivé, suché', 'белое, игристое, сухое', 'white, sparkling, dry', 'białe, musujące, wytrawne'), v: '0,75 l', p: 439 },
-          { n: 'Bohemia sekt', d: 'Demi / Brut', v: '0,75 l', p: 429 },
-        ],
-      },
-      {
         cat: L('Aperitivy', 'Аперитивы', 'Aperitifs', 'Aperitify'),
         note: L('V nabídce také francouzská vína, viz vinný lístek.', 'Также в предложении французские вина — см. винную карту.', 'French wines are also available – see the wine list.', 'W ofercie także wina francuskie – zobacz kartę win.'),
         items: [
