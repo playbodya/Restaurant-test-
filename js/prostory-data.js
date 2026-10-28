@@ -45,7 +45,6 @@ window.PROSTORY = [
       'Pánský klub s kulečníkem',
       'Pódium pro vystupující a balkón s výhledem do sálu',
       'Svatby od 80 hostů: pronajímáme celý komplex',
-      'Výzdobu sálu i restaurace připravíme za příplatek',
     ],
     suits: 'Svatební hostiny, plesy, promoce, konference, firemní večírky a vystoupení.',
     text: {
@@ -67,7 +66,6 @@ window.PROSTORY = [
     info: [
       'Vlastní venkovní posezení',
       'Nejsoukromnější z našich prostor',
-      'Výzdobu salónku připravíme za příplatek',
     ],
     suits: 'Rodinné oslavy, menší svatby, teambuildingy, semináře a smuteční hostiny.',
     text: {
