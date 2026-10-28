@@ -1,5 +1,5 @@
 /* Denní menu page: a single column "menu card" — week strip of soups, then numbered mains like the printed lístek. */
-.dm { max-width: 1080px; margin-inline: auto; padding: calc(110px + env(safe-area-inset-top, 0px)) var(--gutter) 0; }
+.dm { max-width: calc(1080px * var(--k, 1)); margin-inline: auto; padding: calc(110px + env(safe-area-inset-top, 0px)) var(--gutter) 0; }
 .dm-back {
   font-size: var(--step--1); letter-spacing: .16em; text-transform: uppercase; text-decoration: none; color: var(--muted);
   transition: color .3s;
@@ -75,7 +75,7 @@
 .dm-cta > p { color: var(--muted); }
 .dm-cta__row { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.6rem; }
 .dm-addr { margin-top: 1.6rem; font-size: var(--step--1); letter-spacing: .06em; }
-.dm-foot { max-width: 1080px; margin-inline: auto; padding: 2rem var(--gutter) calc(2rem + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--line); color: var(--muted); font-size: var(--step--1); }
+.dm-foot { max-width: calc(1080px * var(--k, 1)); margin-inline: auto; padding: 2rem var(--gutter) calc(2rem + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--line); color: var(--muted); font-size: var(--step--1); }
 
 @media (max-width: 900px) {
   .dm-days { grid-template-columns: repeat(2, minmax(0, 1fr)); }

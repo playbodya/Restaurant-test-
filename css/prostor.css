@@ -1,5 +1,5 @@
 /* Prostor detail page (prostor.html#id): one room – capacity, rental prices, photos, what it offers, partners. */
-.pr { max-width: 1180px; margin-inline: auto; padding: calc(100px + env(safe-area-inset-top, 0px)) var(--gutter) 0; }
+.pr { max-width: calc(1180px * var(--k, 1)); margin-inline: auto; padding: calc(100px + env(safe-area-inset-top, 0px)) var(--gutter) 0; }
 .pr-back { font-size: var(--step--1); letter-spacing: .16em; text-transform: uppercase; text-decoration: none; color: var(--muted); transition: color .3s; }
 .pr-back:hover { color: var(--lavender); }
 
@@ -54,7 +54,7 @@
 .pr-phone a { font-family: var(--display); font-size: var(--step-3); color: var(--ink); text-decoration: none; font-variant-numeric: tabular-nums; }
 .pr-phone a:hover { color: var(--lavender); }
 .pr-addr { margin: 1.2rem 0 0; font-size: var(--step--1); letter-spacing: .04em; }
-.pr-foot { max-width: 1180px; margin-inline: auto; padding: 2rem var(--gutter) calc(2rem + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--line); color: var(--muted); font-size: var(--step--1); }
+.pr-foot { max-width: calc(1180px * var(--k, 1)); margin-inline: auto; padding: 2rem var(--gutter) calc(2rem + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--line); color: var(--muted); font-size: var(--step--1); }
 .pr-foot .foot__op { margin-top: 0; }
 
 @media (max-width: 900px) {

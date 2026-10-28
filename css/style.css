@@ -68,7 +68,7 @@ em { font-style: italic; color: var(--lavender); }
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-.section { padding: clamp(72px, 10vw, 140px) var(--gutter); max-width: 1320px; margin-inline: auto; }
+.section { padding: clamp(72px, 10vw, 140px) var(--gutter); max-width: calc(1320px * var(--k, 1)); margin-inline: auto; }
 
 .eyebrow {
   font-size: var(--step--1); letter-spacing: .28em; text-transform: uppercase;
@@ -105,6 +105,8 @@ em { font-style: italic; color: var(--lavender); }
   position: fixed; top: 0; left: 0; right: 0; z-index: 50;
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
   padding: calc(18px + env(safe-area-inset-top, 0px)) var(--gutter) 18px;
+  /* keep the header content in line with the page column on very wide screens */
+  padding-inline: max(var(--gutter), calc((100% - 1320px * var(--k, 1)) / 2 + var(--gutter)));
   transition: background .4s var(--ease), padding .4s var(--ease), box-shadow .4s var(--ease);
 }
 .nav.is-scrolled {
@@ -146,7 +148,7 @@ em { font-style: italic; color: var(--lavender); }
   position: relative; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
   align-items: center; gap: clamp(24px, 4vw, 64px);
   padding: calc(120px + env(safe-area-inset-top, 0px)) var(--gutter) clamp(56px, 7vw, 96px);
-  max-width: 1320px; margin-inline: auto; overflow: hidden;
+  max-width: calc(1320px * var(--k, 1)); margin-inline: auto; overflow: hidden;
 }
 .hero__petals { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 .hero__text { position: relative; z-index: 1; min-width: 0; }
@@ -165,7 +167,7 @@ em { font-style: italic; color: var(--lavender); }
 .dot.is-closed { background: var(--muted); }
 .dot.is-closed::after { display: none; }
 
-.hero__mark { position: relative; aspect-ratio: 1; width: 100%; max-width: 560px; justify-self: center; z-index: 1; transition: transform .6s var(--ease); }
+.hero__mark { position: relative; aspect-ratio: 1; width: 100%; max-width: calc(560px * var(--k, 1)); justify-self: center; z-index: 1; transition: transform .6s var(--ease); }
 .ring { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
 .ring path { fill: none; stroke: var(--ink); stroke-linecap: round; }
 .ring__a { stroke-width: 3.2; stroke-dasharray: 1500; stroke-dashoffset: 1500; animation: draw 2.2s var(--ease) .3s forwards; }
@@ -305,7 +307,7 @@ em { font-style: italic; color: var(--lavender); }
 .form__done p { color: var(--muted); max-width: 32ch; margin: 0 0 1rem; }
 
 /* Footer */
-.foot { padding: clamp(64px, 9vw, 120px) var(--gutter) calc(32px + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--line); max-width: 1320px; margin-inline: auto; }
+.foot { padding: clamp(64px, 9vw, 120px) var(--gutter) calc(32px + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--line); max-width: calc(1320px * var(--k, 1)); margin-inline: auto; }
 .foot__logo { position: relative; display: flex; align-items: baseline; justify-content: center; flex-wrap: wrap; font-family: var(--display); padding-block: 2rem; }
 .foot__ellipse { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
 .foot__ellipse path { fill: none; stroke: var(--ink); stroke-width: 1.4; stroke-dasharray: 3200; stroke-dashoffset: 3200; transition: stroke-dashoffset 2.6s var(--ease); }
@@ -689,3 +691,8 @@ em { font-style: italic; color: var(--lavender); }
 #menu { box-shadow: 0 0 0 100vmax #A68659; clip-path: inset(0 -100vmax); }
 #denni-menu .btn--light { --bg: #1f1a26; --fg: #f3ead9; border-color: #1f1a26; }
 #denni-menu .tasting__sprig { opacity: .45; }
+
+/* Large monitors (2K/4K at 100 % scaling, 34" ultrawide): a wider column and larger text,
+   so the page does not shrink to a small strip in the middle of the screen */
+@media (min-width: 2200px) { :root { --k: 1.2; } html { font-size: 120%; } }
+@media (min-width: 3000px) { :root { --k: 1.45; } html { font-size: 145%; } }
