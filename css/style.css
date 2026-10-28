@@ -173,9 +173,10 @@ em { font-style: italic; color: var(--lavender); }
 .ring__c { stroke-width: 1.2; stroke-dasharray: 260; stroke-dashoffset: 260; animation: draw 1.2s var(--ease) 1.3s forwards; opacity: .6; }
 .mark__p {
   position: absolute; left: 50%; top: 50%; transform: translate(-36%, -55%);
-  font-family: var(--display); font-weight: 500; font-size: clamp(11rem, 26vw, 24rem); line-height: 1;
+  font-family: var(--display); font-weight: 500; font-size: clamp(11rem, 26vw, 24rem); font-size: 63cqw; line-height: 1;
   animation: rise 1.4s var(--ease) .2s both;
 }
+.hero__mark { container-type: inline-size; }
 .hero__mark .ring { scale: .84; }
 .mark__p { z-index: 1; }
 /* line-drawn lavender (two sprigs tied with a bow), coloured with --mark-line through a mask */
@@ -185,8 +186,8 @@ em { font-style: italic; color: var(--lavender); }
   background: var(--mark-line); -webkit-mask: url(../assets/lavender-line.png) center / contain no-repeat; mask: url(../assets/lavender-line.png) center / contain no-repeat;
   transform-origin: 50% 100%; animation: bloom 1.8s var(--ease) .7s both, sway-tilt 8s ease-in-out 2.5s infinite alternate;
 }
-.mark__line--l { left: 34%; top: 17%; rotate: -40deg; }
-.mark__line--r { left: 38%; top: 19%; rotate: -27deg; transform: scaleX(-1); animation-name: bloom, sway-tilt-r; animation-delay: 1s, 2.9s; }
+.mark__line--l { left: 34%; top: 17%; transform: rotate(-40deg); }
+.mark__line--r { left: 38%; top: 19%; transform: rotate(-27deg) scaleX(-1); animation-name: bloom, sway-tilt-r; animation-delay: 1s, 2.9s; }
 
 /* load-in (hero only, short, ends visible) */
 .load { animation: up 1.1s var(--ease) var(--d, 0s) both; }
