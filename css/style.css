@@ -186,8 +186,8 @@ em { font-style: italic; color: var(--lavender); }
   background: var(--mark-line); -webkit-mask: url(../assets/lavender-line.png) center / contain no-repeat; mask: url(../assets/lavender-line.png) center / contain no-repeat;
   transform-origin: 50% 100%; animation: bloom 1.8s var(--ease) .7s both, sway-tilt 8s ease-in-out 2.5s infinite alternate;
 }
-.mark__line--l { left: 34%; top: 17%; transform: rotate(-40deg); }
-.mark__line--r { left: 38%; top: 19%; transform: rotate(-27deg) scaleX(-1); animation-name: bloom, sway-tilt-r; animation-delay: 1s, 2.9s; }
+.mark__line--l { left: 28%; top: 15%; transform: rotate(-13deg); }
+.mark__line--r { left: 32%; top: 16%; transform: rotate(-7deg) scaleX(-1); animation-name: bloom, sway-tilt-r; animation-delay: 1s, 2.9s; }
 
 /* load-in (hero only, short, ends visible) */
 .load { animation: up 1.1s var(--ease) var(--d, 0s) both; }
