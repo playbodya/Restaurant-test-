@@ -683,5 +683,7 @@ em { font-style: italic; color: var(--lavender); }
   --band: #A68659; --band-fg: #1f1a26; --band-muted: #2f261b; --band-accent: #3d2470;
   background: #A68659; color: #1f1a26; color-scheme: light;
 }
+/* the Menu section is a centred 1320px column: paint its colour edge to edge */
+#menu { box-shadow: 0 0 0 100vmax #A68659; clip-path: inset(0 -100vmax); }
 #denni-menu .btn--light { --bg: #1f1a26; --fg: #f3ead9; border-color: #1f1a26; }
 #denni-menu .tasting__sprig { opacity: .45; }
