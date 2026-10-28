@@ -203,26 +203,6 @@
         ],
       },
       {
-        cat: L('Další vína rozlévaná', 'Другие вина в розлив', 'More wines by the glass', 'Inne wina na kieliszki'),
-        items: [
-          { n: 'Cuvée', s: L('bílé, suché', 'белое, сухое', 'white, dry', 'białe, wytrawne'), p: [['1,5 dcl', 69]] },
-          { n: 'Pálava', s: L('bílé, polosladké', 'белое, полусладкое', 'white, semi-sweet', 'białe, półsłodkie'), p: [['1,5 dcl', 79]] },
-          { n: 'Cuvée', s: L('červené, suché', 'красное, сухое', 'red, dry', 'czerwone, wytrawne'), p: [['1,5 dcl', 69]] },
-          { n: 'Frizzante', s: L('bílé, šumivé, suché', 'белое, игристое, сухое', 'white, sparkling, dry', 'białe, musujące, wytrawne'), p: [['1,5 dcl', 89]] },
-        ],
-      },
-      {
-        cat: L('Odrůdová jakostní vína (láhev)', 'Сортовые качественные вина (бутылка)', 'Varietal quality wines (bottle)', 'Wina odmianowe jakościowe (butelka)'),
-        items: [
-          { n: L('Tramín červený', 'Траминер красный', 'Tramín červený (Gewürztraminer)', 'Tramín červený (Gewürztraminer)'), s: L('bílé, suché', 'белое, сухое', 'white, dry', 'białe, wytrawne'), p: [['0,75 l', 279]] },
-          { n: 'Sauvignon', s: L('bílé, suché', 'белое, сухое', 'white, dry', 'białe, wytrawne'), p: [['0,75 l', 279]] },
-          { n: L('Frankovka rosé', 'Франковка розе', 'Frankovka rosé', 'Frankovka rosé'), s: L('růžové, suché', 'розовое, сухое', 'rosé, dry', 'różowe, wytrawne'), p: [['0,75 l', 279]] },
-          { n: 'Modrý Portugal', s: L('červené, suché', 'красное, сухое', 'red, dry', 'czerwone, wytrawne'), p: [['0,75 l', 279]] },
-          { n: 'Frizzante', s: L('bílé, šumivé, suché', 'белое, игристое, сухое', 'white, sparkling, dry', 'białe, musujące, wytrawne'), p: [['0,75 l', 439]] },
-          { n: 'Bohemia sekt', s: 'Demi / Brut', p: [['0,75 l', 429]] },
-        ],
-      },
-      {
         cat: L('Bílá vína', 'Белые вина', 'White wines', 'Wina białe'),
         items: [
           {
