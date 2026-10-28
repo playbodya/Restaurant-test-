@@ -22,7 +22,9 @@
       const it = RENT && RENT.items.find((i) => i.name === name);
       return `<li><span>${esc(name)}</span><b>${it && typeof it.price === 'number' ? kc(it.price) : 'cena na dotaz'}</b></li>`;
     });
-    $('#prPrices').innerHTML = prices.length ? prices.join('') : '<li><span>Pronájem</span><b>cenu vám rádi sdělíme</b></li>';
+    // no rental items (e.g. Modrý salónek is free): show no price block at all
+    $('#prPrices').innerHTML = prices.join('');
+    $('#prPrices').hidden = !prices.length;
 
     const photos = r.photos || [];
     $('#prPhotos').innerHTML = photos.map((src, i) => `<a class="pr-photo${i ? '' : ' pr-photo--main'}" href="${src}" target="_blank" rel="noopener"><img src="${src}" alt="${esc(r.name)} – fotografie ${i + 1}" loading="${i ? 'lazy' : 'eager'}"></a>`).join('');
