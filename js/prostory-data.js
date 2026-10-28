@@ -41,7 +41,7 @@ window.PROSTORY = [
     rent: ['Velký sál s terasou', 'Velký sál – uzavření celé restaurace'],
     info: [
       'Při uzavření celé restaurace pro 100–140 hostů',
-      'Venkovní posezení s pergolou a oplocená terasa s možností grilování',
+      'Venkovní posezení s pergolou, oplocená terasa s možností grilování a dětské hřiště',
       'Pánský klub s kulečníkem',
       'Pódium pro vystupující a balkón s výhledem do sálu',
       'Svatby od 80 hostů: pronajímáme celý komplex',
