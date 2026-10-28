@@ -92,13 +92,13 @@
   .dm-main { grid-template-columns: 2.6rem minmax(0, 1fr) auto; }
 }
 
-/* Soups block in Sandalwood (#A68659), like Menu and Denní menu on the home page – same in light and dark theme */
-.dm-soups {
+/* Soups and mains blocks in Sandalwood (#A68659), like Menu and Denní menu on the home page – same in light and dark theme */
+.dm-sand {
   --paper: #A68659; --paper-2: #9a7b4f; --ink: #1f1a26; --muted: #2f261b; --line: #8a6d45; --lavender: #3d2470;
   background: #A68659; color: #1f1a26; color-scheme: light; border-bottom: 0;
   box-shadow: 0 0 0 100vmax #A68659; clip-path: inset(0 -100vmax);
 }
-.dm-soups .dm-day { background: #ad8f63; }
-.dm-soups .dm-day.is-today { background: #1f1a26; border-color: #1f1a26; color: #f3ead9; box-shadow: 0 18px 40px -18px rgba(31, 26, 38, .6); }
-.dm-soups .dm-day.is-today .dm-day__name, .dm-soups .dm-day.is-today .dm-day__al { color: #cdbfa6; }
-.dm-soups .dm-day__badge { background: #f3ead9; color: #1f1a26; }
+.dm-sand .dm-day { background: #ad8f63; }
+.dm-sand .dm-day.is-today { background: #1f1a26; border-color: #1f1a26; color: #f3ead9; box-shadow: 0 18px 40px -18px rgba(31, 26, 38, .6); }
+.dm-sand .dm-day.is-today .dm-day__name, .dm-sand .dm-day.is-today .dm-day__al { color: #cdbfa6; }
+.dm-sand .dm-day__badge { background: #f3ead9; color: #1f1a26; }
