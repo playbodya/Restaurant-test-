@@ -42,8 +42,8 @@
         <span class="nl-prices">${prices(it.p)}</span>
       </div>
       <span class="nl-wine__s">${tr(it.s)}</span>
-      <span class="nl-wine__w">${tr(it.w)}</span>
-      <p class="nl-wine__d">${tr(it.d)}</p>
+      ${it.w ? `<span class="nl-wine__w">${tr(it.w)}</span>` : ''}
+      ${it.d ? `<p class="nl-wine__d">${tr(it.d)}</p>` : ''}
     </li>`;
   }
   function category(c, i, key, rowFn, listCls) {
