@@ -38,7 +38,7 @@ Stránka `napoje.html` (odkaz `napoje.html#vina` otevře rovnou vína). Ceny a p
 
 ## Akce a kalkulačka rautu
 
-Stránka `akce.html`. Ceny a položky kalkulačky upravujte v **`js/raut-data.js`**:
+Stránka `akce.html` je skrytá: není v menu ani odkazovaná z webu, otevře se jen přímým odkazem (a má `noindex`). Ceny a položky kalkulačky upravujte v **`js/raut-data.js`**:
 
 ```js
 { name: "Vepřová panenka", price: 590, unit: "kg" },
