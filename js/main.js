@@ -384,7 +384,7 @@
   burger.addEventListener('click', () => setMenu(!nav.classList.contains('is-open')));
   $$('#navLinks a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
   addEventListener('keydown', (e) => { if (e.key === 'Escape' && nav.classList.contains('is-open')) setMenu(false); });
-  addEventListener('resize', () => { if (innerWidth > 760 && nav.classList.contains('is-open')) setMenu(false); });
+  addEventListener('resize', () => { if (innerWidth > 1240 && nav.classList.contains('is-open')) setMenu(false); });
 
   const sections = $$('main section[id], footer[id]');
   const linkFor = (id) => $(`#navLinks a[href="#${id}"]`);

@@ -630,7 +630,9 @@ em { font-style: italic; color: var(--lavender); }
   .menu__list { grid-template-columns: 1fr; }
   .foot__cols { grid-template-columns: 1fr; }
 }
-@media (max-width: 760px) {
+/* the full link row needs about 1240px: below that use the burger menu */
+.nav__links a { white-space: nowrap; }
+@media (max-width: 1240px) {
   .burger { display: block; }
   .nav .btn--small { display: none; }
   .nav__links {
