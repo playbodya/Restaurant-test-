@@ -2,11 +2,9 @@
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const R = window.RAUT || { sections: [] };
-  const KEY = 'prostorica-raut-v2';
-  const store = {
-    get() { try { return JSON.parse(localStorage.getItem(KEY)) || null; } catch { return null; } },
-    set(v) { try { localStorage.setItem(KEY, JSON.stringify(v)); } catch { /* storage unavailable */ } },
-  };
+  // every visit starts with an empty calculator: nothing is stored in the browser
+  // (also drop drafts that older versions of this page saved)
+  try { ['prostorica-raut', 'prostorica-raut-v2'].forEach((k) => localStorage.removeItem(k)); } catch { /* storage unavailable */ }
 
   const kc = (n) => `${Math.round(n).toLocaleString('cs-CZ')} Kč`;
   const num = (n) => n.toLocaleString('cs-CZ', { maximumFractionDigits: 2 });
@@ -23,11 +21,9 @@
   R.sections.forEach((s) => s.items.forEach((it, i) => items.push({ ...it, key: `${s.id}:${i}`, sid: s.id })));
   const byKey = Object.fromEntries(items.map((it) => [it.key, it]));
 
-  // quantities: demo data carries its own example quantities; the live site remembers the visitor's draft
+  // quantities: empty, except the example quantities of the demo data
   let qty = {};
-  const saved = R.demo ? null : store.get();
-  if (saved && saved.q) qty = saved.q;
-  else items.forEach((it) => { if (it.qty) qty[it.key] = it.qty; });
+  if (R.demo) items.forEach((it) => { if (it.qty) qty[it.key] = it.qty; });
   qty = Object.fromEntries(Object.entries(qty).filter(([k, v]) => byKey[k] && v > 0));
   // "choice: one" sections (room rental): at most one item, always quantity 1
   const oneOf = R.sections.filter((s) => s.choice === 'one');
@@ -149,8 +145,7 @@
 
   /* ---------- summary ---------- */
   const persons = $('#akPersons'), date = $('#akDate');
-  if (saved) { if (saved.p) persons.value = saved.p; if (saved.d) date.value = saved.d; }
-  else if (R.demo) persons.value = 40;
+  if (R.demo) persons.value = 40;
   persons.addEventListener('input', () => { summary(); save(); });
   date.addEventListener('input', save);
 
@@ -183,7 +178,7 @@
     $('#akXlsxLabel').textContent = sel.length ? 'Stáhnout vyplněnou objednávku (Excel)' : 'Stáhnout prázdnou tabulku (Excel)';
     return { sel, total, p };
   }
-  function save() { if (!R.demo) store.set({ q: qty, p: persons.value, d: date.value }); }
+  function save() { /* nothing is kept between visits */ }
 
   /* ---------- actions ---------- */
   const toast = (t) => { const el = $('#akToast'); el.textContent = t; clearTimeout(toast.t); toast.t = setTimeout(() => { el.textContent = ''; }, 4000); };

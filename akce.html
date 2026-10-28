@@ -81,8 +81,8 @@
       <aside class="ak-sum" id="akSum" aria-labelledby="akSumTitle">
         <h3 class="ak-sum__title" id="akSumTitle">Váš výběr</h3>
         <div class="ak-sum__fields">
-          <label for="akDate">Datum akce<input type="date" id="akDate"></label>
-          <label for="akPersons">Počet osob<input type="number" id="akPersons" min="1" step="1" inputmode="numeric" placeholder="např. 40"></label>
+          <label for="akDate">Datum akce<input type="date" id="akDate" autocomplete="off"></label>
+          <label for="akPersons">Počet osob<input type="number" id="akPersons" autocomplete="off" min="1" step="1" inputmode="numeric" placeholder="např. 40"></label>
         </div>
         <ul class="ak-sum__lines" id="akLines"></ul>
         <p class="ak-sum__empty" id="akEmpty">Zatím nic. Zadejte množství u pokrmů vlevo.</p>
@@ -97,7 +97,7 @@
           <label for="akName">Jméno a příjmení<input type="text" id="akName" autocomplete="name"></label>
           <label for="akPhone">Telefon<input type="tel" id="akPhone" autocomplete="tel" inputmode="tel"></label>
           <label for="akEmail">E-mail<input type="email" id="akEmail" autocomplete="email"></label>
-          <label for="akNote">Poznámka<textarea id="akNote" rows="3" placeholder="Alergie, přání, čas servírování…"></textarea></label>
+          <label for="akNote">Poznámka<textarea id="akNote" autocomplete="off" rows="3" placeholder="Alergie, přání, čas servírování…"></textarea></label>
         </fieldset>
         <div class="ak-sum__btns">
           <button type="button" class="btn btn--wide" id="akXlsx"><span id="akXlsxLabel">Stáhnout objednávku (Excel)</span></button>
