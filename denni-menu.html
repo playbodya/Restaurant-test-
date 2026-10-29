@@ -29,13 +29,8 @@
 </header>
 
 <main class="dm">
-  <section class="dm-hero dm-hero--video">
-    <div class="dm-hero__media" aria-hidden="true">
-      <video class="dm-hero__video" autoplay muted loop playsinline preload="auto" poster="assets/video/dm-hero-poster.jpg">
-        <source src="assets/video/dm-hero.webm" type="video/webm">
-        <source src="assets/video/dm-hero.mp4" type="video/mp4">
-      </video>
-    </div>
+  <section class="dm-hero">
+    <img class="dm-hero__sprig sway" src="assets/sprig.webp" alt="" width="395" height="321">
     <p class="eyebrow load" style="--d:.05s" data-i18n="eyebrow">Polední nabídka · Po–Pá</p>
     <h1 class="dm-hero__title">
       <span class="line"><span class="load" style="--d:.15s" data-i18n="t1">Denní</span></span>
@@ -94,9 +89,5 @@
 <script src="js/consent.js"></script>
 <script src="js/denni-menu-data.js"></script>
 <script src="js/denni.js"></script>
-<script>
-  // video background: respect "reduce motion" (keep the still poster)
-  (() => { const v = document.querySelector('.dm-hero__video'); if (v && matchMedia('(prefers-reduced-motion: reduce)').matches) { v.removeAttribute('autoplay'); v.pause(); } })();
-</script>
 </body>
 </html>
